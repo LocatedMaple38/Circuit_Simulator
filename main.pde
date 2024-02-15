@@ -9,6 +9,23 @@ float[] xAndB12 = new float[1], yAndB12 = new float[1], widthAndB12 = new float[
 float[] xAndB13 = new float[1], yAndB13 = new float[1], widthAndB13 = new float[1], heightAndB13 = new float[1];
 float[] xAndGate11 = new float[1], yAndGate11 = new float[1], widhtAndGate11 = new float[1], heightAndGate11 = new float[1];
 float[] xAndGate12 = new float[1], yAndGate12 = new float[1], widthAndGate11 = new float[1], heightAndGate11 = new float[1];
+float[] xAndA21, yAndA21, widthAndA21, heightAndA21;
+float[] xAndA22, yAndA22, widthAndA22, heightAndA22;
+float[] xAndA23, yAndA23, widthAndA23, heightAndA23;
+float[] xAndB21, yAndB21, widthAndB21, heightAndB21;
+float[] xAndB22, yAndB22, widthAndB22, heightAndB22;
+float[] xAndB23, yAndB23, widthAndB23, heightAndB23;
+float[] xAndGate21, yAndGate21, widthAndGate21, heightAndGate21;
+float[] xAndGate22, yAndGate22, widthAndGate22, heightAndGate22;
+float[] xAndA31, yAndA31, widthAndA31, heightAndA31;
+float[] xAndA32, yAndA32, widthAndA32, heightAndA32;
+float[] xAndA33, yAndA33, widthAndA33, heightAndA33;
+float[] xAndB31, yAndB31, widthAndB31, heightAndB31;
+float[] xAndB32, yAndB32, widthAndB32, heightAndB32;
+float[] xAndB33, yAndB33, widthAndB33, heightAndB33;
+float[] xAndGate31, yAndGate31, widthAndGate31, heightAndGate31;
+float[] xAndGate32, yAndGate32, widthAndGate32, heightAndGate32;
+float[] xAndA41, yAndA41, widthAndA41, heightAndA41
 float[] xA1 = new float[1], yA1 = new float[1], widthA1 = new float[1], heightA1 = new float[1];
 float[] xB1 = new float[1], yB1 = new float[1], widthB1 = new float[1], heightB1 = new float[1];
 float[] xY1 = new float[1], yY1 = new float[1], widthY1 = new float[1], heightY1 = new float[1];
