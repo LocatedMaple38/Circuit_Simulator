@@ -53,6 +53,30 @@ float[] xY4 = new float[1], yY4 = new float[1], widthY4 = new float[1], heightY4
 
 float[] xY = new float[1], yY = new float[1], widthY = new float[1], heightY = new float[1];
 
+float xSolarPowwer, ySolarPowwer, widthSolarPowwer, heightSolarPowwer;
+float xSolarVolt, ySolarVolt, widthSolarVolt, heightSolarVolt;
+float xSolarAmp, ySolarAmp, widthSolarAmp, heightSolarAmp;
+float xSolarVoltType, ySolarVoltType, widthSolarVoltType, heightSolarVoltType;
+float xSolarAmpType, ySolarAmpType, widthSolarAmpType, heightSolarAmpType;
+float xSolarParallelNumber, ySolarParallelNumber, widthSolarParallelNumber, heightSolarParallelNumber;
+float xSolarSeriesNumber, ySolarSeriesNumber, widthSolarSeriesNumber, heightSolarSeriesNumber;
+float xSolarParallelType, ySolarParallelType, widthSolarParallelType, heightSolarParallelType;
+float xSolarSeriesType, ySolarSeriesType, widthSoalrSeriesType, heightSolarSeriesType;
+float xSolarOutPut, ySolarOutPut, widthSolarOutPut, heightSolarOutPut;
+float xSolarOutPutVolt, ySolarOutPutVolt, widthSolarOutPutVolt, heightSolarOutPutVolt;
+float xSolarOutPutAmp, ySolarOutPutAmp, widhtSolarOutPutAmp, heightSolarOutPutAmp;
+float xSolarOutPutWatt, ySolarOutPutWatt, widthSoarOutPutWatt, heightSolarOutPutWatt;
+
+flaot xBattPower, yBattPower, widthBattPower, heightBattPower;
+flaot xBattVolt, yBattVolt, widthBattVolt, heightBattVolt;
+float xBattAmp, yBattAmp, widthBattAmp, heightBattAmp;
+flaot xBattVoltType, yBattVoltType, widthBattVoltType, heightBattVoltType;
+float xBattAmpType, yBattAmpType, widthBattAmpType, heightBattAmpType;
+flaot xBattParallelNumber, yBattParallelNumber, widhtBattParallelNumber, heightBattParallelNumber;
+float xBattSeriesNumber, yBattSeriesNumber, widthBattSeriesNumber, heightBattSeriesNumber;
+float xBattParallelType, yBattParallelType, widthBattParallelType, heightParallelType;
+float xBattSeriesType, yBattSeriesType, widthBattSeriesType, 
+
 int appWidth, appHeight;
 int[] andMoveX = new int[1], andMoveY = new int[1];
 
