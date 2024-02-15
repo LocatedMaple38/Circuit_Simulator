@@ -12,6 +12,7 @@ float[] xAndGate11 = new float[1], yAndGate11 = new float[1], widthAndGate11 = n
 float[] xAndGate12 = new float[1], yAndGate12 = new float[1], widthAndGate12 = new float[1], heightAndGate12 = new float[1];
 float[] xAndGate13 = new float[1], yAndGate13 = new float[1], widthAndGate13 = new float[1], heightAndGate13 = new float[1];
 float[] xAndGate14 = new float[1], yAndGate14 = new float[1], widthAndGate14 = new float[1], heightAndGate14 = new float[1];
+float[] xAndGate15 = new float[1], yAndGate15 = new float[1], widthAndGate15 = new float[1], heightAndGate15 = new float[1];
 
 float[] xAndA21 = new float[1], yAndA21 = new float[1], widthAndA21 = new float[1], heightAndA21 = new float[1];
 float[] xAndA22 = new float[1], yAndA22 = new float[1], widthAndA22 = new float[1], heightAndA22 = new float[1];
