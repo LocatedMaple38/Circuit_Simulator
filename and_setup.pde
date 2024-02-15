@@ -26,53 +26,8 @@ void andSetup(){
   
   xY1[0] = andMoveX[0]+0;
   yY1[0] = andMoveY[0]+60;
-  widthY1[0] = andMoveX[0]+20;
+  widthY1[0] = andMoveX[0]+38;
   heightY1[0] = andMoveY[0]+60;
-  
-  xA2[0] = andMoveX[0]+0;
-  yA2[0] = andMoveY[0]+80;
-  widthA2[0] = andMoveX[0]+20;
-  heightA2[0] = andMoveY[0]+80;
-  
-  xB2[0] = andMoveX[0]+0;
-  yB2[0] = andMoveY[0]+100;
-  widthB2[0] = andMoveX[0]+20;
-  heightB2[0] = andMoveY[0]+100;
-  
-  xY2[0] = andMoveX[0]+0;
-  yY2[0] = andMoveY[0]+120;
-  widthY2[0] = andMoveX[0]+20;
-  heightY2[0] = andMoveY[0]+120;
-  
-  xA3[0] = andMoveX[0]+70;
-  yA3[0] = andMoveY[0]+40;
-  widthA3[0] = andMoveX[0]+90;
-  heightA3[0] = andMoveY[0]+40;
-  
-  xB3[0] = andMoveX[0]+70;
-  yB3[0] = andMoveY[0]+60;
-  widthB3[0] = andMoveX[0]+90;
-  heightB3[0] = andMoveY[0]+60;
-
-  xY3[0] = andMoveX[0]+70;
-  yY3[0] = andMoveY[0]+80;
-  widthY3[0] = andMoveX[0]+90;
-  heightY3[0] = andMoveY[0]+80;
-  
-  xA4[0] = andMoveX[0]+70;
-  yA4[0] = andMoveY[0]+100;
-  widthA4[0] = andMoveX[0]+90;
-  heightA4[0] = andMoveY[0]+100;
-  
-  xB4[0] = andMoveX[0]+70;
-  yB4[0] = andMoveY[0]+120;
-  widthB4[0] = andMoveX[0]+90;
-  heightB4[0] = andMoveY[0]+120;
-  
-  xY4[0] = andMoveX[0]+70;
-  yY4[0] = andMoveY[0]+140;
-  widthY4[0] = andMoveX[0]+90;
-  heightY4[0] = andMoveY[0]+140;
   
   xAndA11[0] = andMoveX[0]+20;
   yAndA11[0] = andMoveY[0]+20;
@@ -109,14 +64,72 @@ void andSetup(){
   widthAndGate12[0] = andMoveX[0]+30;
   heightAndGate12[0] = andMoveY[0]+40;
   
-  xAndGate13[0] = andMoveX[0]+50;
-  yAndGate13[0] = andMoveY[0]+20;
-  widthAndGate13[0] = andMoveX[0]+60;
-  heightAndGate13[0] = andMoveY[0]+20;
+  xAndGate13[0] = andMoveX[0]+45;
+  yAndGate13[0] = andMoveY[0]+30;
+  widthAndGate13[0] = andMoveX[0]+45;
+  heightAndGate13[0] = andMoveY[0]+40;
   
-  xAndGate14[0] = andMoveX[0]+60;
-  yAndGate14[0] = andMoveY[0]+30;
-  widthAndGate14[0] = andMoveX[0]+20;
-  heightAndGate14[0] = andMoveY[0]+20;
+  xAndGate14[0] = andMoveX[0]+38;
+  yAndGate14[0] = andMoveY[0]+42;
+  widthAndGate14[0] = 15;
+  heightAndGate14[0] = 15;
   
+  xAndGate15[0] = andMoveX[0]+38;
+  yAndGate15[0] = andMoveY[0]+50;
+  widthAndGate15[0] = andMoveX[0]+38;
+  heightAndGate15[0] = andMoveY[0]+60;
+  
+  xA2[0] = andMoveX[0]+0;
+  yA2[0] = andMoveY[0]+80;
+  widthA2[0] = andMoveX[0]+40;
+  heightA2[0] = andMoveY[0]+80;
+  
+  xB2[0] = andMoveX[0]+0;
+  yB2[0] = andMoveY[0]+100;
+  widthB2[0] = andMoveX[0]+25;
+  heightB2[0] = andMoveY[0]+100;
+  
+  xY2[0] = andMoveX[0]+0;
+  yY2[0] = andMoveY[0]+120;
+  widthY2[0] = andMoveX[0]+20;
+  heightY2[0] = andMoveY[0]+120;
+  
+  xAndGate21[0] = andMoveX[0]+40;
+  yAndGate21[0] = andMoveY[0]+80;
+  widthAndGate21[0] = andMoveX[0]+40;
+  heightAndGate21[0] = andMoveY[0]+90;
+  
+  xAndGate22[0] = andMoveX[0]+25;
+  yAndGate22[0] = andMoveY[0]+80;
+  widthAndGate22[0] = andMoveX[0]+0;
+  
+  xA3[0] = andMoveX[0]+70;
+  yA3[0] = andMoveY[0]+40;
+  widthA3[0] = andMoveX[0]+90;
+  heightA3[0] = andMoveY[0]+40;
+  
+  xB3[0] = andMoveX[0]+70;
+  yB3[0] = andMoveY[0]+60;
+  widthB3[0] = andMoveX[0]+90;
+  heightB3[0] = andMoveY[0]+60;
+
+  xY3[0] = andMoveX[0]+70;
+  yY3[0] = andMoveY[0]+80;
+  widthY3[0] = andMoveX[0]+90;
+  heightY3[0] = andMoveY[0]+80;
+  
+  xA4[0] = andMoveX[0]+70;
+  yA4[0] = andMoveY[0]+100;
+  widthA4[0] = andMoveX[0]+90;
+  heightA4[0] = andMoveY[0]+100;
+  
+  xB4[0] = andMoveX[0]+70;
+  yB4[0] = andMoveY[0]+120;
+  widthB4[0] = andMoveX[0]+90;
+  heightB4[0] = andMoveY[0]+120;
+  
+  xY4[0] = andMoveX[0]+70;
+  yY4[0] = andMoveY[0]+140;
+  widthY4[0] = andMoveX[0]+90;
+  heightY4[0] = andMoveY[0]+140;
 }
