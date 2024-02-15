@@ -25,7 +25,6 @@ void draw(){
   
   and();
   
-  
 }
 
 void keyPressed(){}
