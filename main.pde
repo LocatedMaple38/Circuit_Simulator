@@ -2,8 +2,6 @@ float[] xVCC = new float[1], yVCC = new float[1], widthVCC = new float[1], heigh
 float[] xGND = new float[1], yGND = new float[1], widthGND = new float[1], heightGND = new float[1];
 float[] xAnd = new float[1], yAnd = new float[1], widthAnd = new float[1], heightAnd = new float[1];
 
-<<<<<<< HEAD
-=======
 float[] xAndA11 = new float[1], yAndA11 = new float[1], widthAndA11 = new float[1], heightAndA11 = new float[1];
 float[] xAndA12 = new float[1], yAndA12 = new float[1], widthAndA12 = new float[1], heightAndA12 = new float[1];
 float[] xAndA13 = new float[1], yAndA13 = new float[1], widthAndA13 = new float[1], heightAndA13 = new float[1];
@@ -46,7 +44,6 @@ float[] xAndB43 = new float[1], yAndB43 = new float[1], widthAndB43 = new float[
 float[] xAndGate41 = new float[1], yAndGate41 = new float[1], widthAndGate41 = new float[1], heightAndGate41 = new float[1];
 float[] xAndGate42 = new float[1], yAndGate42 = new float[1], widthAndGate42 = new float[1], heightAndGate42 = new float[1];
 
->>>>>>> 70c25c6d148bc547e5f8c5429a053aac155ffbb5
 float[] xA1 = new float[1], yA1 = new float[1], widthA1 = new float[1], heightA1 = new float[1];
 float[] xB1 = new float[1], yB1 = new float[1], widthB1 = new float[1], heightB1 = new float[1];
 float[] xY1 = new float[1], yY1 = new float[1], widthY1 = new float[1], heightY1 = new float[1];
