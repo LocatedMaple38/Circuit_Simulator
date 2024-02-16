@@ -24,6 +24,7 @@ void and(){
   line(xB2[0], yB2[0], widthB2[0], heightB2[0]);
   line(xY2[0], yY2[0], widthY2[0], heightY2[0]);
   line(xAndGate21[0], yAndGate21[0], widthAndGate21[0], heightAndGate21[0]);
+  line(xAndGate22[0], yAndGate22[0], widthAndGate22[0], heightAndGate22[0]);
   
   line(xA3[0], yA3[0], widthA3[0], heightA3[0]);
   line(xB3[0], yB3[0], widthB3[0], heightB3[0]);
@@ -32,4 +33,8 @@ void and(){
   line(xA4[0], yA4[0], widthA4[0], heightA4[0]);
   line(xB4[0], yB4[0], widthB4[0], heightB4[0]);
   line(xY4[0], yY4[0], widthY4[0], heightY4[0]);
+  
+  
+  
+  fill(255);
 }
