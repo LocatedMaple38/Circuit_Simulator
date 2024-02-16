@@ -23,6 +23,8 @@ float[] xAndB23 = new float[1], yAndB23 = new float[1], widthAndB23 = new float[
 float[] xAndGate21 = new float[1], yAndGate21 = new float[1], widthAndGate21 = new float[1], heightAndGate21 = new float[1];
 float[] xAndGate22 = new float[1], yAndGate22 = new float[1], widthAndGate22 = new float[1], heightAndGate22 = new float[1];
 float[] xAndGate23 = new float[1], yAndGate23 = new float[1], widthAndGate23 = new float[1], heightAndGate23 = new float[1];
+float[] xAndGate24 = new float[1], yAndGate24 = new float[1], widthAndGate24 = new float[1], heightAndGate24 = new float[1];
+float[] xAndGate25 = new float[1], yAndGate25 = new flaot[1], widthAndGate25 = new float[1], heightAndGate25 = new float[1];
 
 float[] xAndA31 = new float[1], yAndA31 = new float[1], widthAndA31 = new float[1], heightAndA31 = new float[1];
 float[] xAndA32 = new float[1], yAndA32 = new float[1], widthAndA32 = new float[1], heightAndA32 = new float[1];
