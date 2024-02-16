@@ -70,12 +70,12 @@ void andSetup(){
   heightAndGate13[0] = andMoveY[0]+40;
   
   xAndGate14[0] = andMoveX[0]+38;
-  yAndGate14[0] = andMoveY[0]+42;
+  yAndGate14[0] = andMoveY[0]+40;
   widthAndGate14[0] = 15;
   heightAndGate14[0] = 15;
   
   xAndGate15[0] = andMoveX[0]+38;
-  yAndGate15[0] = andMoveY[0]+50;
+  yAndGate15[0] = andMoveY[0]+48;
   widthAndGate15[0] = andMoveX[0]+38;
   heightAndGate15[0] = andMoveY[0]+60;
   
@@ -101,7 +101,8 @@ void andSetup(){
   
   xAndGate22[0] = andMoveX[0]+25;
   yAndGate22[0] = andMoveY[0]+80;
-  widthAndGate22[0] = andMoveX[0]+0;
+  widthAndGate22[0] = andMoveX[0]+25;
+  heightAndGate22[0] = andMoveY[0]+85;
   
   xA3[0] = andMoveX[0]+70;
   yA3[0] = andMoveY[0]+40;
