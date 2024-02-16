@@ -1,6 +1,7 @@
 float[] xVCC = new float[1], yVCC = new float[1], widthVCC = new float[1], heightVCC = new float[1];
 float[] xGND = new float[1], yGND = new float[1], widthGND = new float[1], heightGND = new float[1];
 float[] xAnd = new float[1], yAnd = new float[1], widthAnd = new float[1], heightAnd = new float[1];
+float[] xAndMain = new float[1], yAndMain = new float[1], widthAndMain = new float[1], heightAndMain = new float[1];
 
 float[] xAndA11 = new float[1], yAndA11 = new float[1], widthAndA11 = new float[1], heightAndA11 = new float[1];
 float[] xAndA12 = new float[1], yAndA12 = new float[1], widthAndA12 = new float[1], heightAndA12 = new float[1];
@@ -24,7 +25,7 @@ float[] xAndGate21 = new float[1], yAndGate21 = new float[1], widthAndGate21 = n
 float[] xAndGate22 = new float[1], yAndGate22 = new float[1], widthAndGate22 = new float[1], heightAndGate22 = new float[1];
 float[] xAndGate23 = new float[1], yAndGate23 = new float[1], widthAndGate23 = new float[1], heightAndGate23 = new float[1];
 float[] xAndGate24 = new float[1], yAndGate24 = new float[1], widthAndGate24 = new float[1], heightAndGate24 = new float[1];
-float[] xAndGate25 = new float[1], yAndGate25 = new flaot[1], widthAndGate25 = new float[1], heightAndGate25 = new float[1];
+float[] xAndGate25 = new float[1], yAndGate25 = new float[1], widthAndGate25 = new float[1], heightAndGate25 = new float[1];
 
 float[] xAndA31 = new float[1], yAndA31 = new float[1], widthAndA31 = new float[1], heightAndA31 = new float[1];
 float[] xAndA32 = new float[1], yAndA32 = new float[1], widthAndA32 = new float[1], heightAndA32 = new float[1];
