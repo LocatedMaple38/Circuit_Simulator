@@ -80,6 +80,8 @@ float xBattSeriesNumber, yBattSeriesNumber, widthBattSeriesNumber, heightBattSer
 float xBattParallelType, yBattParallelType, widthBattParallelType, heightParallelType;
 float xBattSeriesType, yBattSeriesType, widthBattSeriesType, heightBattSeriesType;
 
+float xBackGround, yBackGround, widthBackGround, heightBackGround;
+
 int appWidth, appHeight;
 int[] andMoveX = new int[1], andMoveY = new int[1];
 
@@ -93,12 +95,20 @@ void setup(){
   andMoveX[0] = 0;
   andMoveY[0] = 0;
   
+  xBackGround = appWidth*0;
+  yBackGround = appHeight*0;
+  widthBackGround = appWidth;
+  heightBackGround = appHeight;
   
   andSetup();
   
 }
 
 void draw(){
+  fill(255);
+  noStroke();
+  strokeWeight(0);
+  rect(xBackGround, yBackGround, widthBackGround, heightBackGround);
   
   and();
   
