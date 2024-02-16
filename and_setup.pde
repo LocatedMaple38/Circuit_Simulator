@@ -94,7 +94,7 @@ void andSetup(){
   widthY2[0] = andMoveX[0]+20;
   heightY2[0] = andMoveY[0]+120;
   
-  xAndGate21[0] = andMoveX[0]+40;
+  xB2[0] = andMoveX[0]+40;
   yAndGate21[0] = andMoveY[0]+80;
   widthAndGate21[0] = andMoveX[0]+40;
   heightAndGate21[0] = andMoveY[0]+90;
