@@ -1,4 +1,8 @@
 void andSetup(){
+  xAndMain[0] = andMoveX[0]+0;
+  yAndMain[0] = andMoveY[0]+0;
+  widthAndMain[0] = andMoveX[0]+90;
+  heightAndMain[0] = andMoveY[0]+160;
   
   xAnd[0] = andMoveX[0]+20;
   yAnd[0] = andMoveY[0]+0;
