@@ -31,11 +31,17 @@ void and(){
   text("IN4A", andMoveX[0]+75, andMoveY[0]+95);
   text("IN4B", andMoveX[0]+75, andMoveY[0]+115);
   text("OUT4", andMoveX[0]+75, andMoveY[0]+135);
-  
   text("IN1A", andMoveX[0]+2, andMoveY[0]+15);
   text("IN1B", andMoveX[0]+2, andMoveY[0]+35);
   text("OUT1", andMoveX[0]+2, andMoveY[0]+55);
   text("IN2A", andMoveX[0]+2, andMoveY[0]+75);
-    
+  text("IN2B", andMoveX[0]+2, andMoveY[0]+95);
+  text("OUT2", andMoveX[0]+2, andMoveY[0]+115);
+  text("GND", andMoveX[0]+2, andMoveY[0]+135);
+  textSize(50);
+  rotate(radians(90));
+  text("74HC08", andMoveX[0]+1, andMoveY[0]-30);
+  
+  rect(xAndMain[0], yAndMain[0], widthAndMain[0], heightAndMain[0]);
   fill(255);
 }
