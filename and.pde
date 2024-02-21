@@ -42,6 +42,5 @@ void and(){
   rotate(radians(90));
   text("74HC08", andMoveX[0]+1, andMoveY[0]-30);
   
-  rect(xAndMain[0], yAndMain[0], widthAndMain[0], heightAndMain[0]);
   fill(255);
 }
