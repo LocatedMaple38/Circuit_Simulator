@@ -85,11 +85,13 @@ float xBattParallelType, yBattParallelType, widthBattParallelType, heightParalle
 float xBattSeriesType, yBattSeriesType, widthBattSeriesType, heightBattSeriesType;
 
 float xBackGround, yBackGround, widthBackGround, heightBackGround;
+float xAdder, yAdder, widthAdder, heightAdde;
 
 int appWidth, appHeight;
 int[] andMoveX = new int[1], andMoveY = new int[1];
 
-PShape s;
+boolean edit = false;
+
 void setup(){
   size(500, 500);
   
@@ -106,6 +108,11 @@ void setup(){
   
   andSetup();
   
+  xAdder = (appWidth*1/2)-(1/100);
+  yAdder = appHeight*0;
+  widthAdder = appWidth*1/25;
+  heightAdde = appHeight*1/50;
+  
 }
 
 void draw(){
@@ -113,12 +120,32 @@ void draw(){
   noStroke();
   strokeWeight(0);
   rect(xBackGround, yBackGround, widthBackGround, heightBackGround);
+  strokeWeight(1);
+  stroke(0,0,0);
+  
   
   and();
   
+  if(edit == true){
+    fill(0);
+  }else{
+    fill(50);
+  }
+  rect(xAdder, yAdder, widthAdder, heightAdde);
   
 }
 
 void keyPressed(){}
 
-void mousePressed(){}
+void mousePressed(){
+  
+  if(mouseX>xAdder && mouseX<xAdder+widthAdder && mouseY>yAdder && mouseY<yAdder+heightAdde){
+    if(edit == false){
+      edit = true;
+    }
+    if(edit == true){
+      edit = false;
+    }
+  }
+  
+}
