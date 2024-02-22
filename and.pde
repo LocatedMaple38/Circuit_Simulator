@@ -1,7 +1,7 @@
 void and(){
-  noFill();
   strokeWeight(2);
   stroke(255, 0, 0);
+  noFill();
   rect(xAnd[0], yAnd[0], widthAnd[0], heightAnd[0]);
   line(xVCC[0], yVCC[0], widthVCC[0], heightVCC[0]);
   line(xGND[0], yGND[0], widthGND[0], heightGND[0]);
@@ -40,7 +40,7 @@ void and(){
   text("GND", andMoveX[0]+2, andMoveY[0]+135);
   textSize(50);
   rotate(radians(90));
-  text("74HC08", andMoveX[0]+1, andMoveY[0]-30);
+  text("74HC08", andMoveY[0]+0, andMoveX[0]+30);
   
-  fill(255);
+    
 }
