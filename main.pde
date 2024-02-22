@@ -85,7 +85,9 @@ float xBattParallelType, yBattParallelType, widthBattParallelType, heightParalle
 float xBattSeriesType, yBattSeriesType, widthBattSeriesType, heightBattSeriesType;
 
 float xBackGround, yBackGround, widthBackGround, heightBackGround;
-float xAdder, yAdder, widthAdder, heightAdde;
+float xAdder, yAdder, widthAdder, heightAdder;
+
+float xEdit, yEdit, widthEdit, heightEdit;
 
 int appWidth, appHeight;
 int[] andMoveX = new int[1], andMoveY = new int[1];
@@ -98,8 +100,8 @@ void setup(){
   appWidth = width;
   appHeight = height;
   
-  andMoveX[0] = 0;
-  andMoveY[0] = 0;
+  andMoveX[0] = 10;
+  andMoveY[0] = 20;
   
   xBackGround = appWidth*0;
   yBackGround = appHeight*0;
@@ -107,43 +109,49 @@ void setup(){
   heightBackGround = appHeight;
   
   andSetup();
+  editSetup();
   
-  xAdder = (appWidth*1/2)-(1/100);
-  yAdder = appHeight*0;
+  
+  xAdder = appWidth*1/2;
+  yAdder = appHeight*1/10;
   widthAdder = appWidth*1/25;
-  heightAdde = appHeight*1/50;
-  
+  heightAdder = appHeight*1/50;
 }
 
 void draw(){
   fill(255);
   noStroke();
-  strokeWeight(0);
-  rect(xBackGround, yBackGround, widthBackGround, heightBackGround);
-  strokeWeight(1);
-  stroke(0,0,0);
-  
+  //rect(xBackGround, yBackGround, widthBackGround, heightBackGround);
   
   and();
-  
-  if(edit == true){
-    fill(0);
+  /*
+  if(edit == false){
+    xAdder = appWidth*0.5-(1/100);
+    yAdder = appHeight*0;
+    widthAdder = appWidth*1/25;
+    heightAdder = appHeight*1/50;
   }else{
-    fill(50);
+    xAdder = (appWidth*0.5)-(1/100);
+    yAdder = appHeight*1/10;
+    widthAdder = appWidth*1/25;
+    heightAdder = appHeight*1/50;
+    //edit();
   }
-  rect(xAdder, yAdder, widthAdder, heightAdde);
-  
+  */
+  fill(0);
+  stroke(0);
+  strokeWeight(1);
+  rect(xAdder, yAdder, widthAdder, heightAdder);
 }
 
 void keyPressed(){}
 
 void mousePressed(){
-  
-  if(mouseX>xAdder && mouseX<xAdder+widthAdder && mouseY>yAdder && mouseY<yAdder+heightAdde){
+  println(edit);
+  if(mouseX>xAdder && mouseX<xAdder+widthAdder && mouseY>yAdder && mouseY<yAdder+heightAdder){
     if(edit == false){
       edit = true;
-    }
-    if(edit == true){
+    }else{
       edit = false;
     }
   }
