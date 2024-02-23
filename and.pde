@@ -3,24 +3,24 @@ void and(){
   stroke(255, 0, 0);
   noFill();
   rect(xAnd[0], yAnd[0], widthAnd[0], heightAnd[0]);
-  line(xVCC[0], yVCC[0], widthVCC[0], heightVCC[0]);
-  line(xGND[0], yGND[0], widthGND[0], heightGND[0]);
+  line(xVCCAnd[0], yVCCAnd[0], widthVCCAnd[0], heightVCCAnd[0]);
+  line(xGNDAnd[0], yGNDAnd[0], widthGNDAnd[0], heightGNDAnd[0]);
   
-  line(xA1[0], yA1[0], widthA1[0], heightA1[0]);
-  line(xB1[0], yB1[0], widthB1[0], heightB1[0]);
-  line(xY1[0], yY1[0], widthY1[0], heightY1[0]);
+  line(xA1And[0], yA1And[0], widthA1And[0], heightA1And[0]);
+  line(xB1And[0], yB1And[0], widthB1And[0], heightB1And[0]);
+  line(xY1And[0], yY1And[0], widthY1And[0], heightY1And[0]);
   
-  line(xA2[0], yA2[0], widthA2[0], heightA2[0]);
-  line(xB2[0], yB2[0], widthB2[0], heightB2[0]);
-  line(xY2[0], yY2[0], widthY2[0], heightY2[0]);
+  line(xA2And[0], yA2And[0], widthA2And[0], heightA2And[0]);
+  line(xB2And[0], yB2And[0], widthB2And[0], heightB2And[0]);
+  line(xY2And[0], yY2And[0], widthY2And[0], heightY2And[0]);
   
-  line(xA3[0], yA3[0], widthA3[0], heightA3[0]);
-  line(xB3[0], yB3[0], widthB3[0], heightB3[0]);
-  line(xY3[0], yY3[0], widthY3[0], heightY3[0]);
+  line(xA3And[0], yA3And[0], widthA3And[0], heightA3And[0]);
+  line(xB3And[0], yB3And[0], widthB3And[0], heightB3And[0]);
+  line(xY3And[0], yY3And[0], widthY3And[0], heightY3And[0]);
   
-  line(xA4[0], yA4[0], widthA4[0], heightA4[0]);
-  line(xB4[0], yB4[0], widthB4[0], heightB4[0]);
-  line(xY4[0], yY4[0], widthY4[0], heightY4[0]);
+  line(xA4And[0], yA4And[0], widthA4And[0], heightA4And[0]);
+  line(xB4And[0], yB4And[0], widthB4And[0], heightB4And[0]);
+  line(xY4And[0], yY4And[0], widthY4And[0], heightY4And[0]);
   
   fill(0, 0, 0);
   textSize(8);
@@ -41,6 +41,7 @@ void and(){
   textSize(50);
   rotate(radians(90));
   text("74HC08", andMoveY[0]+0, andMoveX[0]+(-30));
+  rotate(radians(-90));
   
     
 }
