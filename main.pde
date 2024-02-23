@@ -100,6 +100,7 @@ float xAdder, yAdder, widthAdder, heightAdder;
 
 float xEdit, yEdit, widthEdit, heightEdit;
 float xAndAdd, yAndAdd, widthAndAdd, heightAndAdd;
+float xNandAdd, yNandAdd, widthNandAdd, heightNandAdd;
 
 int appWidth, appHeight;
 int[] andMoveX = new int[1], andMoveY = new int[1];
@@ -130,9 +131,9 @@ void setup(){
 void draw(){
   fill(255);
   noStroke();
-  rect(xBackGround, yBackGround, widthBackGround, heightBackGround);
+  //rect(xBackGround, yBackGround, widthBackGround, heightBackGround);
   
-  and();
+  //and();
   
   if(edit == false){
     xAdder = appWidth*1/2;
@@ -145,6 +146,8 @@ void draw(){
     yAdder = appHeight*1/10;
     widthAdder = appWidth*1/25;
     heightAdder = appHeight*1/50;
+    
+    
   }
   
   fill(255);
@@ -156,7 +159,6 @@ void draw(){
 void keyPressed(){}
 
 void mousePressed(){
-  println(edit);
   if(mouseX>xAdder && mouseX<xAdder+widthAdder && mouseY>yAdder && mouseY<yAdder+heightAdder){
     if(edit == false){
       edit = true;
