@@ -40,7 +40,7 @@ void and(){
   text("GND", andMoveX[0]+2, andMoveY[0]+135);
   textSize(50);
   rotate(radians(90));
-  text("74HC08", andMoveY[0]+0, andMoveX[0]+(-30));
+  text("74HC08", (andMoveY[0]+0), andMoveX[0]-andMoveX[0]*2+-30);
   rotate(radians(-90));
   
     
