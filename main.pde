@@ -115,7 +115,7 @@ void setup(){
   appWidth = width;
   appHeight = height;
   
-  andMoveX[0] = 0;
+  andMoveX[0] = 100;
   andMoveY[0] = 0;
   
   xBackGround = appWidth*0;
@@ -131,9 +131,9 @@ void setup(){
 void draw(){
   fill(255);
   noStroke();
-  //rect(xBackGround, yBackGround, widthBackGround, heightBackGround);
+  rect(xBackGround, yBackGround, widthBackGround, heightBackGround);
   
-  //and();
+  and();
   
   if(edit == false){
     xAdder = appWidth*1/2;
