@@ -1,5 +1,5 @@
-float[] xVCC = new float[1], yVCC = new float[1], widthVCC = new float[1], heightVCC = new float[1];
-float[] xGND = new float[1], yGND = new float[1], widthGND = new float[1], heightGND = new float[1];
+float[] xVCCAnd = new float[1], yVCCAnd = new float[1], widthVCCAnd = new float[1], heightVCCAnd = new float[1];
+float[] xGNDAnd = new float[1], yGNDAnd = new float[1], widthGNDAnd = new float[1], heightGNDAnd = new float[1];
 float[] xAnd = new float[1], yAnd = new float[1], widthAnd = new float[1], heightAnd = new float[1];
 float[] xAndMain = new float[1], yAndMain = new float[1], widthAndMain = new float[1], heightAndMain = new float[1];
 
@@ -45,20 +45,31 @@ float[] xAndB43 = new float[1], yAndB43 = new float[1], widthAndB43 = new float[
 float[] xAndGate41 = new float[1], yAndGate41 = new float[1], widthAndGate41 = new float[1], heightAndGate41 = new float[1];
 float[] xAndGate42 = new float[1], yAndGate42 = new float[1], widthAndGate42 = new float[1], heightAndGate42 = new float[1];
 
-float[] xA1 = new float[1], yA1 = new float[1], widthA1 = new float[1], heightA1 = new float[1];
-float[] xB1 = new float[1], yB1 = new float[1], widthB1 = new float[1], heightB1 = new float[1];
-float[] xY1 = new float[1], yY1 = new float[1], widthY1 = new float[1], heightY1 = new float[1];
-float[] xA2 = new float[1], yA2 = new float[1], widthA2 = new float[1], heightA2 = new float[1];
-float[] xB2 = new float[1], yB2 = new float[1], widthB2 = new float[1], heightB2 = new float[1];
-float[] xY2 = new float[1], yY2 = new float[1], widthY2 = new float[1], heightY2 = new float[1];
-float[] xA3 = new float[1], yA3 = new float[1], widthA3 = new float[1], heightA3 = new float[1];
-float[] xB3 = new float[1], yB3 = new float[1], widthB3 = new float[1], heightB3 = new float[1];
-float[] xY3 = new float[1], yY3 = new float[1], widthY3 = new float[1], heightY3 = new float[1];
-float[] xA4 = new float[1], yA4 = new float[1], widthA4 = new float[1], heightA4 = new float[1];
-float[] xB4 = new float[1], yB4 = new float[1], widthB4 = new float[1], heightB4 = new float[1];
-float[] xY4 = new float[1], yY4 = new float[1], widthY4 = new float[1], heightY4 = new float[1];
+float[] xA1And = new float[1], yA1And = new float[1], widthA1And = new float[1], heightA1And = new float[1];
+float[] xB1And = new float[1], yB1And = new float[1], widthB1And = new float[1], heightB1And = new float[1];
+float[] xY1And = new float[1], yY1And = new float[1], widthY1And = new float[1], heightY1And = new float[1];
+float[] xA2And = new float[1], yA2And = new float[1], widthA2And = new float[1], heightA2And = new float[1];
+float[] xB2And = new float[1], yB2And = new float[1], widthB2And = new float[1], heightB2And = new float[1];
+float[] xY2And = new float[1], yY2And = new float[1], widthY2And = new float[1], heightY2And = new float[1];
+float[] xA3And = new float[1], yA3And = new float[1], widthA3And = new float[1], heightA3And = new float[1];
+float[] xB3And = new float[1], yB3And = new float[1], widthB3And = new float[1], heightB3And = new float[1];
+float[] xY3And = new float[1], yY3And = new float[1], widthY3And = new float[1], heightY3And = new float[1];
+float[] xA4And = new float[1], yA4And = new float[1], widthA4And = new float[1], heightA4And = new float[1];
+float[] xB4And = new float[1], yB4And = new float[1], widthB4And = new float[1], heightB4And = new float[1];
+float[] xY4And = new float[1], yY4And = new float[1], widthY4And = new float[1], heightY4And = new float[1];
 
-float[] xY = new float[1], yY = new float[1], widthY = new float[1], heightY = new float[1];
+float[] xA1Nand = new float[1], yA1Nand = new float[1], widthA1Nand = new float[1], heightA1Nand = new float[1];
+float[] xB1Nand = new float[1], yB1Nand = new float[1], widthB1Nand = new float[1], heightB1Nand = new float[1];
+float[] xY1Nana = new float[1], yY1Nand = new float[1], widthY1Nand = new float[1], heightY1Nand = new float[1];
+float[] xA2Nand = new float[1], yA2Nand = new float[1], widthA2Nand = new float[1], heightA2Nand = new float[1];
+float[] xB2Nand = new float[1], yB2Nand = new float[1], widthB2Nand = new float[1], heightB2Nand = new float[1];
+float[] xY2Nana = new float[1], yY2Nand = new float[1], widthY2Nand = new float[1], heightY2Nand = new float[1];
+float[] xA3Nand = new float[1], yA3Nand = new float[1], widthA3Nand = new float[1], heightA3Nand = new float[1];
+float[] xB3Nand = new float[1], yB3Nand = new float[1], widthB3Nand = new float[1], heightB3Nand = new float[1];
+float[] xY3Nana = new float[1], yY3Nand = new float[1], widthY3Nand = new float[1], heightY3Nand = new float[1];
+float[] xA4Nand = new float[1], yA4Nand = new float[1], widthA4Nand = new float[1], heightA4Nand = new float[1];
+float[] xB4Nand = new float[1], yB4Nand = new float[1], widthB4Nand = new float[1], heightB4Nand = new float[1];
+float[] xY4Nana = new float[1], yY4Nand = new float[1], widthY4Nand = new float[1], heightY4Nand = new float[1];
 
 float xSolarPowwer, ySolarPowwer, widthSolarPowwer, heightSolarPowwer;
 float xSolarVolt, ySolarVolt, widthSolarVolt, heightSolarVolt;
@@ -88,6 +99,7 @@ float xBackGround, yBackGround, widthBackGround, heightBackGround;
 float xAdder, yAdder, widthAdder, heightAdder;
 
 float xEdit, yEdit, widthEdit, heightEdit;
+float xAndAdd, yAndAdd, widthAndAdd, heightAndAdd;
 
 int appWidth, appHeight;
 int[] andMoveX = new int[1], andMoveY = new int[1];
@@ -95,6 +107,8 @@ int[] andMoveX = new int[1], andMoveY = new int[1];
 boolean edit = false;
 
 void setup(){
+  
+  windowRatio(500, 500);
   size(500, 500);
   
   appWidth = width;
@@ -111,34 +125,29 @@ void setup(){
   andSetup();
   editSetup();
   
-  
-  xAdder = appWidth*1/2;
-  yAdder = appHeight*1/10;
-  widthAdder = appWidth*1/25;
-  heightAdder = appHeight*1/50;
 }
 
 void draw(){
   fill(255);
   noStroke();
-  //rect(xBackGround, yBackGround, widthBackGround, heightBackGround);
+  rect(xBackGround, yBackGround, widthBackGround, heightBackGround);
   
   and();
-  /*
+  
   if(edit == false){
-    xAdder = appWidth*0.5-(1/100);
+    xAdder = appWidth*1/2;
     yAdder = appHeight*0;
     widthAdder = appWidth*1/25;
     heightAdder = appHeight*1/50;
   }else{
-    xAdder = (appWidth*0.5)-(1/100);
+    edit();
+    xAdder = appWidth*1/2;
     yAdder = appHeight*1/10;
     widthAdder = appWidth*1/25;
     heightAdder = appHeight*1/50;
-    //edit();
   }
-  */
-  fill(0);
+  
+  fill(255);
   stroke(0);
   strokeWeight(1);
   rect(xAdder, yAdder, widthAdder, heightAdder);
