@@ -24,6 +24,7 @@ void and(){
   
   fill(0, 0, 0);
   textSize(8);
+  textAlign(TOP, LEFT);
   text("VCC", andMoveX[0]+75, andMoveY[0]+15);
   text("IN3A", andMoveX[0]+75, andMoveY[0]+35);
   text("IN3B", andMoveX[0]+75, andMoveY[0]+55);
@@ -39,6 +40,7 @@ void and(){
   text("OUT2", andMoveX[0]+2, andMoveY[0]+115);
   text("GND", andMoveX[0]+2, andMoveY[0]+135);
   textSize(50);
+  textAlign(TOP, RIGHT);
   rotate(radians(90));
   text("74HC08", (andMoveY[0]+0), andMoveX[0]-andMoveX[0]*2+-30);
   rotate(radians(-90));
