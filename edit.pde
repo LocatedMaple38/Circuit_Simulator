@@ -16,7 +16,4 @@ void edit(){
   text("OR", appWidth*3/10, appHeight*0, appWidth*1/10, appHeight*1/20);
   text("XOR", appWidth*4/10, appHeight*0, appWidth*1/10, appHeight*1/20);
   
-  if(modeDropDown == true){
-    modeDropDown();
-  }
 }
