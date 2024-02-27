@@ -114,7 +114,7 @@ int[] andMoveX = new int[1], andMoveY = new int[1];
 boolean edit = false;
 boolean modeDropDown = false;
 boolean design = true;
-boolean power = true;
+boolean power = false;
 boolean price = false;
 
 void setup(){
