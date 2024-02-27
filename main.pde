@@ -60,16 +60,16 @@ float[] xY4And = new float[1], yY4And = new float[1], widthY4And = new float[1],
 
 float[] xA1Nand = new float[1], yA1Nand = new float[1], widthA1Nand = new float[1], heightA1Nand = new float[1];
 float[] xB1Nand = new float[1], yB1Nand = new float[1], widthB1Nand = new float[1], heightB1Nand = new float[1];
-float[] xY1Nana = new float[1], yY1Nand = new float[1], widthY1Nand = new float[1], heightY1Nand = new float[1];
+float[] xY1Nanda = new float[1], yY1Nand = new float[1], widthY1Nand = new float[1], heightY1Nand = new float[1];
 float[] xA2Nand = new float[1], yA2Nand = new float[1], widthA2Nand = new float[1], heightA2Nand = new float[1];
 float[] xB2Nand = new float[1], yB2Nand = new float[1], widthB2Nand = new float[1], heightB2Nand = new float[1];
-float[] xY2Nana = new float[1], yY2Nand = new float[1], widthY2Nand = new float[1], heightY2Nand = new float[1];
+float[] xY2Nand = new float[1], yY2Nand = new float[1], widthY2Nand = new float[1], heightY2Nand = new float[1];
 float[] xA3Nand = new float[1], yA3Nand = new float[1], widthA3Nand = new float[1], heightA3Nand = new float[1];
 float[] xB3Nand = new float[1], yB3Nand = new float[1], widthB3Nand = new float[1], heightB3Nand = new float[1];
-float[] xY3Nana = new float[1], yY3Nand = new float[1], widthY3Nand = new float[1], heightY3Nand = new float[1];
+float[] xY3Nand = new float[1], yY3Nand = new float[1], widthY3Nand = new float[1], heightY3Nand = new float[1];
 float[] xA4Nand = new float[1], yA4Nand = new float[1], widthA4Nand = new float[1], heightA4Nand = new float[1];
 float[] xB4Nand = new float[1], yB4Nand = new float[1], widthB4Nand = new float[1], heightB4Nand = new float[1];
-float[] xY4Nana = new float[1], yY4Nand = new float[1], widthY4Nand = new float[1], heightY4Nand = new float[1];
+float[] xY4Nand = new float[1], yY4Nand = new float[1], widthY4Nand = new float[1], heightY4Nand = new float[1];
 
 float xSolarPowwer, ySolarPowwer, widthSolarPowwer, heightSolarPowwer;
 float xSolarVolt, ySolarVolt, widthSolarVolt, heightSolarVolt;
@@ -99,13 +99,20 @@ float xBackGround, yBackGround, widthBackGround, heightBackGround;
 float xAdder, yAdder, widthAdder, heightAdder;
 
 float xEdit, yEdit, widthEdit, heightEdit;
+float xModeDropDown, yModeDropDown, widthModeDropDown, heightModeDropDown;
+float xDisine, yDisine, widhtDisine, heightDisine;
+float xPrice, yPrice, widhtPrice, heightPrice;
+float xPower, yPower, widhtPower, heightPower;
 float xAndAdd, yAndAdd, widthAndAdd, heightAndAdd;
 float xNandAdd, yNandAdd, widthNandAdd, heightNandAdd;
+float xOrAdd, yOrAdd, widthOrAdd, heightOrAdd;
+float xXorAdd, yXorAdd, widthXorAdd, heightXorAdd;
 
 int appWidth, appHeight;
 int[] andMoveX = new int[1], andMoveY = new int[1];
 
 boolean edit = false;
+boolean modeDropDown = false;
 
 void setup(){
   
@@ -125,6 +132,7 @@ void setup(){
   
   andSetup();
   editSetup();
+  modeDropDownSetup();
   
 }
 
@@ -143,7 +151,7 @@ void draw(){
   }else{
     edit();
     xAdder = appWidth*1/2;
-    yAdder = appHeight*1/10;
+    yAdder = appHeight*1/20;
     widthAdder = appWidth*1/25;
     heightAdder = appHeight*1/50;
     
@@ -166,5 +174,11 @@ void mousePressed(){
       edit = false;
     }
   }
-  
+  if(edit == true && mouseX>xModeDropDown && mouseX<xModeDropDown+widthModeDropDown && mouseY>yModeDropDown && mouseY<yModeDropDown+heightModeDropDown){
+    if(modeDropDown == false){
+      modeDropDown = true;
+    }else{
+      modeDropDown = false;
+    }
+  }
 }
