@@ -113,6 +113,9 @@ int[] andMoveX = new int[1], andMoveY = new int[1];
 
 boolean edit = false;
 boolean modeDropDown = false;
+boolean design = true;
+boolean power = true;
+boolean price = false;
 
 void setup(){
   
@@ -137,6 +140,7 @@ void setup(){
 }
 
 void draw(){
+    
   fill(255);
   noStroke();
   rect(xBackGround, yBackGround, widthBackGround, heightBackGround);
@@ -149,19 +153,37 @@ void draw(){
     widthAdder = appWidth*1/25;
     heightAdder = appHeight*1/50;
   }else{
-    edit();
+    if(design == true){
+      edit();
+    }else{}
+    
+    if(modeDropDown == true){
+      modeDropDown();
+    }else{}
+    
     xAdder = appWidth*1/2;
     yAdder = appHeight*1/20;
     widthAdder = appWidth*1/25;
     heightAdder = appHeight*1/50;
     
-    
   }
-  
   fill(255);
   stroke(0);
   strokeWeight(1);
   rect(xAdder, yAdder, widthAdder, heightAdder);
+  
+  if(design == true || power == true || price == true){
+    if(design == true && power == true){
+      faill();
+    }
+    if(power == true && price == true){
+      faill();
+    }
+    if(design == true && price == true){
+      faill();
+    }
+  }
+  
 }
 
 void keyPressed(){}
@@ -172,6 +194,7 @@ void mousePressed(){
       edit = true;
     }else{
       edit = false;
+      modeDropDown = false;
     }
   }
   if(edit == true && mouseX>xModeDropDown && mouseX<xModeDropDown+widthModeDropDown && mouseY>yModeDropDown && mouseY<yModeDropDown+heightModeDropDown){
