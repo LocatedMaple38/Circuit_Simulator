@@ -60,7 +60,7 @@ float[] xY4And = new float[1], yY4And = new float[1], widthY4And = new float[1],
 
 float[] xA1Nand = new float[1], yA1Nand = new float[1], widthA1Nand = new float[1], heightA1Nand = new float[1];
 float[] xB1Nand = new float[1], yB1Nand = new float[1], widthB1Nand = new float[1], heightB1Nand = new float[1];
-float[] xY1Nanda = new float[1], yY1Nand = new float[1], widthY1Nand = new float[1], heightY1Nand = new float[1];
+float[] xY1Nand = new float[1], yY1Nand = new float[1], widthY1Nand = new float[1], heightY1Nand = new float[1];
 float[] xA2Nand = new float[1], yA2Nand = new float[1], widthA2Nand = new float[1], heightA2Nand = new float[1];
 float[] xB2Nand = new float[1], yB2Nand = new float[1], widthB2Nand = new float[1], heightB2Nand = new float[1];
 float[] xY2Nand = new float[1], yY2Nand = new float[1], widthY2Nand = new float[1], heightY2Nand = new float[1];
