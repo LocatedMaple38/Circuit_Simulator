@@ -110,6 +110,7 @@ float xXorAdd, yXorAdd, widthXorAdd, heightXorAdd;
 
 int appWidth, appHeight;
 int[] andMoveX = new int[1], andMoveY = new int[1];
+int[] nandMoveX = new int [1], nandMoveY = new int[1];
 
 boolean edit = false;
 boolean modeDropDown = false;
@@ -128,6 +129,7 @@ void setup(){
   andMoveX[0] = 100;
   andMoveY[0] = 0;
   
+  
   xBackGround = appWidth*0;
   yBackGround = appHeight*0;
   widthBackGround = appWidth;
@@ -145,7 +147,14 @@ void draw(){
   noStroke();
   rect(xBackGround, yBackGround, widthBackGround, heightBackGround);
   
-  and();
+  if(design == true){
+    and();
+    nand();
+  }else if(power == true){
+    
+  }else if(price == true){
+    
+  }
   
   if(edit == false){
     xAdder = appWidth*1/2;
