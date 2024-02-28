@@ -1,6 +1,6 @@
 void and(){
   strokeWeight(2);
-  stroke(255, 0, 0);
+  stroke(0);
   noFill();
   rect(xAnd[0], yAnd[0], widthAnd[0], heightAnd[0]);
   line(xVCCAnd[0], yVCCAnd[0], widthVCCAnd[0], heightVCCAnd[0]);
@@ -44,6 +44,24 @@ void and(){
   rotate(radians(90));
   text("74HC08", (andMoveY[0]+0), andMoveX[0]-andMoveX[0]*2+-30);
   rotate(radians(-90));
+  
+  if(keyPressed == true){
+    if(key == BACKSPACE){
+    addAndGateInt = addAndGateInt - 1;
+    keyPressed = false;
+    }
+    println(addAndGateInt);
+  }
+  if(mousePressed == true){
+    if(mouseX>xAndAdd && mouseX<xAndAdd+widthAndAdd && mouseY>yAndAdd && mouseY<yAndAdd+heightAndAdd){
+    addAndGateInt = addAndGateInt + 1 ;
+    mousePressed = false;
+    }
+    println(addAndGateInt);
+  }
+  while(a > addAndGateInt || a == addAndGateInt){
+    addAndGateInt = 1;
+  }
   
     
 }
