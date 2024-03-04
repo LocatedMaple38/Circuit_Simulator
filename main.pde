@@ -143,6 +143,7 @@ void setup(){
   andSetup();
   editSetup();
   modeDropDownSetup();
+  powerSetup();
   
 }
 
@@ -151,12 +152,12 @@ void draw(){
   fill(255);
   noStroke();
   rect(xBackGround, yBackGround, widthBackGround, heightBackGround);
+  strokeWeight(2);
   
   if(design == true){
-    and();
-    nand();
+    design();
   }else if(power == true){
-    
+    power();
   }else if(price == true){
     
   }
@@ -167,10 +168,7 @@ void draw(){
     widthAdder = appWidth*1/25;
     heightAdder = appHeight*1/50;
   }else{
-    if(design == true){
-      edit();
-    }else{}
-    
+    edit();
     if(modeDropDown == true){
       modeDropDown();
     }else{}
@@ -219,5 +217,17 @@ void mousePressed(){
     }else{
       modeDropDown = false;
     }
+  }
+  if(modeDropDown == true && design == false && mouseX>appWidth*0 && mouseX<appWidth*0+appWidth*2/10 && mouseY>appHeight*1/20 && mouseY<appHeight*1/10+appHeight*1/20){
+    edit = false;
+    price = false;
+    power = false;
+    design = true;
+  }
+  if(modeDropDown == true && power == false && mouseX>appWidth*0 && mouseX<appWidth*0+appWidth*2/10 && mouseY>appHeight*2/20 && mouseY<appHeight*2/20+appHeight*1/20){
+    edit = false;
+    price = false;
+    design = false;
+    power = true;
   }
 }
