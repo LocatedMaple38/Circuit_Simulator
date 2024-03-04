@@ -1,0 +1,5 @@
+void design(){
+  and();
+  nand();
+  
+}
