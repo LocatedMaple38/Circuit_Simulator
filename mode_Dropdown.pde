@@ -1,7 +1,6 @@
 void modeDropDown(){
-  fill(175);
-  rect(xDisine, yDisine, widhtDisine, heightDisine);
   fill(255);
+  rect(xDisine, yDisine, widhtDisine, heightDisine);
   rect(xPrice, yPrice, widhtPrice, heightPrice);
   rect(xPower, yPower, widhtPower, heightPower);
   
