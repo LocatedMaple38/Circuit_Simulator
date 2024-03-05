@@ -203,6 +203,21 @@ void keyPressed(){
 }
 
 void mousePressed(){
+  if(modeDropDown == true && design == false && mouseX>appWidth*0 && mouseX<appWidth*0+appWidth*2/10 && mouseY>appHeight*1/20 && mouseY<appHeight*1/10+appHeight*1/20){
+    edit = false;
+    modeDropDown = false;
+    price = false;
+    power = false;
+    design = true;
+  }
+  if(modeDropDown == true && power == false && mouseX>appWidth*0 && mouseX<appWidth*0+appWidth*2/10 && mouseY>appHeight*2/20 && mouseY<appHeight*2/20+appHeight*1/20){
+    edit = false;
+    modeDropDown = false;
+    price = false;
+    design = false;
+    power = true;
+  }
+  
   if(mouseX>xAdder && mouseX<xAdder+widthAdder && mouseY>yAdder && mouseY<yAdder+heightAdder){
     if(edit == false){
       edit = true;
@@ -212,22 +227,10 @@ void mousePressed(){
     }
   }
   if(edit == true && mouseX>xModeDropDown && mouseX<xModeDropDown+widthModeDropDown && mouseY>yModeDropDown && mouseY<yModeDropDown+heightModeDropDown){
-    if(modeDropDown == false){
+    if(modeDropDown == false && edit == true){
       modeDropDown = true;
     }else{
       modeDropDown = false;
     }
-  }
-  if(modeDropDown == true && design == false && mouseX>appWidth*0 && mouseX<appWidth*0+appWidth*2/10 && mouseY>appHeight*1/20 && mouseY<appHeight*1/10+appHeight*1/20){
-    edit = false;
-    price = false;
-    power = false;
-    design = true;
-  }
-  if(modeDropDown == true && power == false && mouseX>appWidth*0 && mouseX<appWidth*0+appWidth*2/10 && mouseY>appHeight*2/20 && mouseY<appHeight*2/20+appHeight*1/20){
-    edit = false;
-    price = false;
-    design = false;
-    power = true;
   }
 }
