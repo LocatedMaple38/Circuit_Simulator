@@ -199,10 +199,13 @@ void draw(){
 }
 
 void keyPressed(){
-  
+  println(addAndGateInt);
 }
 
 void mousePressed(){
+
+  println(addAndGateInt);
+  
   if(modeDropDown == true && design == false && mouseX>appWidth*0 && mouseX<appWidth*0+appWidth*2/10 && mouseY>appHeight*1/20 && mouseY<appHeight*1/10+appHeight*1/20){
     edit = false;
     modeDropDown = false;
