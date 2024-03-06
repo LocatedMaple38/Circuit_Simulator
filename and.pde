@@ -46,7 +46,7 @@ void and(){
   rotate(radians(-90));
   
   if(keyPressed == true){
-    if(key == BACKSPACE){
+    if(key == BACKSPACE && addAndGateInt != 1){
     addAndGateInt = addAndGateInt - 1;
     keyPressed = false;
     }
