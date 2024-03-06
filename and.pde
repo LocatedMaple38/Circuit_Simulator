@@ -58,10 +58,5 @@ void and(){
     mousePressed = false;
     }
     println(addAndGateInt);
-  }
-  while(a > addAndGateInt || a == addAndGateInt){
-    addAndGateInt = 1;
-  }
-  
-    
+  } 
 }
