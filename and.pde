@@ -50,13 +50,11 @@ void and(){
     addAndGateInt = addAndGateInt - 1;
     keyPressed = false;
     }
-    println(addAndGateInt);
   }
   if(mousePressed == true){
     if(mouseX>xAndAdd && mouseX<xAndAdd+widthAndAdd && mouseY>yAndAdd && mouseY<yAndAdd+heightAndAdd){
     addAndGateInt = addAndGateInt + 1 ;
     mousePressed = false;
     }
-    println(addAndGateInt);
   } 
 }
