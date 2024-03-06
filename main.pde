@@ -131,7 +131,7 @@ void setup(){
   appWidth = width;
   appHeight = height;
   
-  andMoveX[0] = 100;
+  andMoveX[0] = 0;
   andMoveY[0] = 0;
   
   
