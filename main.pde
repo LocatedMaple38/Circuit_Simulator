@@ -1,4 +1,7 @@
 int addAndGateInt = 1;
+int gridSnap = 10;
+int test1 = 1;
+
 float[] xVCCAnd = new float[addAndGateInt], yVCCAnd = new float[addAndGateInt], widthVCCAnd = new float[addAndGateInt], heightVCCAnd = new float[1];
 float[] xGNDAnd = new float[addAndGateInt], yGNDAnd = new float[addAndGateInt], widthGNDAnd = new float[addAndGateInt], heightGNDAnd = new float[1];
 float[] xAnd = new float[addAndGateInt], yAnd = new float[addAndGateInt], widthAnd = new float[addAndGateInt], heightAnd = new float[1];
@@ -121,6 +124,7 @@ boolean power = false;
 boolean price = false;
 
 boolean[] addAndGateBool = new boolean[addAndGateInt];
+boolean[] slectAnd = new boolean[addAndGateInt];
 
 
 void setup(){
@@ -130,9 +134,6 @@ void setup(){
   
   appWidth = width;
   appHeight = height;
-  
-  andMoveX[0] = 0;
-  andMoveY[0] = 0;
   
   
   xBackGround = appWidth*0;
@@ -148,7 +149,10 @@ void setup(){
 }
 
 void draw(){
-    
+  
+  andMoveX[0] = 0;
+  andMoveY[0] = 0;
+  
   fill(255);
   noStroke();
   rect(xBackGround, yBackGround, widthBackGround, heightBackGround);
