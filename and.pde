@@ -45,16 +45,31 @@ void and(){
   text("74HC08", (andMoveY[0]+0), andMoveX[0]-andMoveX[0]*2+-30);
   rotate(radians(-90));
   
-  if(keyPressed == true){
-    if(key == BACKSPACE && addAndGateInt != 1){
-    addAndGateInt = addAndGateInt - 1;
-    keyPressed = false;
+  if(keyPressed == true || mousePressed == true){   //looks for if the mouse is pressed or the key board
+    if(key == BACKSPACE && addAndGateInt != 1){     //looks for the BACKSPACE with addAndGateInt gratter the 1 
+    addAndGateInt = addAndGateInt - 1;              //decrments addAndGateInt by 1
+    keyPressed = false;                             //resets keyPressed to false 
     }
-  }
-  if(mousePressed == true){
-    if(mouseX>xAndAdd && mouseX<xAndAdd+widthAndAdd && mouseY>yAndAdd && mouseY<yAndAdd+heightAndAdd){
+    
+    if(mouseX>xAndMain[0] && mouseX<xAndMain[0]+widthAndMain[0] && mouseY>yAndMain[0] && mouseY<yAndMain[0]+heightAndMain[0]){
+      slectAnd[0] = true;
+      mousePressed = false;
+    }
+    
+    if(mouseX>xAndAdd && mouseX<xAndAdd+widthAndAdd && mouseY>yAndAdd && mouseY<yAndAdd+heightAndAdd){ //looks for if the mouse is pressed id the and button 
     addAndGateInt = addAndGateInt + 1 ;
     mousePressed = false;
     }
   } 
+  
+  if(slectAnd[0] == true && key == LEFT || key == RIGHT){
+    if(key == LEFT){
+      andMoveX[0] = andMoveX[0] - gridSnap;
+      slectAnd[0] = false;
+    }
+    if(key == RIGHT){
+      andMoveX[0] = andMoveX[0] + gridSnap;
+      slectAnd[0] = false;
+    }
+  }
 }
