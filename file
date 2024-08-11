@@ -49,7 +49,7 @@ void fileSave(){
 }
   
 void fileAutoSave(){
-    
+
 }
   
 void fileLoad(){
@@ -62,6 +62,6 @@ void fileSelected(File selection){
     }else{
         println("User selected " + selection.getAbsolutePath());
     }
-    path = relativePath(selection.getAbsolutePath());
+    path = selection.getAbsolutePath();
     println(path);
 }

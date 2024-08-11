@@ -38,6 +38,11 @@ void addSetup(){
     yAddINVERTER = 70;
     widhtAddINVERTER = 20;
     heightAddINVERTER = 10;
+
+    xAddWire = 0;
+    yAddWire = 80;
+    widthAddWire = 20;
+    heightAddWire = 10;
 }
 
 void addDraw(){
@@ -58,6 +63,7 @@ void addDropDown(){
     rect(xAddXOR, yAddXOR, widthAddXOR, heightAddXOR);
     rect(xAddXNOR, yAddXNOR, widthAddXNOR, heightAddXNOR);
     rect(xAddINVERTER, yAddINVERTER, widhtAddINVERTER, heightAddINVERTER);
+    rect(xAddWire, yAddWire, widthAddWire, heightAddWire);
     fill(0);
     text("AND", xAddAND, yAddAND, widthAddAND, heightADDAND);
     text("NAND", xAddNAND, yAddNAND, widthAddNAND, heightADDNAND);
@@ -66,5 +72,6 @@ void addDropDown(){
     text("XOR", xAddXOR, yAddXOR, widthAddXOR, heightAddXOR);
     text("XNOR", xAddXNOR, yAddXNOR, widthAddXNOR, heightAddXNOR);
     text("INVERTER", xAddINVERTER, yAddINVERTER, widhtAddINVERTER, heightAddINVERTER);
+    text("WIRE", xAddWire, yAddWire, widthAddWire, heightAddWire);
     noFill();
 }

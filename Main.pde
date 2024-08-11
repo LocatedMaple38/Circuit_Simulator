@@ -42,7 +42,7 @@ float xSaveFileAs, ySaveFileAs, widthSaveFileAs, heightSaveFileAs;
 boolean simBool = false;
 float xSIM, ySIM, widthSIM, heightSIM;
 
-
+String path;
 
 void settup(){
   size(500, 500);

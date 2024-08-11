@@ -77,7 +77,6 @@ void andSetup(){
             heightANDY4[i] = 10;
 
             if(i == 74hc08){
-                i = 0
                 74hc08ADD = false;
                 continue;
             }else{
@@ -108,5 +107,11 @@ void andDraw(){
         rect(xANDB4[i], yANDB4[i], widthANDB4[i], heightANDB4[i]);
         rect(xANDY4[i], yANDY4[i], widthANDY4[i], heightANDY4[i]);
         noFill();
+        if(i == 74hc08){
+            i = 0;
+            continue;
+        }else{
+            i++;
+        }
     }
 }
