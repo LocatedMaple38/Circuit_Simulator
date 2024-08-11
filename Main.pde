@@ -21,22 +21,44 @@ boolean addBool = false;
 float xAdd, yAdd, widthAdd, heightADD;
 float xAddAND, yAddAND, widthAddAND, heightAddAND;
 float xAddNAND, yAddNAND, widthAddNAND, heightADDNAND;
+float xAddOR, yAddOR, widthAddOR, heightAddRO;
+float xAddNOR, yAddNOR widthAddNOR, heightAddNOR;
+float xAddXOR, yAddXOR, widthAddXOR, heightAddXOR;
+float xAddXNOR, yAddXNOR, widthAddXNOR, heightAddXNOR;
+float xAddINVERTER, yAddINVERTER, widhtAddINVERTER, heightAddINVERTER;
 
 boolean fileBool = false;
 float xFile, yFile, widthFile, heightFile;
+float xSaveFile, ySaveFile, widthSaveFile, heightSaveFile;
+float xLoadFile, yLoadFile, widthLoadFile, heightLoadFile;
+float xSaveFileAs, ySaveFileAs, widthSaveFileAs, heightSaveFileAs;
 
 boolean sim = false;
+float xSIM, ySIM, widthSIM, heightSIM;
 
 void settup(){
   size(500, 500);
+
+  surface.setResizable(true);
+  surface.setLocation(0, 0);
+  surface.setTitle("Cercit Design");
+
   addSetup();
   fileSetup();
 }
 
 void draw(){
-  fill(#ffadff);
-  rect(0, 0, divicewidth, diviceheight);
 
+  textAlign(LEFT, CENTER);
+  textSize(15);
+
+  fill(#ffadff);
+  rect(0, 0, divicewidth*2, diviceheight*2);
+  if(addBool == true){
+    addDropDown();
+  }
+
+  fileDraw();
   andSetup();
   NANDSetup();
   ORSetup();
