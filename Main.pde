@@ -15,6 +15,11 @@ float[] xANDY3 = new float[74hc08], yANDY3 = new float[74hc08], widthANDY3 = new
 float[] xANDA4 = new float[74hc08], yANDA4 = new float[74hc08], widthANDA4 = new float[74hc08], heightANDA4 = new float[74hc08];
 float[] xANDB4 = new float[74hc08], yANDB4 = new float[74hc08], widhtANDB4 = new float[74hc08], heightANDB4 = new float[74hc08];
 float[] xANDY4 = new float[74hc08], yANDY4 = new float[74hc08], widthANDY4 = new float[74hc08], heightANDY4 = new float[74hc08];
+float[] xANDPos = new float[74hc08], yANDPos = new float[74hc08];
+
+boolean wireBool = false;
+int wireInt = 1;
+float[] xWire = new float[wireInt], yWire = new float[wireInt], widthWire = new float[wireInt], heightWire = new float[wireInt];
 
 
 boolean addBool = false;
@@ -26,6 +31,7 @@ float xAddNOR, yAddNOR widthAddNOR, heightAddNOR;
 float xAddXOR, yAddXOR, widthAddXOR, heightAddXOR;
 float xAddXNOR, yAddXNOR, widthAddXNOR, heightAddXNOR;
 float xAddINVERTER, yAddINVERTER, widhtAddINVERTER, heightAddINVERTER;
+float xAddWire, yAddWire, widthAddWire, heightAddWire;
 
 boolean fileBool = false;
 float xFile, yFile, widthFile, heightFile;
@@ -35,6 +41,8 @@ float xSaveFileAs, ySaveFileAs, widthSaveFileAs, heightSaveFileAs;
 
 boolean simBool = false;
 float xSIM, ySIM, widthSIM, heightSIM;
+
+
 
 void settup(){
   size(500, 500);
@@ -107,6 +115,14 @@ void mousePressed(){
   }
 
   if(simBool == true && mouseX>xSIM && mouseX<xSIM+widthSIM && mouseY>ySIM && mouseY<ySIM+heightSIM){
-    sumulate();
+    simBool = false;
+  }else{
+    simBool = true;
+    fileBool = false;
+    addBool = false;
+  }
+
+  if(addBool == true && mouseX>xAddAND && mouseX<xAddAND+widthAddAND && mouseY>yAddAND && mouseY<yAddAND+heightAddAND){
+    74hc08ADD = true;
   }
 }
