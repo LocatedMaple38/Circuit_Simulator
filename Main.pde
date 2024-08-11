@@ -52,3 +52,11 @@ void draw(){
   XORDraw();
   XNORDraw();
 }
+
+void keyPressed(){
+
+}
+
+void mousePressed(){
+  
+}

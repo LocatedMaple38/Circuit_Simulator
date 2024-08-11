@@ -79,6 +79,7 @@ void andSetup(){
             if(i == 74hc08){
                 i = 0
                 74hc08ADD = false;
+                continue;
             }else{
                 i++;
             }
@@ -87,5 +88,25 @@ void andSetup(){
 }
 
 void andDraw(){
-
+    for(int i = 0; i < 74hc08){
+        noStroke();
+        fill(0);
+        rect(xAND[i], yAND[i], widhtAND[i], heightAND[i]);
+        fill(#aaaaaa);
+        rect(xANDVDD[i], yANDVDD[i], widthANDVDD[i], heightANDVDD[i]);
+        rect(xANDVSS[i], yANDVSS[i], widhtANDVSS[i], heightANDVSS[i]);
+        rect(xANDA1[i], yANDA1[i], widthANDA1[i], heightANDA1[i]);
+        rect(xANDB1[i], yANDB1[i], widthANDB1[i], heightANDB1[i]);
+        rect(xANDY1[i], yANDY1[i], widthANDY1[i], heightANDY1[i]);
+        rect(xANDA2[i], yANDA2[i], widthANDA2[i], heightANDA2[i]);
+        rect(xANDB2[i], yANDB2[i], widthANDB2[i], heightANDB2[i]);
+        rect(xANDY2[i], yANDY2[i], widthANDY2[i], heightANDY2[i]);
+        rect(xANDA3[i], yANDA3[i], widthANDA3[i], heightANDA3[i]);
+        rect(xANDB3[i], yANDB3[i], widthANDB3[i], heightANDB3[i]);
+        rect(xANDY3[i], yANDY3[i], widthANDY3[i], heightANDY3[i]);
+        rect(xANDA4[i], yANDA4[i], widthANDA4[i], heightANDA4[i]);
+        rect(xANDB4[i], yANDB4[i], widthANDB4[i], heightANDB4[i]);
+        rect(xANDY4[i], yANDY4[i], widthANDY4[i], heightANDY4[i]);
+        noFill();
+    }
 }
