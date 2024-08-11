@@ -1,4 +1,4 @@
-void andSetup()
+void andSetup(){
     if(74hc08ADD == true){
         for(int i = 0; i < 74hc08;){
             xAND[i] = 100;
@@ -84,6 +84,7 @@ void andSetup()
             }
         }
     }
+}
 
 void andDraw(){
 

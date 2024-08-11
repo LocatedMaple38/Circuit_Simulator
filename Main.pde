@@ -1,3 +1,4 @@
+boolean 74hc08ADD = true;
 int 74hc08 = 1;
 float[] xAND = new float[74hc08], yAND = new float[74hc08], widhtAND = new float[74hc08], heightAND = new float[74hc08];
 float[] xANDVSS = new float[74hc08], yANDVSS = new float[74hc08], widhtANDVSS = new float[74hc08], heightANDVSS = new float[74hc08];
