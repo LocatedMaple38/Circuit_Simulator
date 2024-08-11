@@ -11,6 +11,7 @@ float xAddNAND, yAddNAND, widthAddNAND, heightADDNAND;
 
 float xFile, yFile, widthFile, heightFile;
 
+String add;
 
 void settup(){
   size(500, 500);
@@ -19,6 +20,7 @@ void settup(){
 }
 
 void draw(){
+  addDraw();
   andSetup();
   NANDSetup();
   ORSetup();
