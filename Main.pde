@@ -33,7 +33,7 @@ float xSaveFile, ySaveFile, widthSaveFile, heightSaveFile;
 float xLoadFile, yLoadFile, widthLoadFile, heightLoadFile;
 float xSaveFileAs, ySaveFileAs, widthSaveFileAs, heightSaveFileAs;
 
-boolean sim = false;
+boolean simBool = false;
 float xSIM, ySIM, widthSIM, heightSIM;
 
 void settup(){
@@ -80,5 +80,33 @@ void keyPressed(){
 }
 
 void mousePressed(){
-  
+  if(fileBool == true && mouseX>xFile && mouseX<xFile+widthFile && mouseY>yFile && mouseY<yFile+heightFile){
+    fileBool = false;
+  }else{
+    fileBool = true;
+    addBool = false;
+  }
+
+  if(fileBool == true && mouseX>xLoadFile && mouseX<xLoadFile+widthLoadFile && mouseY>yLoadFile && mouseY<yLoadFile+heightLoadFile){
+    fileLoad();
+  }
+
+  if(fileBool == true && mouseX>xSaveFile && mouseX<xSaveFile+widthSaveFile && mouseY>ySaveFile && mouseY<ySaveFile+heightSaveFile){
+    fileSave();
+  }
+
+  if(fileBool == true && mouseX>xSaveFileAs && mouseX<xSaveFileAs+widthSaveFileAs && mouseY>ySaveFileAs && mouseY<ySaveFileAs+heightSaveFileAs){
+
+  }
+
+  if(simBool == false && addBool == true && mouseX>xAdd && mouseX<xAdd+widthAdd && mouseY>yAdd && mouseY<yAdd+heightADD){
+    addBool = false;
+  }else{
+    addBool = true;
+    fileBool = false;
+  }
+
+  if(simBool == true && mouseX>xSIM && mouseX<xSIM+widthSIM && mouseY>ySIM && mouseY<ySIM+heightSIM){
+    sumulate();
+  }
 }

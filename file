@@ -43,3 +43,25 @@ void fileDropDown(){
     text("Save As", xSaveFileAs, ySaveFileAs, widthSaveFileAs, heightSaveFileAs);
     noFill();
 }
+
+void fileSave(){
+    selectOutput("Select a file to write to:", "fileSelected");
+}
+  
+void fileAutoSave(){
+    
+}
+  
+void fileLoad(){
+    selectFolder("Select a folder to process:", "folderSelected");
+}
+
+void fileSelected(File selection){
+    if(selection == null){
+        println("Window was closed or the user hit cancel.");
+    }else{
+        println("User selected " + selection.getAbsolutePath());
+    }
+    path = relativePath(selection.getAbsolutePath());
+    println(path);
+}
