@@ -16,22 +16,42 @@ float[] xANDA4 = new float[74hc08], yANDA4 = new float[74hc08], widthANDA4 = new
 float[] xANDB4 = new float[74hc08], yANDB4 = new float[74hc08], widhtANDB4 = new float[74hc08], heightANDB4 = new float[74hc08];
 float[] xANDY4 = new float[74hc08], yANDY4 = new float[74hc08], widthANDY4 = new float[74hc08], heightANDY4 = new float[74hc08];
 float[] xANDPos = new float[74hc08], yANDPos = new float[74hc08];
+int[] boolANDA1 = new int[74hc08], boolANDB1 = new int[74hc08], boolANDY1 = new int[74hc08];
+int[] boolANDA2 = new int[74hc08], boolANDB2 = new int[74hc08], boolANDY2 = new int[74hc08];
+int[] boolANDA3 = new int[74hc08], boolANDB3 = new int[74hc08], boolANDY3 = new int[74hc08];
+int[] boolANDA4 = new int[74hc08], boolANDB4 = new int[74hc08], boolANDY4 = new int[74hc08];
 
 boolean wireBool = false;
 int wireInt = 1;
 float[] xWire = new float[wireInt], yWire = new float[wireInt], widthWire = new float[wireInt], heightWire = new float[wireInt];
 
 
-boolean addBool = false;
-float xAdd, yAdd, widthAdd, heightADD;
-float xAddAND, yAddAND, widthAddAND, heightAddAND;
-float xAddNAND, yAddNAND, widthAddNAND, heightADDNAND;
-float xAddOR, yAddOR, widthAddOR, heightAddRO;
-float xAddNOR, yAddNOR widthAddNOR, heightAddNOR;
-float xAddXOR, yAddXOR, widthAddXOR, heightAddXOR;
-float xAddXNOR, yAddXNOR, widthAddXNOR, heightAddXNOR;
-float xAddINVERTER, yAddINVERTER, widhtAddINVERTER, heightAddINVERTER;
-float xAddWire, yAddWire, widthAddWire, heightAddWire;
+boolean itemAddBool = false;
+float xItemAdd, yItemAdd, widthItemAdd, heightItemAdd;
+float xItemAddAND, yItemAddAND, widthItemAddAND, heightItemAddAND;
+float xItemAddNAND, yItemAddNAND, widthItemAddNAND, heightADDNAND;
+float xItemAddOR, yItemAddOR, widthItemAddOR, heightItemAddRO;
+float xItemAddNOR, yItemAddNOR, widthItemAddNOR, heightItemAddNOR;
+float xItemAddXOR, yItemAddXOR, widthItemAddXOR, heightItemAddXOR;
+float xItemAddXNOR, yItemAddXNOR, widthItemAddXNOR, heightItemAddXNOR;
+float xItemAddINVERTER, yItemAddINVERTER, widhtItemAddINVERTER, heightItemAddINVERTER;
+float xItemAddWire, yItemAddWire, widthItemAddWire, heightItemAddWire;
+
+boolean toolsAddBool = false;
+float xToolAddMutimeter, yToolAddMutimeter, widthToolAddMutimeter, heightToolAddMutimeter;
+float xToolAddOscilloscope, yToolAddOscilloscope, widthToolAddOscilloscope, heightToolAddOscilloscope;
+float xToolAddPowreSuply, yToolAddPowreSuply, widthToolAddPowreSuply, heightToolAddPowreSuply;
+float xToolAddFunctionGenerator, yToolAddFunctionGenerator, widthToolAddFunctionGenerator, heightToolAddFunctionGenerator;
+
+int mutimeterInt = 1;
+boolean mutimeterAdd = false;
+int[] mutimeterModeInt = new int[mutimeterInt]; 
+float[] xMutimeter = new float[mutimeterInt], yMutimeter = new float[mutimeterInt], widthMutimeter = new float[mutimeterInt], heightMutimeter = new float[mutimeterInt];
+float[] xMutimeterPoative = new float[mutimeterInt], yMutimeterPoative = new float[mutimeterInt], widthMutimeterPoative = new float[mutimeterInt], heightMutimeterPoative = new float[mutimeterInt];
+float[] xMutimeterNagative = new float[mutimeterInt], yMutimeterNagative = new float[mutimeterInt], widthMutimeterNagative = new float[mutimeterInt], heightMutimeterNagative = new float[mutimeterInt];
+float[] xMutimeterMode1 = new float[mutimeterInt], yMutimeterMode1 = new float[mutimeterInt], widthMutimeterMode1 = new float[mutimeterInt], heightMutimeterMode1 = new float[mutimeterInt];
+float[] xMutimeterMode2 = new float[mutimeterInt], yMutimeterMode2 = new float[mutimeterInt], widthMutimeterMode2 = new float[mutimeterInt], heightMutimeterMode2 = new float[mutimeterInt];
+float[] xMutimeterMode3 = new float[mutimeterInt], yMutimeterMode3 = new float[mutimeterInt], widthMutimeterMode3 = new float[mutimeterInt], heightMutimeterMode3 = new float[mutimeterInt];
 
 boolean fileBool = false;
 float xFile, yFile, widthFile, heightFile;
@@ -51,6 +71,8 @@ void settup(){
   surface.setLocation(0, 0);
   surface.setTitle("Cercit Design");
 
+
+
   addSetup();
   fileSetup();
 }
@@ -66,7 +88,6 @@ void draw(){
     addDropDown();
   }
 
-  fileDraw();
   andSetup();
   NANDSetup();
   ORSetup();
@@ -74,7 +95,12 @@ void draw(){
   XORSetup();
   XNORSetup();
 
-  addDraw();
+  if(simBool == false){
+    fileDraw();
+    addDraw();
+  }else{
+    simulate();
+  }
   andDraw();
   NANDDraw();
   ORDraw();
@@ -100,11 +126,11 @@ void mousePressed(){
   }
 
   if(fileBool == true && mouseX>xSaveFile && mouseX<xSaveFile+widthSaveFile && mouseY>ySaveFile && mouseY<ySaveFile+heightSaveFile){
-    fileSave();
+    
   }
 
   if(fileBool == true && mouseX>xSaveFileAs && mouseX<xSaveFileAs+widthSaveFileAs && mouseY>ySaveFileAs && mouseY<ySaveFileAs+heightSaveFileAs){
-
+    fileSave();
   }
 
   if(simBool == false && addBool == true && mouseX>xAdd && mouseX<xAdd+widthAdd && mouseY>yAdd && mouseY<yAdd+heightADD){

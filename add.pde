@@ -1,77 +1,77 @@
 void addSetup(){
-    xAdd = 0;
-    yAdd = 0;
-    widthAdd = 20;
+    xItemAdd = 0;
+    yItemAdd = 0;
+    widthItemAdd = 20;
     heightADD = 10;
 
-    xAddAND = 0;
-    yAddAND = 10;
-    widthAddAND = 20;
-    heightAddAND = 10;
+    xItemAddAND = 0;
+    yItemAddAND = 10;
+    widthItemAddAND = 20;
+    heightItemAddAND = 10;
     
-    xAddNAND = 0;
-    yAddNAND = 20;
-    widthAddNAND = 20;
+    xItemAddNAND = 0;
+    yItemAddNAND = 20;
+    widthItemAddNAND = 20;
     heightADDNAND = 10;
 
-    xAddOR = 0;
-    yAddOR = 30;
-    widthAddOR = 20;
-    heightAddRO = 10;
+    xItemAddOR = 0;
+    yItemAddOR = 30;
+    widthItemAddOR = 20;
+    heightItemAddRO = 10;
     
-    xAddNOR = 0;
-    yAddNOR = 40;
-    widthAddNOR = 20;
-    heightAddNOR = 10;
+    xItemAddNOR = 0;
+    yItemAddNOR = 40;
+    widthItemAddNOR = 20;
+    heightItemAddNOR = 10;
 
-    xAddXOR = 0;
-    yAddXOR = 50;
-    widthAddXOR = 20;
-    heightAddXOR = 10;
+    xItemAddXOR = 0;
+    yItemAddXOR = 50;
+    widthItemAddXOR = 20;
+    heightItemAddXOR = 10;
     
-    xAddXNOR = 0;
-    yAddXNOR = 60;
-    widthAddXNOR = 20;
-    heightAddXNOR = 10;
+    xItemAddXNOR = 0;
+    yItemAddXNOR = 60;
+    widthItemAddXNOR = 20;
+    heightItemAddXNOR = 10;
     
-    xAddINVERTER = 0;
-    yAddINVERTER = 70;
-    widhtAddINVERTER = 20;
-    heightAddINVERTER = 10;
+    xItemAddINVERTER = 0;
+    yItemAddINVERTER = 70;
+    widhtItemAddINVERTER = 20;
+    heightItemAddINVERTER = 10;
 
-    xAddWire = 0;
-    yAddWire = 80;
-    widthAddWire = 20;
-    heightAddWire = 10;
+    xItemAddWire = 0;
+    yItemAddWire = 80;
+    widthItemAddWire = 20;
+    heightItemAddWire = 10;
 }
 
 void addDraw(){
     noStroke();
     fill(225);
-    rect(xAdd, yAdd, widthAdd, heightADD);
+    rect(xItemAdd, yItemAdd, widthItemAdd, heightADD);
     fill(0);
-    text("ADD", xAdd, yAdd, widthAdd, heightADD);
+    text("ADD", xItemAdd, yItemAdd, widthItemAdd, heightADD);
     noFill()
 }
 
 void addDropDown(){
     fill(225);
-    rect(xAddAND, yAddAND, widthAddAND, heightAddAND);
-    rect(xAddNAND, yAddNAND, widthAddNAND, heightADDNAND);
-    rect(xAddOR, yAddOR, widthAddOR, heightAddRO);
-    rect(xAddNOR, yAddNOR widthAddNOR, heightAddNOR);
-    rect(xAddXOR, yAddXOR, widthAddXOR, heightAddXOR);
-    rect(xAddXNOR, yAddXNOR, widthAddXNOR, heightAddXNOR);
-    rect(xAddINVERTER, yAddINVERTER, widhtAddINVERTER, heightAddINVERTER);
-    rect(xAddWire, yAddWire, widthAddWire, heightAddWire);
+    rect(xItemAddAND, yItemAddAND, widthItemAddAND, heightItemAddAND);
+    rect(xItemAddNAND, yItemAddNAND, widthItemAddNAND, heightItemAddNAND);
+    rect(xItemAddOR, yItemAddOR, widthItemAddOR, heightItemAddRO);
+    rect(xItemAddNOR, yItemAddNOR widthItemAddNOR, heightItemAddNOR);
+    rect(xItemAddXOR, yItemAddXOR, widthItemAddXOR, heightItemAddXOR);
+    rect(xItemAddXNOR, yItemAddXNOR, widthItemAddXNOR, heightItemAddXNOR);
+    rect(xItemAddINVERTER, yItemAddINVERTER, widhtItemAddINVERTER, heightItemAddINVERTER);
+    rect(xItemAddWire, yItemAddWire, widthItemAddWire, heightItemAddWire);
     fill(0);
-    text("AND", xAddAND, yAddAND, widthAddAND, heightADDAND);
-    text("NAND", xAddNAND, yAddNAND, widthAddNAND, heightADDNAND);
-    text("OR", xAddOR, yAddOR, widthAddOR, heightAddRO);
-    text("NOR", xAddNOR, yAddNOR widthAddNOR, heightAddNOR);
-    text("XOR", xAddXOR, yAddXOR, widthAddXOR, heightAddXOR);
-    text("XNOR", xAddXNOR, yAddXNOR, widthAddXNOR, heightAddXNOR);
-    text("INVERTER", xAddINVERTER, yAddINVERTER, widhtAddINVERTER, heightAddINVERTER);
-    text("WIRE", xAddWire, yAddWire, widthAddWire, heightAddWire);
+    text("AND", xItemAddAND, yItemAddAND, widthItemAddAND, heightADDAND);
+    text("NAND", xItemAddNAND, yItemAddNAND, widthItemAddNAND, heightADDNAND);
+    text("OR", xItemAddOR, yItemAddOR, widthItemAddOR, heightItemAddRO);
+    text("NOR", xItemAddNOR, yItemAddNOR widthItemAddNOR, heightItemAddNOR);
+    text("XOR", xItemAddXOR, yItemAddXOR, widthItemAddXOR, heightItemAddXOR);
+    text("XNOR", xItemAddXNOR, yItemAddXNOR, widthItemAddXNOR, heightItemAddXNOR);
+    text("INVERTER", xItemAddINVERTER, yItemAddINVERTER, widhtItemAddINVERTER, heightItemAddINVERTER);
+    text("WIRE", xItemAddWire, yItemAddWire, widthItemAddWire, heightItemAddWire);
     noFill();
 }
