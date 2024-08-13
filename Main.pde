@@ -81,7 +81,7 @@ void draw(){
 
   textAlign(LEFT, CENTER);
   textSize(15);
-
+  
   fill(#ffadff);
   rect(0, 0, divicewidth*2, diviceheight*2);
   if(addBool == true){
