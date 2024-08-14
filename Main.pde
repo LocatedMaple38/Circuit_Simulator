@@ -24,7 +24,7 @@ int[] boolANDA4 = new int[74hc08], boolANDB4 = new int[74hc08], boolANDY4 = new 
 boolean wireBool = false;
 int wireInt = 1;
 float[] xWire = new float[wireInt], yWire = new float[wireInt], widthWire = new float[wireInt], heightWire = new float[wireInt];
-
+float[] volt = new float[wireInt];
 
 boolean itemAddBool = false;
 float xItemAdd, yItemAdd, widthItemAdd, heightItemAdd;
@@ -36,6 +36,9 @@ float xItemAddXOR, yItemAddXOR, widthItemAddXOR, heightItemAddXOR;
 float xItemAddXNOR, yItemAddXNOR, widthItemAddXNOR, heightItemAddXNOR;
 float xItemAddINVERTER, yItemAddINVERTER, widhtItemAddINVERTER, heightItemAddINVERTER;
 float xItemAddWire, yItemAddWire, widthItemAddWire, heightItemAddWire;
+float xItemAddLed, yItemAddLed, widthItemAddLed, heightItemAddLed;
+float xItemAddGround, yItemAddGround, widthItemAddGround, heightItemAddGround;
+
 
 boolean toolsAddBool = false;
 float xToolAddMutimeter, yToolAddMutimeter, widthToolAddMutimeter, heightToolAddMutimeter;
@@ -47,11 +50,15 @@ int mutimeterInt = 1;
 boolean mutimeterAdd = false;
 int[] mutimeterModeInt = new int[mutimeterInt]; 
 float[] xMutimeter = new float[mutimeterInt], yMutimeter = new float[mutimeterInt], widthMutimeter = new float[mutimeterInt], heightMutimeter = new float[mutimeterInt];
-float[] xMutimeterPoative = new float[mutimeterInt], yMutimeterPoative = new float[mutimeterInt], widthMutimeterPoative = new float[mutimeterInt], heightMutimeterPoative = new float[mutimeterInt];
+float[] xMutimeterPosative = new float[mutimeterInt], yMutimeterPosative = new float[mutimeterInt], widthMutimeterPosative = new float[mutimeterInt], heightMutimeterPosative = new float[mutimeterInt];
 float[] xMutimeterNagative = new float[mutimeterInt], yMutimeterNagative = new float[mutimeterInt], widthMutimeterNagative = new float[mutimeterInt], heightMutimeterNagative = new float[mutimeterInt];
 float[] xMutimeterMode1 = new float[mutimeterInt], yMutimeterMode1 = new float[mutimeterInt], widthMutimeterMode1 = new float[mutimeterInt], heightMutimeterMode1 = new float[mutimeterInt];
 float[] xMutimeterMode2 = new float[mutimeterInt], yMutimeterMode2 = new float[mutimeterInt], widthMutimeterMode2 = new float[mutimeterInt], heightMutimeterMode2 = new float[mutimeterInt];
 float[] xMutimeterMode3 = new float[mutimeterInt], yMutimeterMode3 = new float[mutimeterInt], widthMutimeterMode3 = new float[mutimeterInt], heightMutimeterMode3 = new float[mutimeterInt];
+float[] xMutimeterLCD = new float[mutimeterInt], yMutimeterLCD = new float[mutimeterInt], widthMutimeterLCD = new float[mutimeterInt], heightMutimeterLCD = new float[mutimeterInt];
+float[] xMutimeterPosativeProb = new float[mutimeterInt], yMutimeterPosativeProb = new float[mutimeterInt], widthMutimeterPosativeProb = new float[mutimeterInt], heightMutimeterPosativeProb = new float[mutimeterInt];
+float[] xPosativeProbRead = new float[mutimeterInt], yPosativeProbRead = new float[mutimeterInt], widthPosativeProbRead = new float[mutimeterInt], heightPosativeProbRead = new float[mutimeterInt];
+float[] xNagativeProbRead = new float[mutimeterInt], yNagativeProbRead = new float[mutimeterInt], ;
 
 boolean fileBool = false;
 float xFile, yFile, widthFile, heightFile;
@@ -81,7 +88,7 @@ void draw(){
 
   textAlign(LEFT, CENTER);
   textSize(15);
-  
+
   fill(#ffadff);
   rect(0, 0, divicewidth*2, diviceheight*2);
   if(addBool == true){
@@ -94,6 +101,7 @@ void draw(){
   NORSetup();
   XORSetup();
   XNORSetup();
+  LEDSetup();
 
   if(simBool == false){
     fileDraw();
@@ -107,6 +115,7 @@ void draw(){
   NORDraw();
   XORDraw();
   XNORDraw();
+  LEDDraw();
 }
 
 void keyPressed(){
