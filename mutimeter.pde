@@ -38,9 +38,13 @@ void mutimeterSetup(){
 
             xPosativeProbRead[i] = 1;
             yPosativeProbRead[i] = 1;
-            
+            widthMutimeterPoativeProb[i] = 5;
+            heightMutimeterPoativeProb[i] = 20;
+
             xNagativeProbRead[i] = 2;
             yNagativeProbRead[i] = 2
+            widthMutimeterNagativeProb = 5;
+            heightMutimeterNagativeProb = 20;
         }
     }
 }
@@ -51,8 +55,10 @@ void mutimeterDraw(){
         rect(xMutimeter, yMutimeter, widthMutimeter, heightMutimeter);
         fill(#ff0000);
         rect(xMutimeterPoative, yMutimeterPoative, widthMutimeterPoative, heightMutimeterPoative);
+        rect(xPosativeProbRead, yPosativeProbRead, widthMutimeterPoative, heightMutimeterPoativeProb);
         fill(0);
         rect(xMutimeterNagative, yMutimeterNagative, widthMutimeterNagative, heightMutimeterNagative);
+        rect()
         fill(ffadff);
         rect(xMutimeterLCD, yMutimeterLCD, widthMutimeterLCD, heightMutimeterLCD);
         fill(#aaaaaa)

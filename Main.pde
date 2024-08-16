@@ -58,7 +58,7 @@ float[] xMutimeterMode3 = new float[mutimeterInt], yMutimeterMode3 = new float[m
 float[] xMutimeterLCD = new float[mutimeterInt], yMutimeterLCD = new float[mutimeterInt], widthMutimeterLCD = new float[mutimeterInt], heightMutimeterLCD = new float[mutimeterInt];
 float[] xMutimeterPosativeProb = new float[mutimeterInt], yMutimeterPosativeProb = new float[mutimeterInt], widthMutimeterPosativeProb = new float[mutimeterInt], heightMutimeterPosativeProb = new float[mutimeterInt];
 float[] xPosativeProbRead = new float[mutimeterInt], yPosativeProbRead = new float[mutimeterInt], widthPosativeProbRead = new float[mutimeterInt], heightPosativeProbRead = new float[mutimeterInt];
-float[] xNagativeProbRead = new float[mutimeterInt], yNagativeProbRead = new float[mutimeterInt], ;
+float[] xNagativeProbRead = new float[mutimeterInt], yNagativeProbRead = new float[mutimeterInt], widthMutimeterNagativeProb = new float[mutimeterInt], heightMutimeterNagativeProb = new float[mutimeterInt];
 
 boolean fileBool = false;
 float xFile, yFile, widthFile, heightFile;
