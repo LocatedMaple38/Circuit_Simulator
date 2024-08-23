@@ -36,13 +36,18 @@ void mutimeterSetup(){
             widthMutimeterMode3[i] = 10;
             heightMutimeterMode3[i] = 5;
 
-            xPosativeProbRead[i] = 1;
-            yPosativeProbRead[i] = 1;
+            xMutimeterMode3[i] = xMutimeter[i]+5;
+            yMutimeterMode3[i] = yMutimeter[i]+15;
+            widthMutimeterMode3[i] = 10;
+            heightMutimeterMode3[i] = 5;
+
+            xPosativeProbRead[i] = 100;
+            yPosativeProbRead[i] = 50;
             widthMutimeterPoativeProb[i] = 5;
             heightMutimeterPoativeProb[i] = 20;
 
-            xNagativeProbRead[i] = 2;
-            yNagativeProbRead[i] = 2
+            xNagativeProbRead[i] = 110;
+            yNagativeProbRead[i] = 50;
             widthMutimeterNagativeProb = 5;
             heightMutimeterNagativeProb = 20;
         }
@@ -65,6 +70,7 @@ void mutimeterDraw(){
         rect(xMutimeterMode1, yMutimeterMode1, widthMutimeterMode1, heightMutimeterMode1);
         rect(xMutimeterMode2, yMutimeterMode2, widthMutimeterMode2, heightMutimeterMode2);
         rect(xMutimeterMode3, yMutimeterMode3, widthMutimeterMode3, heightMutimeterMode3);
+        rect(xMutimeterMode4, yMutimeterMode4, widthMutimeterMode4, heightMutimeterMode4);
         fill(0);
         text("", xMutimeterLCD, yMutimeterLCD, widthMutimeterLCD, heightMutimeterLCD);
         if(mouseX>xMutimeterMode1 && mouseX<xMutimeterMode1+widthMutimeterMode1 && mouseY>yMutimeterMode1 && mouseY<yMutimeterMode1+heightMutimeterMode1){
@@ -73,6 +79,8 @@ void mutimeterDraw(){
             text("AMPS", mouseX, mouseY, 5, 10);
         }else if(mouseX>xMutimeterMode3 && mouseX<xMutimeterMode3+widthMutimeterMode3 && mouseY>yMutimeterMode3 && mouseY<yMutimeterMode3+heightMutimeterMode3){
             test("OMS", mouseX, mouseY, 5, 10);
+        }else if(mouseX>xMutimeterMode4 && mouseX<xMutimeterMode4+widthMutimeterMode4 && mouseY>yMutimeterMode4 && mouseY<xMutimeterMode4+heightMutimeterMode4){
+            text("TONE", mouseX, mouseY, 5, 10);
         }
     }
 }

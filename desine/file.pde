@@ -28,6 +28,7 @@ void fileDraw(){
     noFill();
 
     if(fileBool == true){
+        
         fileDropDown();
     }
 }
@@ -59,8 +60,10 @@ void fileLoad(){
 void fileSelected(File selection){
     if(selection == null){
         println("Window was closed or the user hit cancel.");
+        title = "";
     }else{
         println("User selected " + selection.getAbsolutePath());
+        title = "File";
     }
     path = selection.getAbsolutePath();
     println(path);

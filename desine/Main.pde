@@ -55,6 +55,7 @@ float[] xMutimeterNagative = new float[mutimeterInt], yMutimeterNagative = new f
 float[] xMutimeterMode1 = new float[mutimeterInt], yMutimeterMode1 = new float[mutimeterInt], widthMutimeterMode1 = new float[mutimeterInt], heightMutimeterMode1 = new float[mutimeterInt];
 float[] xMutimeterMode2 = new float[mutimeterInt], yMutimeterMode2 = new float[mutimeterInt], widthMutimeterMode2 = new float[mutimeterInt], heightMutimeterMode2 = new float[mutimeterInt];
 float[] xMutimeterMode3 = new float[mutimeterInt], yMutimeterMode3 = new float[mutimeterInt], widthMutimeterMode3 = new float[mutimeterInt], heightMutimeterMode3 = new float[mutimeterInt];
+float[] xMutimeterMode4 = new float[mutimeterInt], yMutimeterMode4 = new float[mutimeterInt], widthMutimeterMode4 = new float[mutimeterInt], heightMutimeterMode4 = new float[mutimeterInt];
 float[] xMutimeterLCD = new float[mutimeterInt], yMutimeterLCD = new float[mutimeterInt], widthMutimeterLCD = new float[mutimeterInt], heightMutimeterLCD = new float[mutimeterInt];
 float[] xMutimeterPosativeProb = new float[mutimeterInt], yMutimeterPosativeProb = new float[mutimeterInt], widthMutimeterPosativeProb = new float[mutimeterInt], heightMutimeterPosativeProb = new float[mutimeterInt];
 float[] xPosativeProbRead = new float[mutimeterInt], yPosativeProbRead = new float[mutimeterInt], widthPosativeProbRead = new float[mutimeterInt], heightPosativeProbRead = new float[mutimeterInt];
@@ -70,14 +71,18 @@ boolean simBool = false;
 float xSIM, ySIM, widthSIM, heightSIM;
 
 String path;
+String title = "";
 
 void settup(){
   size(500, 500);
 
   surface.setResizable(true);
   surface.setLocation(0, 0);
-  surface.setTitle("Cercit Design");
-
+  if(simBool == false){
+    surface.setTitle("Design "+title);
+  }else{
+    surface.setTitle("Simulate "+title);
+  }
 
 
   addSetup();
@@ -90,11 +95,9 @@ void draw(){
   textSize(15);
 
   fill(#ffadff);
-  rect(0, 0, divicewidth*2, diviceheight*2);
-  if(addBool == true){
-    addDropDown();
-  }
+  rect(0, 0, displaywidth*2, displayheight*2);
 
+  mutimeterSetup();
   andSetup();
   NANDSetup();
   ORSetup();
@@ -109,6 +112,8 @@ void draw(){
   }else{
     simulate();
   }
+
+  mutimeterDraw();
   andDraw();
   NANDDraw();
   ORDraw();

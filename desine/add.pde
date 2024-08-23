@@ -43,6 +43,16 @@ void addSetup(){
     yItemAddWire = 80;
     widthItemAddWire = 20;
     heightItemAddWire = 10;
+
+    xItemAddLed = 0;
+    yItemAddLed = 90;
+    widthItemAddLed = 20;
+    heightItemAddLed = 10;
+
+    xItemAddGround = 0;
+    yItemAddGround = 100;
+    widthItemAddGround = 20;
+    heightItemAddGround = 10;
 }
 
 void addDraw(){
@@ -51,7 +61,10 @@ void addDraw(){
     rect(xItemAdd, yItemAdd, widthItemAdd, heightADD);
     fill(0);
     text("ADD", xItemAdd, yItemAdd, widthItemAdd, heightADD);
-    noFill()
+    if(itemAddBool = true){
+        addDropDown();
+    }
+    noFill();
 }
 
 void addDropDown(){
@@ -75,3 +88,6 @@ void addDropDown(){
     text("WIRE", xItemAddWire, yItemAddWire, widthItemAddWire, heightItemAddWire);
     noFill();
 }
+/*
+
+*/
