@@ -29,7 +29,7 @@ float[] volt = new float[wireInt];
 boolean itemAddBool = false;
 float xItemAdd, yItemAdd, widthItemAdd, heightItemAdd;
 float xItemAddAND, yItemAddAND, widthItemAddAND, heightItemAddAND;
-float xItemAddNAND, yItemAddNAND, widthItemAddNAND, heightADDNAND;
+float xItemAddNAND, yItemAddNAND, widthItemAddNAND, heightAddNAND;
 float xItemAddOR, yItemAddOR, widthItemAddOR, heightItemAddRO;
 float xItemAddNOR, yItemAddNOR, widthItemAddNOR, heightItemAddNOR;
 float xItemAddXOR, yItemAddXOR, widthItemAddXOR, heightItemAddXOR;
@@ -41,25 +41,25 @@ float xItemAddGround, yItemAddGround, widthItemAddGround, heightItemAddGround;
 
 
 boolean toolsAddBool = false;
-float xToolAddMutimeter, yToolAddMutimeter, widthToolAddMutimeter, heightToolAddMutimeter;
-float xToolAddOscilloscope, yToolAddOscilloscope, widthToolAddOscilloscope, heightToolAddOscilloscope;
-float xToolAddPowreSuply, yToolAddPowreSuply, widthToolAddPowreSuply, heightToolAddPowreSuply;
-float xToolAddFunctionGenerator, yToolAddFunctionGenerator, widthToolAddFunctionGenerator, heightToolAddFunctionGenerator;
+float xItemAddMultimeter, yItemAddMultimeter, widthItemAddMultimeter, heightItemAddMultimeter;
+float xItemAddOscilloscope, yItemAddOscilloscope, widthItemAddOscilloscope, heightItemAddOscilloscope;
+float xItemAddPowreSuply, yItemAddPowreSuply, widthItemAddPowreSuply, heightItemAddPowreSuply;
+float xItemAddFunctionGenerator, yItemAddFunctionGenerator, widthItemAddFunctionGenerator, heightItemAddFunctionGenerator;
 
-int mutimeterInt = 1;
-boolean mutimeterAdd = false;
-int[] mutimeterModeInt = new int[mutimeterInt]; 
-float[] xMutimeter = new float[mutimeterInt], yMutimeter = new float[mutimeterInt], widthMutimeter = new float[mutimeterInt], heightMutimeter = new float[mutimeterInt];
-float[] xMutimeterPosative = new float[mutimeterInt], yMutimeterPosative = new float[mutimeterInt], widthMutimeterPosative = new float[mutimeterInt], heightMutimeterPosative = new float[mutimeterInt];
-float[] xMutimeterNagative = new float[mutimeterInt], yMutimeterNagative = new float[mutimeterInt], widthMutimeterNagative = new float[mutimeterInt], heightMutimeterNagative = new float[mutimeterInt];
-float[] xMutimeterMode1 = new float[mutimeterInt], yMutimeterMode1 = new float[mutimeterInt], widthMutimeterMode1 = new float[mutimeterInt], heightMutimeterMode1 = new float[mutimeterInt];
-float[] xMutimeterMode2 = new float[mutimeterInt], yMutimeterMode2 = new float[mutimeterInt], widthMutimeterMode2 = new float[mutimeterInt], heightMutimeterMode2 = new float[mutimeterInt];
-float[] xMutimeterMode3 = new float[mutimeterInt], yMutimeterMode3 = new float[mutimeterInt], widthMutimeterMode3 = new float[mutimeterInt], heightMutimeterMode3 = new float[mutimeterInt];
-float[] xMutimeterMode4 = new float[mutimeterInt], yMutimeterMode4 = new float[mutimeterInt], widthMutimeterMode4 = new float[mutimeterInt], heightMutimeterMode4 = new float[mutimeterInt];
-float[] xMutimeterLCD = new float[mutimeterInt], yMutimeterLCD = new float[mutimeterInt], widthMutimeterLCD = new float[mutimeterInt], heightMutimeterLCD = new float[mutimeterInt];
-float[] xMutimeterPosativeProb = new float[mutimeterInt], yMutimeterPosativeProb = new float[mutimeterInt], widthMutimeterPosativeProb = new float[mutimeterInt], heightMutimeterPosativeProb = new float[mutimeterInt];
-float[] xPosativeProbRead = new float[mutimeterInt], yPosativeProbRead = new float[mutimeterInt], widthPosativeProbRead = new float[mutimeterInt], heightPosativeProbRead = new float[mutimeterInt];
-float[] xNagativeProbRead = new float[mutimeterInt], yNagativeProbRead = new float[mutimeterInt], widthMutimeterNagativeProb = new float[mutimeterInt], heightMutimeterNagativeProb = new float[mutimeterInt];
+int multimeterInt = 1;
+boolean multimeterAdd = false;
+int[] multimeterModeInt = new int[multimeterInt]; 
+float[] xMultimeter = new float[multimeterInt], yMultimeter = new float[multimeterInt], widthMultimeter = new float[multimeterInt], heightMultimeter = new float[multimeterInt];
+float[] xMultimeterPosative = new float[multimeterInt], yMultimeterPosative = new float[multimeterInt], widthMultimeterPosative = new float[multimeterInt], heightMultimeterPosative = new float[multimeterInt];
+float[] xMultimeterNagative = new float[multimeterInt], yMultimeterNagative = new float[multimeterInt], widthMultimeterNagative = new float[multimeterInt], heightMultimeterNagative = new float[multimeterInt];
+float[] xMultimeterMode1 = new float[multimeterInt], yMultimeterMode1 = new float[multimeterInt], widthMultimeterMode1 = new float[multimeterInt], heightMultimeterMode1 = new float[multimeterInt];
+float[] xMultimeterMode2 = new float[multimeterInt], yMultimeterMode2 = new float[multimeterInt], widthMultimeterMode2 = new float[multimeterInt], heightMultimeterMode2 = new float[multimeterInt];
+float[] xMultimeterMode3 = new float[multimeterInt], yMultimeterMode3 = new float[multimeterInt], widthMultimeterMode3 = new float[multimeterInt], heightMultimeterMode3 = new float[multimeterInt];
+float[] xMultimeterMode4 = new float[multimeterInt], yMultimeterMode4 = new float[multimeterInt], widthMultimeterMode4 = new float[multimeterInt], heightMultimeterMode4 = new float[multimeterInt];
+float[] xMultimeterLCD = new float[multimeterInt], yMultimeterLCD = new float[multimeterInt], widthMultimeterLCD = new float[multimeterInt], heightMultimeterLCD = new float[multimeterInt];
+float[] xMultimeterPosativeProb = new float[multimeterInt], yMultimeterPosativeProb = new float[multimeterInt], widthMultimeterPosativeProb = new float[multimeterInt], heightMultimeterPosativeProb = new float[multimeterInt];
+float[] xPosativeProbRead = new float[multimeterInt], yPosativeProbRead = new float[multimeterInt], widthPosativeProbRead = new float[multimeterInt], heightPosativeProbRead = new float[multimeterInt];
+float[] xNagativeProbRead = new float[multimeterInt], yNagativeProbRead = new float[multimeterInt], widthMultimeterNagativeProb = new float[multimeterInt], heightMultimeterNagativeProb = new float[multimeterInt];
 
 boolean fileBool = false;
 float xFile, yFile, widthFile, heightFile;
@@ -78,12 +78,12 @@ void settup(){
 
   surface.setResizable(true);
   surface.setLocation(0, 0);
+  
   if(simBool == false){
     surface.setTitle("Design "+title);
   }else{
     surface.setTitle("Simulate "+title);
   }
-
 
   addSetup();
   fileSetup();
@@ -97,7 +97,7 @@ void draw(){
   fill(#ffadff);
   rect(0, 0, displaywidth*2, displayheight*2);
 
-  mutimeterSetup();
+  multimeterSetup();
   andSetup();
   NANDSetup();
   ORSetup();
@@ -113,7 +113,7 @@ void draw(){
     simulate();
   }
 
-  mutimeterDraw();
+  multimeterDraw();
   andDraw();
   NANDDraw();
   ORDraw();
@@ -147,7 +147,7 @@ void mousePressed(){
     fileSave();
   }
 
-  if(simBool == false && addBool == true && mouseX>xAdd && mouseX<xAdd+widthAdd && mouseY>yAdd && mouseY<yAdd+heightADD){
+  if(simBool == false && addBool == true && mouseX>xAdd && mouseX<xAdd+widthAdd && mouseY>yAdd && mouseY<yAdd+heightAdd){
     addBool = false;
   }else{
     addBool = true;
