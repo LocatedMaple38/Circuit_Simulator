@@ -1,7 +1,0 @@
-void simuSetup(){
-    
-}
-
-void simulate(){
-
-}
