@@ -58,7 +58,7 @@ float xItemAddPowreSuply, yItemAddPowreSuply, widthItemAddPowreSuply, heightItem
 float xItemAddFunctionGenerator, yItemAddFunctionGenerator, widthItemAddFunctionGenerator, heightItemAddFunctionGenerator;
 
 int multimeterInt = 1;
-boolean multimeterAdd = false;
+boolean multimeterAdd = true;
 int[] multimeterModeInt = new int[multimeterInt]; 
 String Mode;
 float[] xMultimeter = new float[multimeterInt], yMultimeter = new float[multimeterInt], widthMultimeter = new float[multimeterInt], heightMultimeter = new float[multimeterInt];
@@ -104,11 +104,12 @@ void setup(){
 }
 
 void draw(){
+  fill(#ffadff);
+  rect(0, 0, displayWidth*2, displayHeight*2);
+  
   textAlign(LEFT, CENTER);
   textSize(10);
 
-  fill(#ffadff);
-  rect(0, 0, displayWidth*2, displayHeight*2);
 
   if(fileBool == true){
     fileDropDown();
@@ -124,14 +125,13 @@ void draw(){
   //LEDSetup();
 
   multimeterDraw();
-  andDraw();
+  //andDraw();
   //NANDDraw();
   //ORDraw();
   //NORDraw();
   //XORDraw();
   //XNORDraw();
   //LEDDraw();
-  
   fileDraw();
   addDraw();
 }
@@ -143,12 +143,12 @@ void keyPressed(){
 void mousePressed(){
   
   println(mouseX, mouseY);
-  println((mouseX>xFile && mouseX<xFile+widthFile && mouseY>yFile && mouseY<yFile+heightFile) ? "true" : "flase");
+  //println((mouseX>xFile && mouseX<xFile+widthFile && mouseY>yFile && mouseY<yFile+heightFile) ? "true" : "flase");
   
   if(mouseX>xFile && mouseX<xFile+widthFile && mouseY>yFile && mouseY<yFile+heightFile){
     fileBool = fileBool ? false : true;
     println(fileBool);
-
+  }
   if(fileBool == true && mouseX>xLoadFile && mouseX<xLoadFile+widthLoadFile && mouseY>yLoadFile && mouseY<yLoadFile+heightLoadFile){
     fileLoad();
   }
