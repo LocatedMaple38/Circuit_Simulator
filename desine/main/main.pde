@@ -60,7 +60,7 @@ float xItemAddFunctionGenerator, yItemAddFunctionGenerator, widthItemAddFunction
 int multimeterInt = 1;
 boolean multimeterAdd = true;
 int[] multimeterModeInt = new int[multimeterInt]; 
-String Mode;
+String[] Mode = new String[multimeterInt];
 float[] xMultimeter = new float[multimeterInt], yMultimeter = new float[multimeterInt], widthMultimeter = new float[multimeterInt], heightMultimeter = new float[multimeterInt];
 float[] xMultimeterPosative = new float[multimeterInt], yMultimeterPosative = new float[multimeterInt], widthMultimeterPosative = new float[multimeterInt], heightMultimeterPosative = new float[multimeterInt];
 float[] xMultimeterNagative = new float[multimeterInt], yMultimeterNagative = new float[multimeterInt], widthMultimeterNagative = new float[multimeterInt], heightMultimeterNagative = new float[multimeterInt];
@@ -73,7 +73,7 @@ float[] xMultimeterPosativeProb = new float[multimeterInt], yMultimeterPosativeP
 float[] xPosativeProbRead = new float[multimeterInt], yPosativeProbRead = new float[multimeterInt], widthPosativeProbRead = new float[multimeterInt], heightPosativeProbRead = new float[multimeterInt];
 float[] xNagativeProbRead = new float[multimeterInt], yNagativeProbRead = new float[multimeterInt], widthMultimeterNagativeProb = new float[multimeterInt], heightMultimeterNagativeProb = new float[multimeterInt];
 
-boolean fileBool = false;
+boolean fileBool;
 float xFile, yFile, widthFile, heightFile;
 float xSaveFile, ySaveFile, widthSaveFile, heightSaveFile;
 float xLoadFile, yLoadFile, widthLoadFile, heightLoadFile;
@@ -89,6 +89,7 @@ void setup(){
   xANDPos[0] = 100;
   yANDPos[0] = 100;
   size(500, 500);
+  
 
   surface.setResizable(true);
   surface.setLocation(0, 0);
@@ -101,6 +102,7 @@ void setup(){
   
   addSetup();
   fileSetup();
+  simSetup();
 }
 
 void draw(){
@@ -116,6 +118,7 @@ void draw(){
   }
   
   multimeterSetup();
+  simDraw();
   andSetup();
   //NANDSetup();
   //ORSetup();
@@ -134,20 +137,27 @@ void draw(){
   //LEDDraw();
   fileDraw();
   addDraw();
+  
 }
 
 void keyPressed(){
-
+  println(fileBool);
 }
 
 void mousePressed(){
+  
   
   println(mouseX, mouseY);
   //println((mouseX>xFile && mouseX<xFile+widthFile && mouseY>yFile && mouseY<yFile+heightFile) ? "true" : "flase");
   
   if(mouseX>xFile && mouseX<xFile+widthFile && mouseY>yFile && mouseY<yFile+heightFile){
-    fileBool = fileBool ? false : true;
-    println(fileBool);
+    //fileBool = fileBool ? false : true;
+    if(fileBool == true){
+      fileBool = false;
+    }else{
+      fileBool = true;
+      itemAddBool = false;
+    }
   }
   if(fileBool == true && mouseX>xLoadFile && mouseX<xLoadFile+widthLoadFile && mouseY>yLoadFile && mouseY<yLoadFile+heightLoadFile){
     fileLoad();
@@ -174,8 +184,8 @@ void mousePressed(){
     simBool = false;
   }else{
     simBool = true;
-    fileBool = false;
-    itemAddBool = false;
+    //fileBool = false;
+    //itemAddBool = false;
   }
 
   if(itemAddBool == true && mouseX>xItemAddAND && mouseX<xItemAddAND+widthItemAddAND && mouseY>yItemAddAND && mouseY<yItemAddAND+heightItemAddAND){
