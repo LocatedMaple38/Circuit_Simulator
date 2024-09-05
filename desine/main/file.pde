@@ -5,18 +5,18 @@ void fileSetup(){
     heightFile = 10;
 
     xSaveFile = 20;
-    ySaveFile = 20;
-    widthSaveFile = 20;
+    ySaveFile = 10;
+    widthSaveFile = 25;
     heightSaveFile = 10;
 
     xLoadFile = 20;
-    yLoadFile = 30;
-    widthLoadFile = 20;
+    yLoadFile = 20;
+    widthLoadFile = 25;
     heightLoadFile = 10;
 
     xSaveFileAs = 20;
-    ySaveFileAs = 40;
-    widthSaveFileAs = 20;
+    ySaveFileAs = 30;
+    widthSaveFileAs = 25;
     heightSaveFileAs = 10;
 }
 
