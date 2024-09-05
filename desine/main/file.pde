@@ -50,21 +50,21 @@ void fileAutoSave(){
 }
   
 void fileLoad(){
-    selectFolder("Select a folder to process:", "folderSelected");
+  selectFolder("Select a folder to process:", "folderSelected");
 }
 
 void fileSelected(File selection){
-    if(selection == null){
-        println("Window was closed or the user hit cancel.");
-        title = "";
-    }else{
-        println("User selected " + selection.getAbsolutePath());
-        title = "File";
-    }
-    path = selection.getAbsolutePath();
-    
-    if(path == null){
-      path = "1";
-    }
-    println(path);
+  if(selection == null){
+    println("Window was closed or the user hit cancel.");
+    title = "";
+  }else{
+    println("User selected " + selection.getAbsolutePath());
+    title = "File";
+  }
+  path = selection.getAbsolutePath();
+  
+  if(path == null){
+    path = "1";
+  }
+  println(path);
 }
