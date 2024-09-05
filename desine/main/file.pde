@@ -26,11 +26,7 @@ void fileDraw(){
     fill(#000000);
     text("File", xFile, yFile, widthFile, heightFile);
     noFill();
-
-    if(fileBool == true){
-        
-        fileDropDown();
-    }
+    
 }
 
 void fileDropDown(){
@@ -66,5 +62,9 @@ void fileSelected(File selection){
         title = "File";
     }
     path = selection.getAbsolutePath();
+    
+    if(path == null){
+      path = "1";
+    }
     println(path);
 }
