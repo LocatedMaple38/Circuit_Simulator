@@ -69,6 +69,10 @@ void multimeterDraw(){
     fill(#ff0000);
     rect(xMultimeterPosative[i], yMultimeterPosative[i], widthMultimeterPosative[i], heightMultimeterPosative[i]);
     rect(xPosativeProbRead[i], yPosativeProbRead[i], widthMultimeterPosative[i], heightMultimeterPosativeProb[i]);
+    strokeWeight(5);
+    stroke(#ff0000);
+    line(xPosativeProbRead[i], yPosativeProbRead[i], xMultimeterPosative[i], yMultimeterPosative[i]);
+    noStroke();
     fill(0);
     rect(xMultimeterNagative[i], yMultimeterNagative[i], widthMultimeterNagative[i], heightMultimeterNagative[i]);
     fill(#ffadff);
@@ -103,16 +107,16 @@ void multimeterDraw(){
     }
     switch(multimeterModeInt[i]){
       default:
-        Mode = " VOLTS";
+        Mode[i] = " VOLTS";
         break;
       case '2':
-        Mode = " AMPS";
+        Mode[i] = " AMPS";
         break;
       case '3':
-        Mode = " OMS";
+        Mode[i] = " OMS";
         break;
       case '4':
-        Mode = " Tone";
+        Mode[i] = " Tone";
         break;
     }
     
