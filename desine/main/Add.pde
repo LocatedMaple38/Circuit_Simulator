@@ -112,18 +112,18 @@ void addSetup(){
 
 void addDraw(){
     noStroke();
-    fill(225);
+    fill(255);
     rect(xItemAdd, yItemAdd, widthItemAdd, heightItemAdd);
     fill(0);
     text("ADD", xItemAdd, yItemAdd, widthItemAdd, heightItemAdd);
-    if(itemAddBool = true){
+    if(itemAddBool == true){
         addDropDown();
     }
     noFill();
 }
 
 void addDropDown(){
-    fill(225);
+    fill(255);
     rect(xItemAddLogic, yItemAddLogic, widthItemAddLogic, heightItemAddLogic);
     rect(xItemAddCompute, yItemAddCompute, widthItemAddCompute, heightItemAddCompute);
     rect(xItemAddTools, yItemAddTools, widthItemAddTools, heightItemAddTools);
@@ -158,8 +158,8 @@ void addLogicDraw(){
     rect(xItemAddXNOR, yItemAddXNOR, widthItemAddXNOR, heightItemAddXNOR);
     rect(xItemAddINVERTER, yItemAddINVERTER, widhtItemAddINVERTER, heightItemAddINVERTER);
     fill(0);
-    text("AND", xItemAddAND, yItemAddAND, widthItemAddAND, heightAddAND);
-    text("NAND", xItemAddNAND, yItemAddNAND, widthItemAddNAND, heightAddNAND);
+    text("AND", xItemAddAND, yItemAddAND, widthItemAddAND, heightItemAddAND);
+    text("NAND", xItemAddNAND, yItemAddNAND, widthItemAddNAND, heightItemAddNAND);
     text("OR", xItemAddOR, yItemAddOR, widthItemAddOR, heightItemAddRO);
     text("NOR", xItemAddNOR, yItemAddNOR, widthItemAddNOR, heightItemAddNOR);
     text("XOR", xItemAddXOR, yItemAddXOR, widthItemAddXOR, heightItemAddXOR);
@@ -173,19 +173,19 @@ void addComputeDraw(){
     rect(xItemAddArduinoNanoESP32, yItemAddArduinoNanoESP32, widhtItemAddArduinoNanoESP32, heightItemAddArduinoNanoESP32);
     rect(xItemAddArduinoUNOR3, yItemAddArduinoUNOR3, widthItemAddArduinoUNOR3, heightItemAddArduinoUNOR3);
     fill(0);
-    text("ArduinoNanoESP32", xItemAddArduinoESP32, yItemAddArduinoNanoESP32 ,widhtItemAddArduinoNanoESP32, heightItemAddArduinoNanoESP32);
+    text("ArduinoNanoESP32", xItemAddArduinoNanoESP32, yItemAddArduinoNanoESP32 ,widhtItemAddArduinoNanoESP32, heightItemAddArduinoNanoESP32);
     text("Arduino UNO R3", xItemAddArduinoUNOR3, yItemAddArduinoUNOR3, widthItemAddArduinoUNOR3, heightItemAddArduinoUNOR3);
     noFill();
 }
 
 void addToolsDraw(){
     fill(255);
-    rect(xItemAddPowreSupply, yItemAddPowreSupply, widthItemAddPowreSupply, heightItemAddPowreSpply);
+    rect(xItemAddPowerSupply, yItemAddPowerSupply, widthItemAddPowerSupply, heightItemAddPowerSpply);
     rect(xItemAddMultimeter, yItemAddMultimeter, widthItemAddMultimeter, heightItemAddMultimeter);
     rect(xItemAddOscilloscope, yItemAddOscilloscope, widthItemAddOscilloscope, heightItemAddOscilloscope);
     rect(xItemAddFunctionGenerator, yItemAddFunctionGenerator, widthItemAddFunctionGenerator, heightItemAddFunctionGenerator);
     fill(0);
-    text("Powre Supply", xItemAddPowreSupply, yItemAddPowreSupply, widthItemAddPowreSupply, heightItemAddPowreSpply);
+    text("Powre Supply", xItemAddPowerSupply, yItemAddPowerSupply, widthItemAddPowerSupply, heightItemAddPowerSpply);
     text("Multimeter", xItemAddMultimeter, yItemAddMultimeter, widthItemAddMultimeter, heightItemAddMultimeter);
     text("Oscilloscope", xItemAddOscilloscope, yItemAddOscilloscope, widthItemAddOscilloscope, heightItemAddOscilloscope);
     text("Function Generator", xItemAddFunctionGenerator, yItemAddFunctionGenerator, widthItemAddFunctionGenerator, heightItemAddFunctionGenerator);
