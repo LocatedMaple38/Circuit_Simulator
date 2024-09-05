@@ -7,15 +7,16 @@ float[] xANDA1 = new float[a74hc08], yANDA1 = new float[a74hc08], widthANDA1 = n
 float[] xANDB1 = new float[a74hc08], yANDB1 = new float[a74hc08], widthANDB1 = new float[a74hc08], heightANDB1 = new float[a74hc08];
 float[] xANDY1 = new float[a74hc08], yANDY1 = new float[a74hc08], widthANDY1 = new float[a74hc08], heightANDY1 = new float[a74hc08];
 float[] xANDA2 = new float[a74hc08], yANDA2 = new float[a74hc08], widthANDA2 = new float[a74hc08], heightANDA2 = new float[a74hc08];
-float[] xANDB2 = new float[a74hc08], yANDB2 = new float[a74hc08], widhtANDB2 = new float[a74hc08], heightANDB2 = new float[a74hc08];
+float[] xANDB2 = new float[a74hc08], yANDB2 = new float[a74hc08], widthANDB2 = new float[a74hc08], heightANDB2 = new float[a74hc08];
 float[] xANDY2 = new float[a74hc08], yANDY2 = new float[a74hc08], widthANDY2 = new float[a74hc08], heightANDY2 = new float[a74hc08];
 float[] xANDA3 = new float[a74hc08], yANDA3 = new float[a74hc08], widthANDA3 = new float[a74hc08], heightANDA3 = new float[a74hc08];
-float[] xANDB3 = new float[a74hc08], yANDB3 = new float[a74hc08], widhtANDB3 = new float[a74hc08], heightANDB3 = new float[a74hc08];
+float[] xANDB3 = new float[a74hc08], yANDB3 = new float[a74hc08], widthANDB3 = new float[a74hc08], heightANDB3 = new float[a74hc08];
 float[] xANDY3 = new float[a74hc08], yANDY3 = new float[a74hc08], widthANDY3 = new float[a74hc08], heightANDY3 = new float[a74hc08];
 float[] xANDA4 = new float[a74hc08], yANDA4 = new float[a74hc08], widthANDA4 = new float[a74hc08], heightANDA4 = new float[a74hc08];
-float[] xANDB4 = new float[a74hc08], yANDB4 = new float[a74hc08], widhtANDB4 = new float[a74hc08], heightANDB4 = new float[a74hc08];
+float[] xANDB4 = new float[a74hc08], yANDB4 = new float[a74hc08], widthANDB4 = new float[a74hc08], heightANDB4 = new float[a74hc08];
 float[] xANDY4 = new float[a74hc08], yANDY4 = new float[a74hc08], widthANDY4 = new float[a74hc08], heightANDY4 = new float[a74hc08];
 float[] xANDPos = new float[a74hc08], yANDPos = new float[a74hc08];
+float[] xPin1 = new float[a74hc08], yPin1 = new float[a74hc08], widthPin1 = new float[a74hc08], heightPin1 = new float[a74hc08];
 int[] boolANDA1 = new int[a74hc08], boolANDB1 = new int[a74hc08], boolANDY1 = new int[a74hc08];
 int[] boolANDA2 = new int[a74hc08], boolANDB2 = new int[a74hc08], boolANDY2 = new int[a74hc08];
 int[] boolANDA3 = new int[a74hc08], boolANDB3 = new int[a74hc08], boolANDY3 = new int[a74hc08];
@@ -29,7 +30,7 @@ float[] volt = new float[wireInt];
 boolean itemAddBool = false;
 float xItemAdd, yItemAdd, widthItemAdd, heightItemAdd;
 float xItemAddAND, yItemAddAND, widthItemAddAND, heightItemAddAND;
-float xItemAddNAND, yItemAddNAND, widthItemAddNAND, heightAddNAND;
+float xItemAddNAND, yItemAddNAND, widthItemAddNAND, heightItemAddNAND;
 float xItemAddOR, yItemAddOR, widthItemAddOR, heightItemAddRO;
 float xItemAddNOR, yItemAddNOR, widthItemAddNOR, heightItemAddNOR;
 float xItemAddXOR, yItemAddXOR, widthItemAddXOR, heightItemAddXOR;
@@ -38,7 +39,17 @@ float xItemAddINVERTER, yItemAddINVERTER, widhtItemAddINVERTER, heightItemAddINV
 float xItemAddWire, yItemAddWire, widthItemAddWire, heightItemAddWire;
 float xItemAddLed, yItemAddLed, widthItemAddLed, heightItemAddLed;
 float xItemAddGround, yItemAddGround, widthItemAddGround, heightItemAddGround;
-
+float xItemAddLogic, yItemAddLogic, widthItemAddLogic, heightItemAddLogic;
+float xItemAddCompute, yItemAddCompute, widthItemAddCompute, heightItemAddCompute;
+float xItemAddArduinoNanoESP32, yItemAddArduinoNanoESP32, widhtItemAddArduinoNanoESP32, heightItemAddArduinoNanoESP32;
+float xItemAddArduinoUNOR3, yItemAddArduinoUNOR3, widthItemAddArduinoUNOR3, heightItemAddArduinoUNOR3;
+float xItemAddTools, yItemAddTools, widthItemAddTools, heightItemAddTools;
+float xItemAddPowerSupply, yItemAddPowerSupply, widthItemAddPowerSupply, heightItemAddPowerSpply;
+float xItemAddDisplay, yItemAddDisplay, widthItemAddDisplay, heightItemAddDisplay;
+float xItemAddLCD, yItemAddLCD, widthItemAddLCD, heightItemAddLCD;
+float xAset, yAset, widthAset, heightAset;
+float xItemAdd5VSupply, yItemAdd5VSupply, widhtItemAdd5VSupply, heightItemAdd5VSupply;
+float xItemAdd3_3VSupply, yItemAdd3_3VSupply, widhtItemAdd3_3VSupply, heightItemAdd3_3VSupply;
 
 boolean toolsAddBool = false;
 float xItemAddMultimeter, yItemAddMultimeter, widthItemAddMultimeter, heightItemAddMultimeter;
@@ -49,6 +60,7 @@ float xItemAddFunctionGenerator, yItemAddFunctionGenerator, widthItemAddFunction
 int multimeterInt = 1;
 boolean multimeterAdd = false;
 int[] multimeterModeInt = new int[multimeterInt]; 
+String Mode;
 float[] xMultimeter = new float[multimeterInt], yMultimeter = new float[multimeterInt], widthMultimeter = new float[multimeterInt], heightMultimeter = new float[multimeterInt];
 float[] xMultimeterPosative = new float[multimeterInt], yMultimeterPosative = new float[multimeterInt], widthMultimeterPosative = new float[multimeterInt], heightMultimeterPosative = new float[multimeterInt];
 float[] xMultimeterNagative = new float[multimeterInt], yMultimeterNagative = new float[multimeterInt], widthMultimeterNagative = new float[multimeterInt], heightMultimeterNagative = new float[multimeterInt];
@@ -71,9 +83,11 @@ boolean simBool = false;
 float xSIM, ySIM, widthSIM, heightSIM;
 
 String path;
-String title = "";
+String title;
 
-void settup(){
+void setup(){
+  xANDPos[0] = 100;
+  yANDPos[0] = 100;
   size(500, 500);
 
   surface.setResizable(true);
@@ -84,19 +98,22 @@ void settup(){
   }else{
     surface.setTitle("Simulate "+title);
   }
-
+  
   addSetup();
   fileSetup();
 }
 
 void draw(){
-
   textAlign(LEFT, CENTER);
-  textSize(15);
+  textSize(10);
 
   fill(#ffadff);
   rect(0, 0, displayWidth*2, displayHeight*2);
 
+  if(fileBool == true){
+    fileDropDown();
+  }
+  
   multimeterSetup();
   andSetup();
   //NANDSetup();
@@ -106,13 +123,6 @@ void draw(){
   //XNORSetup();
   //LEDSetup();
 
-  if(simBool == false){
-    fileDraw();
-    addDraw();
-  }else{
-    simulate();
-  }
-
   multimeterDraw();
   andDraw();
   //NANDDraw();
@@ -121,6 +131,9 @@ void draw(){
   //XORDraw();
   //XNORDraw();
   //LEDDraw();
+  
+  fileDraw();
+  addDraw();
 }
 
 void keyPressed(){
@@ -128,12 +141,13 @@ void keyPressed(){
 }
 
 void mousePressed(){
-  if(fileBool == true && mouseX>xFile && mouseX<xFile+widthFile && mouseY>yFile && mouseY<yFile+heightFile){
-    fileBool = false;
-  }else{
-    fileBool = true;
-    itemAddBool = false;
-  }
+  
+  println(mouseX, mouseY);
+  println((mouseX>xFile && mouseX<xFile+widthFile && mouseY>yFile && mouseY<yFile+heightFile) ? "true" : "flase");
+  
+  if(mouseX>xFile && mouseX<xFile+widthFile && mouseY>yFile && mouseY<yFile+heightFile){
+    fileBool = fileBool ? false : true;
+    println(fileBool);
 
   if(fileBool == true && mouseX>xLoadFile && mouseX<xLoadFile+widthLoadFile && mouseY>yLoadFile && mouseY<yLoadFile+heightLoadFile){
     fileLoad();
@@ -147,11 +161,13 @@ void mousePressed(){
     fileSave();
   }
 
-  if(simBool == false && itemAddBool == true && mouseX>xAdd && mouseX<xAdd+widthAdd && mouseY>yAdd && mouseY<yAdd+heightAdd){
-    itemAddBool = false;
-  }else{
-    itemAddBool = true;
-    fileBool = false;
+  if(mouseX>xItemAdd && mouseX<xItemAdd+widthItemAdd && mouseY>yItemAdd && mouseY<yItemAdd+heightItemAdd){
+    if(itemAddBool == true){
+      itemAddBool = false;
+    }else{
+      itemAddBool = true;
+      fileBool = false;
+    }
   }
 
   if(simBool == true && mouseX>xSIM && mouseX<xSIM+widthSIM && mouseY>ySIM && mouseY<ySIM+heightSIM){
@@ -162,7 +178,7 @@ void mousePressed(){
     itemAddBool = false;
   }
 
-  if(itemAddBool == true && mouseX>xAddAND && mouseX<xAddAND+widthAddAND && mouseY>yAddAND && mouseY<yAddAND+heightAddAND){
+  if(itemAddBool == true && mouseX>xItemAddAND && mouseX<xItemAddAND+widthItemAddAND && mouseY>yItemAddAND && mouseY<yItemAddAND+heightItemAddAND){
     a74hc08ADD = true;
   }
 }
