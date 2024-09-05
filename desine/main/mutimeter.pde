@@ -1,15 +1,15 @@
 void multimeterSetup(){
     if(multimeterAdd == true){
         for(int i = 0; i < multimeterInt; i++){
-            xMultimeter[i] = 0;
+            xMultimeter[i] = 200;
             yMultimeter[i] = 200;
             widthMultimeter[i] = 50;
             heightMultimeter[i] = 200;
 
-            xMultimeterPoative[i] = xMultimeter[i]+30;
-            yMultimeterPoative[i] = yMultimeter[i]+190;
-            widthMultimeterPoative[i] = 5;
-            heightMultimeterPoative[i] = 5;
+            xMultimeterPosative[i] = xMultimeter[i]+30;
+            yMultimeterPosative[i] = yMultimeter[i]+190;
+            widthMultimeterPosative[i] = 5;
+            heightMultimeterPosative[i] = 5;
 
             xMultimeterNagative[i] = xMultimeter[i]+40;
             yMultimeterNagative[i] = yMultimeter[i]+190;
@@ -43,8 +43,8 @@ void multimeterSetup(){
 
             xPosativeProbRead[i] = 100;
             yPosativeProbRead[i] = 50;
-            widthMultimeterPoativeProb[i] = 5;
-            heightMultimeterPoativeProb[i] = 20;
+            widthMultimeterPosativeProb[i] = 5;
+            heightMultimeterPosativeProb[i] = 20;
 
             xNagativeProbRead[i] = 110;
             yNagativeProbRead[i] = 50;
@@ -57,30 +57,52 @@ void multimeterSetup(){
 void multimeterDraw(){
     for(int i = 0; i < multimeterInt;){
         fill(0);
-        rect(xMultimeter, yMultimeter, widthMultimeter, heightMultimeter);
+        rect(xMultimeter[i], yMultimeter[i], widthMultimeter[i], heightMultimeter[i]);
         fill(#ff0000);
-        rect(xMultimeterPoative, yMultimeterPoative, widthMultimeterPoative, heightMultimeterPoative);
-        rect(xPosativeProbRead, yPosativeProbRead, widthMultimeterPoative, heightMultimeterPoativeProb);
+        rect(xMultimeterPosative[i], yMultimeterPosative[i], widthMultimeterPosative[i], heightMultimeterPosative[i]);
+        rect(xPosativeProbRead[i], yPosativeProbRead[i], widthMultimeterPosative[i], heightMultimeterPosativeProb[i]);
         fill(0);
-        rect(xMultimeterNagative, yMultimeterNagative, widthMultimeterNagative, heightMultimeterNagative);
-        rect();
-        fill(ffadff);
-        rect(xMultimeterLCD, yMultimeterLCD, widthMultimeterLCD, heightMultimeterLCD);
+        rect(xMultimeterNagative[i], yMultimeterNagative[i], widthMultimeterNagative[i], heightMultimeterNagative[i]);
+        fill(#ffadff);
+        rect(xMultimeterLCD[i], yMultimeterLCD[i], widthMultimeterLCD[i], heightMultimeterLCD[i]);
         fill(#aaaaaa);
-        rect(xMultimeterMode1, yMultimeterMode1, widthMultimeterMode1, heightMultimeterMode1);
-        rect(xMultimeterMode2, yMultimeterMode2, widthMultimeterMode2, heightMultimeterMode2);
-        rect(xMultimeterMode3, yMultimeterMode3, widthMultimeterMode3, heightMultimeterMode3);
-        rect(xMultimeterMode4, yMultimeterMode4, widthMultimeterMode4, heightMultimeterMode4);
+        rect(xMultimeterMode1[i], yMultimeterMode1[i], widthMultimeterMode1[i], heightMultimeterMode1[i]);
+        rect(xMultimeterMode2[i], yMultimeterMode2[i], widthMultimeterMode2[i], heightMultimeterMode2[i]);
+        rect(xMultimeterMode3[i], yMultimeterMode3[i], widthMultimeterMode3[i], heightMultimeterMode3[i]);
+        rect(xMultimeterMode4[i], yMultimeterMode4[i], widthMultimeterMode4[i], heightMultimeterMode4[i]);
         fill(0);
-        text("", xMultimeterLCD, yMultimeterLCD, widthMultimeterLCD, heightMultimeterLCD);
-        if(mouseX>xMultimeterMode1 && mouseX<xMultimeterMode1+widthMultimeterMode1 && mouseY>yMultimeterMode1 && mouseY<yMultimeterMode1+heightMultimeterMode1){
+        text("1"+Mode, xMultimeterLCD[i], yMultimeterLCD[i], widthMultimeterLCD[i], heightMultimeterLCD[i]);
+        if(mouseX>xMultimeterMode1[i] && mouseX<xMultimeterMode1[i]+widthMultimeterMode1[i] && mouseY>yMultimeterMode1[i] && mouseY<yMultimeterMode1[i]+heightMultimeterMode1[i]){
             text("VOLTS", mouseX, mouseY, 5, 10);
-        }else if(mouseX>xMultimeterMode2 && mouseX<xMultimeterMode2+widthMultimeterMode2 && mouseY>yMultimeterMode2 && mouseY<yMultimeterMode2+heightMultimeterMode2){
+        }else if(mouseX>xMultimeterMode2[i] && mouseX<xMultimeterMode2[i]+widthMultimeterMode2[i] && mouseY>yMultimeterMode2[i] && mouseY<yMultimeterMode2[i]+heightMultimeterMode2[i]){
             text("AMPS", mouseX, mouseY, 5, 10);
-        }else if(mouseX>xMultimeterMode3 && mouseX<xMultimeterMode3+widthMultimeterMode3 && mouseY>yMultimeterMode3 && mouseY<yMultimeterMode3+heightMultimeterMode3){
-            test("OMS", mouseX, mouseY, 5, 10);
-        }else if(mouseX>xMultimeterMode4 && mouseX<xMultimeterMode4+widthMultimeterMode4 && mouseY>yMultimeterMode4 && mouseY<xMultimeterMode4+heightMultimeterMode4){
+        }else if(mouseX>xMultimeterMode3[i] && mouseX<xMultimeterMode3[i]+widthMultimeterMode3[i] && mouseY>yMultimeterMode3[i] && mouseY<yMultimeterMode3[i]+heightMultimeterMode3[i]){
+            text("OMS", mouseX, mouseY, 5, 10);
+        }else if(mouseX>xMultimeterMode4[i] && mouseX<xMultimeterMode4[i]+widthMultimeterMode4[i] && mouseY>yMultimeterMode4[i] && mouseY<xMultimeterMode4[i]+heightMultimeterMode4[i]){
             text("TONE", mouseX, mouseY, 5, 10);
         }
+        
+        switch(multimeterModeInt[i]){
+          case '1':
+            Mode = "VOLTS";
+            break;
+          case '2':
+            Mode = "AMPS";
+            break;
+          case '3':
+            Mode = "OMS";
+            break;
+          case '4':
+            Mode = "Tone";
+            break;
+        }
+        
+        if(i == multimeterInt){
+          i = 0;
+          continue;
+        }else{
+          i++;
+        }
+        
     }
 }
