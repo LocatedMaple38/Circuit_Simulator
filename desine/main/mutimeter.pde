@@ -83,30 +83,49 @@ void multimeterDraw(){
     rect(xMultimeterMode3[i], yMultimeterMode3[i], widthMultimeterMode3[i], heightMultimeterMode3[i]);
     rect(xMultimeterMode4[i], yMultimeterMode4[i], widthMultimeterMode4[i], heightMultimeterMode4[i]);
     fill(0);
-    text("0"+Mode, xMultimeterLCD[i], yMultimeterLCD[i], widthMultimeterLCD[i], heightMultimeterLCD[i]);
+    switch(multimeterModeInt[i]){
+      default:
+        text("0"+Mode[i], xMultimeterLCD[i], yMultimeterLCD[i], widthMultimeterLCD[i], heightMultimeterLCD[i]);
+        break;
+      case '4':
+        text(Mode[i], xMultimeterLCD[i], yMultimeterLCD[i], widthMultimeterLCD[i], heightMultimeterLCD[i]);
+        break;
+    }
     if(mouseX>xMultimeterMode1[i] && mouseX<xMultimeterMode1[i]+widthMultimeterMode1[i] && mouseY>yMultimeterMode1[i] && mouseY<yMultimeterMode1[i]+heightMultimeterMode1[i]){
       fill(255);
       rect(mouseX+15, mouseY, 30, 20);
       fill(0);
       text("VOLTS", mouseX+15, mouseY, 30, 20);
+      if(mousePressed == true){
+        multimeterModeInt[i] = '1';
+      }
     }else if(mouseX>xMultimeterMode2[i] && mouseX<xMultimeterMode2[i]+widthMultimeterMode2[i] && mouseY>yMultimeterMode2[i] && mouseY<yMultimeterMode2[i]+heightMultimeterMode2[i]){
       fill(255);
       rect(mouseX+15, mouseY, 25, 20);
       fill(0);
       text("AMPS", mouseX+15, mouseY, 25, 20);
+      if(mousePressed == true){
+        multimeterModeInt[i] = '2';
+      }
     }else if(mouseX>xMultimeterMode3[i] && mouseX<xMultimeterMode3[i]+widthMultimeterMode3[i] && mouseY>yMultimeterMode3[i] && mouseY<yMultimeterMode3[i]+heightMultimeterMode3[i]){
       fill(255);
       rect(mouseX+15, mouseY, 20, 20);
       fill(0);
       text("OMS", mouseX+15, mouseY, 20, 20);
+      if(mousePressed){
+        multimeterModeInt[i] = '3';
+      }
     }else if(mouseX>xMultimeterMode4[i] && mouseX<xMultimeterMode4[i]+widthMultimeterMode4[i] && mouseY>yMultimeterMode4[i] && mouseY<yMultimeterMode4[i]+heightMultimeterMode4[i]){
       fill(255);
       rect(mouseX+15, mouseY, 25, 20);
       fill(0);
       text("TONE", mouseX+15, mouseY, 25, 20);
+      if(mousePressed){
+        multimeterModeInt[i] = '4';
+      }
     }
     switch(multimeterModeInt[i]){
-      default:
+      case '1':
         Mode[i] = " VOLTS";
         break;
       case '2':
@@ -116,7 +135,7 @@ void multimeterDraw(){
         Mode[i] = " OMS";
         break;
       case '4':
-        Mode[i] = " Tone";
+        Mode[i] = " TONE";
         break;
     }
     
