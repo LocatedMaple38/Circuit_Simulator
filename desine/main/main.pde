@@ -89,7 +89,7 @@ void setup(){
   xANDPos[0] = 100;
   yANDPos[0] = 100;
   size(500, 500);
-  
+  multimeterModeInt[0] = '1';
 
   surface.setResizable(true);
   surface.setLocation(0, 0);
@@ -141,7 +141,7 @@ void draw(){
 }
 
 void keyPressed(){
-  println(fileBool);
+  println(multimeterModeInt[0]); 
 }
 
 void mousePressed(){
