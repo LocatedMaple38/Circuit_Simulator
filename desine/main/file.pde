@@ -57,11 +57,9 @@ void folderSelected(File selection){
   if(selection == null){
     println("Window was closed or the user hit cancel.");
   }else{
-    println("User selected " + selection.getAbsolutePath());
-    path = selection.getAbsolutePath();
-    userHome = System.getProperty("file.separator");
-    //createOutput(path+"tools.txt");
-    //createOutput(path+"item.txt");
-    println(userHome);
+    println(selection.getPath());
+    path = selection.getPath();
+    createOutput(path+"/"+Name+"/tools.txt");
+    createOutput(path+"/"+Name+"/item.txt");
   }
 }
