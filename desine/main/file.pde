@@ -42,7 +42,7 @@ void fileDropDown(){
 }
 
 void fileSave(){
-    selectOutput("Select a file to write to:", "fileSelected");
+    selectFolder("This will crat a folder of the name of the doc", "folderSelected");
 }
   
 void fileAutoSave(){
@@ -53,18 +53,15 @@ void fileLoad(){
   selectFolder("Select a folder to process:", "folderSelected");
 }
 
-void fileSelected(File selection){
+void folderSelected(File selection){
   if(selection == null){
     println("Window was closed or the user hit cancel.");
-    title = "";
   }else{
     println("User selected " + selection.getAbsolutePath());
-    title = "File";
+    path = selection.getAbsolutePath();
+    userHome = System.getProperty("file.separator");
+    //createOutput(path+"tools.txt");
+    //createOutput(path+"item.txt");
+    println(userHome);
   }
-  path = selection.getAbsolutePath();
-  
-  if(path == null){
-    path = "1";
-  }
-  println(path);
 }
