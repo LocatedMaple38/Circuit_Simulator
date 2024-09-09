@@ -45,7 +45,7 @@ void addSetup(){
   heightItemAddINVERTER = 10;
 
   xItemAddCompute = 0;
-  yItemAddCompute = 30;
+  yItemAddCompute = 20;
   widthItemAddCompute= 50;
   heightItemAddCompute = 10;
 
@@ -60,7 +60,7 @@ void addSetup(){
   heightItemAddArduinoUNOR3 = 10;
 
   xItemAddTools = 0;
-  yItemAddTools = 40;
+  yItemAddTools = 30;
   widthItemAddTools = 50; 
   heightItemAddTools = 10;
 
@@ -70,7 +70,7 @@ void addSetup(){
   heightItemAddPowerSpply = 10;
 
   xItemAddDisplay = 0;
-  yItemAddDisplay = 50;
+  yItemAddDisplay = 40;
   widthItemAddDisplay = 50;
   heightItemAddDisplay = 10;
 
@@ -83,11 +83,6 @@ void addSetup(){
   yItemAddLCD = 60;
   widthItemAddLCD = 50;
   heightItemAddLCD = 10;
-
-  xAset = 0;
-  yAset = 60;
-  widthAset = 50;
-  heightAset = 10;
 
   xItemAddWire = 50;
   yItemAddWire = 60;
