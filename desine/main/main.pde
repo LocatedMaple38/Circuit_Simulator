@@ -1,3 +1,5 @@
+import java.io.FileInputStream;
+
 boolean a74hc08ADD = true;
 int a74hc08 = 1;
 float[] xAND = new float[a74hc08], yAND = new float[a74hc08], widhtAND = new float[a74hc08], heightAND = new float[a74hc08];
@@ -36,26 +38,37 @@ float xItemAddNOR, yItemAddNOR, widthItemAddNOR, heightItemAddNOR;
 float xItemAddXOR, yItemAddXOR, widthItemAddXOR, heightItemAddXOR;
 float xItemAddXNOR, yItemAddXNOR, widthItemAddXNOR, heightItemAddXNOR;
 float xItemAddINVERTER, yItemAddINVERTER, widhtItemAddINVERTER, heightItemAddINVERTER;
-float xItemAddWire, yItemAddWire, widthItemAddWire, heightItemAddWire;
-float xItemAddLed, yItemAddLed, widthItemAddLed, heightItemAddLed;
-float xItemAddGround, yItemAddGround, widthItemAddGround, heightItemAddGround;
+
+boolean itemAddLogic = false;
 float xItemAddLogic, yItemAddLogic, widthItemAddLogic, heightItemAddLogic;
+float xItemAddWire, yItemAddWire, widthItemAddWire, heightItemAddWire;
+float xItemAddGround, yItemAddGround, widthItemAddGround, heightItemAddGround;
+
+boolean itemAddCompute = false;
 float xItemAddCompute, yItemAddCompute, widthItemAddCompute, heightItemAddCompute;
 float xItemAddArduinoNanoESP32, yItemAddArduinoNanoESP32, widhtItemAddArduinoNanoESP32, heightItemAddArduinoNanoESP32;
 float xItemAddArduinoUNOR3, yItemAddArduinoUNOR3, widthItemAddArduinoUNOR3, heightItemAddArduinoUNOR3;
+
+boolean itemAddTools = false;
 float xItemAddTools, yItemAddTools, widthItemAddTools, heightItemAddTools;
 float xItemAddPowerSupply, yItemAddPowerSupply, widthItemAddPowerSupply, heightItemAddPowerSpply;
-float xItemAddDisplay, yItemAddDisplay, widthItemAddDisplay, heightItemAddDisplay;
-float xItemAddLCD, yItemAddLCD, widthItemAddLCD, heightItemAddLCD;
-float xAset, yAset, widthAset, heightAset;
 float xItemAdd5VSupply, yItemAdd5VSupply, widhtItemAdd5VSupply, heightItemAdd5VSupply;
 float xItemAdd3_3VSupply, yItemAdd3_3VSupply, widhtItemAdd3_3VSupply, heightItemAdd3_3VSupply;
+
+boolean itemAddDisplay = false;
+float xItemAddDisplay, yItemAddDisplay, widthItemAddDisplay, heightItemAddDisplay;
+float xItemAddLCD, yItemAddLCD, widthItemAddLCD, heightItemAddLCD;
+float xItemAddLed, yItemAddLed, widthItemAddLed, heightItemAddLed;
 
 boolean toolsAddBool = false;
 float xItemAddMultimeter, yItemAddMultimeter, widthItemAddMultimeter, heightItemAddMultimeter;
 float xItemAddOscilloscope, yItemAddOscilloscope, widthItemAddOscilloscope, heightItemAddOscilloscope;
 float xItemAddPowreSuply, yItemAddPowreSuply, widthItemAddPowreSuply, heightItemAddPowreSuply;
 float xItemAddFunctionGenerator, yItemAddFunctionGenerator, widthItemAddFunctionGenerator, heightItemAddFunctionGenerator;
+
+boolean accessibilityBool = false;
+float xAccessibility, yAccessibility, widthAccessibility, heightAccessibility;
+float xTTS, yTTS, widthTTS, heightTTS;
 
 int multimeterInt = 1;
 boolean multimeterAdd = true;
@@ -83,7 +96,9 @@ boolean simBool = false;
 float xSIM, ySIM, widthSIM, heightSIM;
 
 String path;
-String title;
+String Name = "New";
+String userHome;
+
 
 void setup(){
   xANDPos[0] = 100;
@@ -95,9 +110,9 @@ void setup(){
   surface.setLocation(0, 0);
   
   if(simBool == false){
-    surface.setTitle("Design "+title);
+    surface.setTitle("Design "+Name);
   }else{
-    surface.setTitle("Simulate "+title);
+    surface.setTitle("Simulate "+Name);
   }
   
   addSetup();
@@ -141,23 +156,14 @@ void draw(){
 }
 
 void keyPressed(){
-  println(multimeterModeInt[0]); 
 }
 
 void mousePressed(){
   
-  
-  println(mouseX, mouseY);
-  //println((mouseX>xFile && mouseX<xFile+widthFile && mouseY>yFile && mouseY<yFile+heightFile) ? "true" : "flase");
-  
+    
   if(mouseX>xFile && mouseX<xFile+widthFile && mouseY>yFile && mouseY<yFile+heightFile){
-    //fileBool = fileBool ? false : true;
-    if(fileBool == true){
-      fileBool = false;
-    }else{
-      fileBool = true;
-      itemAddBool = false;
-    }
+    fileBool = fileBool ? false : true;
+    itemAddBool = false;
   }
   if(fileBool == true && mouseX>xLoadFile && mouseX<xLoadFile+widthLoadFile && mouseY>yLoadFile && mouseY<yLoadFile+heightLoadFile){
     fileLoad();
@@ -172,12 +178,8 @@ void mousePressed(){
   }
 
   if(mouseX>xItemAdd && mouseX<xItemAdd+widthItemAdd && mouseY>yItemAdd && mouseY<yItemAdd+heightItemAdd){
-    if(itemAddBool == true){
-      itemAddBool = false;
-    }else{
-      itemAddBool = true;
-      fileBool = false;
-    }
+    itemAddBool = itemAddBool ? false : true;
+    fileBool = false;
   }
 
   if(simBool == true && mouseX>xSIM && mouseX<xSIM+widthSIM && mouseY>ySIM && mouseY<ySIM+heightSIM){
@@ -190,5 +192,13 @@ void mousePressed(){
 
   if(itemAddBool == true && mouseX>xItemAddAND && mouseX<xItemAddAND+widthItemAddAND && mouseY>yItemAddAND && mouseY<yItemAddAND+heightItemAddAND){
     a74hc08ADD = true;
+  }
+  
+  if(itemAddBool == true && mouseX>xItemAddLogic && mouseX<xItemAddLogic+widthItemAddLogic && mouseY>yItemAddLogic && mouseY<yItemAddLogic+heightItemAddLogic){
+    if(itemAddLogic == true){
+      itemAddLogic = false;
+    }else{
+      itemAddLogic = true;
+    }
   }
 }
