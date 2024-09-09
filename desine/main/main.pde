@@ -1,5 +1,3 @@
-import java.io.FileInputStream;
-
 boolean a74hc08ADD = true;
 int a74hc08 = 1;
 float[] xAND = new float[a74hc08], yAND = new float[a74hc08], widhtAND = new float[a74hc08], heightAND = new float[a74hc08];
@@ -115,8 +113,7 @@ float xSIM, ySIM, widthSIM, heightSIM;
 
 String path;
 String Name = "New";
-String userHome;
-
+String userHome = System.getProperty("user.home");
 
 void setup(){
   xANDPos[0] = 100;
