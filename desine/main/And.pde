@@ -6,79 +6,84 @@ void andSetup() {
       widhtAND[i] = 75;
       heightAND[i] = 20;
 
-      xANDVSS[i] = xAND[i]+5;
-      yANDVSS[i] = yAND[i]-10;
-      widhtANDVSS[i] = 5;
-      heightANDVSS[i] = 10;
+      xANDPIN1[i] = xAND[i]+5;
+      yANDPIN1[i] = yAND[i]-10;
+      widthANDPIN1[i] = 5;
+      heightANDPIN1[i] = 10;
 
-      xANDVDD[i] = xAND[i]+65;
-      yANDVDD[i] = yAND[i]+20;
-      widthANDVDD[i] = 5;
-      heightANDVDD[i] = 10;
+      xANDPIN2[i] = xAND[i]+15;
+      yANDPIN2[i] = yAND[i]-10;
+      widthANDPIN2[i] = 5;
+      heightANDPIN2[i] = 10;
 
-      xANDA1[i] = xAND[i]+5;
-      yANDA1[i] = yAND[i]+20;
-      widthANDA1[i] = 5;
-      heightANDA1[i] = 10;
+      xANDPIN3[i] = xAND[i]+25;
+      yANDPIN3[i] = yAND[i]-10;
+      widthANDPIN3[i] = 5;
+      heightANDPIN3[i] = 10;
 
-      xANDB1[i] = xAND[i]+15;
-      yANDB1[i] = yAND[i]+20;
-      widthANDB1[i] = 5;
-      heightANDB1[i] = 10;
+      xANDPIN3[i] = xAND[i]+35;
+      yANDPIN3[i] = yAND[i]-10;
+      widthANDPIN3[i] = 5;
+      heightANDPIN3[i] = 10;
 
-      xANDY1[i] = xAND[i]+25;
-      yANDY1[i] = yAND[i]+20;
-      widthANDY1[i] = 5;
-      heightANDY1[i] = 10;
+      xANDPIN4[i] = xAND[i]+45;
+      yANDPIN4[i] = yAND[i]-10;
+      widthANDPIN4[i] = 5;
+      heightANDPIN4[i] = 10;
 
-      xANDA2[i] = xAND[i]+35;
-      yANDA2[i] = yAND[i]+20;
-      widthANDA2[i] = 5;
-      heightANDA2[i] = 10;
+      xANDPIN5[i] = xAND[i]+55;
+      yANDPIN5[i] = yAND[i]-10;
+      widthANDPIN5[i] = 5;
+      heightANDPIN5[i] = 10;
 
-      xANDB2[i] = xAND[i]+45;
-      yANDB2[i] = yAND[i]+20;
-      widthANDB2[i] = 5;
-      heightANDB2[i] = 10;
+      xANDPIN6[i] = xAND[i]+65;
+      yANDPIN6[i] = yAND[i]-10;
+      widthANDPIN6[i] = 5;
+      heightANDPIN6[i] = 10;
 
-      xANDY2[i] = xAND[i]+55;
-      yANDY2[i] = yAND[i]+20;
-      widthANDY2[i] = 5;
-      heightANDY2[i] = 10;
+      xANDPIN7[i] = xAND[i]+75;
+      yANDPIN7[i] = yAND[i]-10;
+      widthANDPIN11[i] = 5;
+      heightANDPIN11[i] = 10;
 
-      xANDA3[i] = xAND[i]+15;
-      yANDA3[i] = yAND[i]-10;
-      widthANDA3[i] = 5;
-      heightANDA3[i] = 10;
+      xANDPIN8[i] = xAND[i]+15;
+      yANDPIN8[i] = yAND[i]-10;
+      widthANDPIN8[i] = 5;
+      heightANDPIN8[i] = 10;
 
-      xANDB3[i] = xAND[i]+25;
-      yANDB3[i] = yAND[i]-10;
-      widthANDB3[i] = 5;
-      heightANDB3[i] = 10;
+      xANDPIN9[i] = xAND[i]+25;
+      yANDPIN9[i] = yAND[i]-10;
+      widthANDPIN9[i] = 5;
+      heightANDPIN9[i] = 10;
 
-      xANDY3[i] = xAND[i]+35;
-      yANDY3[i] = yAND[i]-10;
-      widthANDY3[i] = 5;
-      heightANDY3[i] = 10;
+      xANDPIN10[i] = xAND[i]+35;
+      yANDPIN10[i] = yAND[i]-10;
+      widthANDPIN10[i] = 5;
+      heightANDPIN10[i] = 10;
 
-      xANDA4[i] = xAND[i]+45;
-      yANDA4[i] = yAND[i]-10;
-      widthANDA4[i] = 5;
-      heightANDA4[i] = 10;
+      xANDPIN11[i] = xAND[i]+45;
+      yANDPIN11[i] = yAND[i]-10;
+      widthANDPIN11[i] = 5;
+      heightANDPIN11[i] = 10;
 
-      xANDB4[i] = xAND[i]+55;
-      yANDB4[i] = yAND[i]-10;
-      widthANDB4[i] = 5;
-      heightANDB4[i] = 10;
+      xANDPIN12[i] = xAND[i]+55;
+      yANDPIN12[i] = yAND[i]-10;
+      widthANDPIN12[i] = 5;
+      heightANDPIN12[i] = 10;
 
-      xANDY4[i] = xAND[i]+65;
-      yANDY4[i] = yAND[i]-10;
-      widthANDY4[i] = 5;
-      heightANDY4[i] = 10;
+      xANDPIN13[i] = xAND[i]+65;
+      yANDPIN13[i] = yAND[i]-10;
+      widthANDPIN13[i] = 5;
+      heightANDPIN13[i] = 10;
       
-      xPin1[i] = xAND[i]+3;
-      yPin1[i] = yAND[i]+17;
-      widthPin1[i] = 5;
+      xANDPIN14[i] = xAND[i]+65;
+      yANDPIN14[i] = yAND[i]-10;
+      widthANDPIN14[i] = 5;
+      heightANDPIN14[i] = 10;
+      
+      xANDPin1Loco[i] = xAND[i]+3;
+      yANDPin1Loco[i] = yAND[i]+17;
+      widthANDPin1Loco[i] = 5;
 
       if (i == a74hc08) {
         a74hc08ADD = false;
@@ -96,22 +101,22 @@ void andDraw() {
     fill(0);
     rect(xAND[i], yAND[i], widhtAND[i], heightAND[i]);
     fill(#aaaaaa);
-    rect(xANDVDD[i], yANDVDD[i], widthANDVDD[i], heightANDVDD[i]);
-    rect(xANDVSS[i], yANDVSS[i], widhtANDVSS[i], heightANDVSS[i]);
-    rect(xANDA1[i], yANDA1[i], widthANDA1[i], heightANDA1[i]);
-    rect(xANDB1[i], yANDB1[i], widthANDB1[i], heightANDB1[i]);
-    rect(xANDY1[i], yANDY1[i], widthANDY1[i], heightANDY1[i]);
-    rect(xANDA2[i], yANDA2[i], widthANDA2[i], heightANDA2[i]);
-    rect(xANDB2[i], yANDB2[i], widthANDB2[i], heightANDB2[i]);
-    rect(xANDY2[i], yANDY2[i], widthANDY2[i], heightANDY2[i]);
-    rect(xANDA3[i], yANDA3[i], widthANDA3[i], heightANDA3[i]);
-    rect(xANDB3[i], yANDB3[i], widthANDB3[i], heightANDB3[i]);
-    rect(xANDY3[i], yANDY3[i], widthANDY3[i], heightANDY3[i]);
-    rect(xANDA4[i], yANDA4[i], widthANDA4[i], heightANDA4[i]);
-    rect(xANDB4[i], yANDB4[i], widthANDB4[i], heightANDB4[i]);
-    rect(xANDY4[i], yANDY4[i], widthANDY4[i], heightANDY4[i]);
+    rect(xANDPIN1[i], yANDPIN1[i], widthANDPIN1[i], heightANDPIN1[i]);
+    rect(xANDPIN2[i], yANDPIN2[i], widthANDPIN2[i], heightANDPIN2[i]);
+    rect(xANDPIN3[i], yANDPIN3[i], widthANDPIN3[i], heightANDPIN3[i]);
+    rect(xANDPIN4[i], yANDPIN4[i], widthANDPIN4[i], heightANDPIN4[i]);
+    rect(xANDPIN5[i], yANDPIN5[i], widthANDPIN5[i], heightANDPIN5[i]);
+    rect(xANDPIN6[i], yANDPIN6[i], widthANDPIN6[i], heightANDPIN6[i]);
+    rect(xANDPIN7[i], yANDPIN7[i], widthANDPIN7[i], heightANDPIN7[i]);
+    rect(xANDPIN8[i], yANDPIN8[i], widthANDPIN8[i], heightANDPIN8[i]);
+    rect(xANDPIN9[i], yANDPIN9[i], widthANDPIN9[i], heightANDPIN9[i]);
+    rect(xANDPIN10[i], yANDPIN10[i], widthANDPIN10[i], heightANDPIN10[i]);
+    rect(xANDPIN11[i], yANDPIN11[i], widthANDPIN11[i], heightANDPIN11[i]);
+    rect(xANDPIN12[i], yANDPIN12[i], widthANDPIN12[i], heightANDPIN12[i]);
+    rect(xANDPIN13[i], yANDPIN13[i], widthANDPIN13[i], heightANDPIN13[i]);
+    rect(xANDPIN14[i], yANDPIN14[i], widthANDPIN14[i], heightANDPIN14[i]);
     fill(255);
-    circle(xPin1[i], yPin1[i], widthPin1[i]);
+    circle(xANDPin1Loco[i], yANDPin1Loco[i], widthANDPin1Loco[i]);
     noFill();
     if (i == a74hc08) {
       i = 0;
