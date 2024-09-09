@@ -24,6 +24,24 @@ int[] boolANDA2 = new int[a74hc08], boolANDB2 = new int[a74hc08], boolANDY2 = ne
 int[] boolANDA3 = new int[a74hc08], boolANDB3 = new int[a74hc08], boolANDY3 = new int[a74hc08];
 int[] boolANDA4 = new int[a74hc08], boolANDB4 = new int[a74hc08], boolANDY4 = new int[a74hc08];
 
+boolean a74hc02ADD = true;
+int a74hc02 = 1;
+float[] xOR = new float[a74hc02], yOR = new float[a74hc02], widthOR = new float[a74hc02], heightOR = new float[a74hc02];
+float[] xORVSS = new float[a74hc02], yORVSS = new float[a74hc02], widthORVSS = new float[a74hc02], heightORVSS = new float[a74hc02];
+float[] xORVDD = new float[a74hc02], yORVDD = new float[a74hc02], widthORVDD = new float[a74hc02], heightORVDD = new float[a74hc02];
+
+boolean a74hc04ADD = true;
+int a74hc04 = 1;
+
+boolean a74hc32ADD = true;
+int a74hc32 = 1;
+
+boolean a74hc86ADD = true;
+int a74hc86 = 1;
+
+boolean a74hc74ADD = true;
+int a74hc74 = 1;
+
 boolean wireBool = false;
 int wireInt = 1;
 float[] xWire = new float[wireInt], yWire = new float[wireInt], widthWire = new float[wireInt], heightWire = new float[wireInt];
@@ -135,7 +153,7 @@ void draw(){
   multimeterSetup();
   simDraw();
   andSetup();
-  //NANDSetup();
+  NANDSetup();
   //ORSetup();
   //NORSetup();
   //XORSetup();
@@ -143,8 +161,8 @@ void draw(){
   //LEDSetup();
 
   multimeterDraw();
-  //andDraw();
-  //NANDDraw();
+  andDraw();
+  NANDDraw();
   //ORDraw();
   //NORDraw();
   //XORDraw();
