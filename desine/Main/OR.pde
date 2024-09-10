@@ -1,7 +1,7 @@
-void ORSetup(){
+void orSetup(){
   
 }
 
-void ORDraw(){
+void orDraw(){
   
 }
