@@ -1,7 +1,11 @@
-void NANDSetup(){
+void nandSetup(){
   
 }
 
-void NANDDraw(){
+void nandDraw(){
+  
+}
+
+void nandMousePressed(){
   
 }
