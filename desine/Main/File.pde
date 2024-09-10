@@ -59,7 +59,7 @@ void folderSelected(File selection){
   }else{
     println(selection.getPath());
     path = selection.getPath();
-    createOutput(path+"/"+Name+"/tools.txt");
-    createOutput(path+"/"+Name+"/item.txt");
+    createOutput(path+"/tools.txt");
+    createOutput(path+"/item.txt");
   }
 }
