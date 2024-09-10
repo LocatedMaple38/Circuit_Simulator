@@ -111,6 +111,9 @@ float[] xPosativeProbRead = new float[multimeterInt], yPosativeProbRead = new fl
 float[] xNagativeProbRead = new float[multimeterInt], yNagativeProbRead = new float[multimeterInt], widthMultimeterNagativeProb = new float[multimeterInt], heightMultimeterNagativeProb = new float[multimeterInt];
 
 boolean fileBool = false;
+boolean fileSaveAs = false;
+boolean fileLoad = false;
+boolean fileSave = false;
 float xFile, yFile, widthFile, heightFile;
 float xSaveFile, ySaveFile, widthSaveFile, heightSaveFile;
 float xLoadFile, yLoadFile, widthLoadFile, heightLoadFile;
@@ -175,6 +178,7 @@ void draw() {
   //ledDraw();
   fileDraw();
   addDraw();
+  fileKeyPressed();
 }
 
 void keyPressed() {
@@ -186,14 +190,15 @@ void mousePressed(){
     itemAddBool = false;
   }
   if (fileBool == true && mouseX>xLoadFile && mouseX<xLoadFile+widthLoadFile && mouseY>yLoadFile && mouseY<yLoadFile+heightLoadFile) {
-    fileLoad();
+      
   }
 
   if (fileBool == true && mouseX>xSaveFile && mouseX<xSaveFile+widthSaveFile && mouseY>ySaveFile && mouseY<ySaveFile+heightSaveFile) {
   }
 
   if (fileBool == true && mouseX>xSaveFileAs && mouseX<xSaveFileAs+widthSaveFileAs && mouseY>ySaveFileAs && mouseY<ySaveFileAs+heightSaveFileAs) {
-    fileSave();
+    //fileSave();
+    fileSaveAs = fileSaveAs ? false : true;
   }
 
   if (mouseX>xItemAdd && mouseX<xItemAdd+widthItemAdd && mouseY>yItemAdd && mouseY<yItemAdd+heightItemAdd) {
@@ -219,6 +224,7 @@ void mousePressed(){
       itemAddDisplay = false;
       itemAddTools = false;
       itemAddCompute = false;
+      itemAddAset = false;
     }
   }
   
@@ -230,6 +236,7 @@ void mousePressed(){
       itemAddDisplay = true;
       itemAddTools = false;
       itemAddCompute = false;
+      itemAddAset = false;
     }
   }
   
@@ -241,9 +248,36 @@ void mousePressed(){
       itemAddDisplay = false;
       itemAddTools = true;
       itemAddCompute = false;
+      itemAddAset = false;
+    }
+  }
+  
+  if(itemAddBool == true && mouseX>xItemAddCompute && mouseX<xItemAddCompute+widthItemAddCompute && mouseY>yItemAddCompute && mouseY<yItemAddCompute+heightItemAddCompute){
+    if(itemAddCompute == true){
+      itemAddCompute = false;
+    }else{
+      itemAddLogic = false;
+      itemAddDisplay = false;
+      itemAddTools = false;
+      itemAddCompute = true;
+      itemAddAset = false;
+    }
+  }
+  
+  if(itemAddBool == true && mouseX>xAccessibility && mouseX<xAccessibility+widthAccessibility && mouseY>yAccessibility && mouseY<yAccessibility+heightAccessibility){
+    if(itemAddAset == true){
+      itemAddAset = false;
+    }else{
+      itemAddLogic = false;
+      itemAddDisplay = false;
+      itemAddTools = false;
+      itemAddCompute = false;
+      itemAddAset = true;
     }
   }
   
   //nandMousePressed();
   //andMousePressed();
 }
+
+//, , , 
