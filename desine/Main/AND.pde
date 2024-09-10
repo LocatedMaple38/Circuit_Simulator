@@ -7,76 +7,71 @@ void andSetup() {
       heightAND[i] = 20;
 
       xANDPIN1[i] = xAND[i]+5;
-      yANDPIN1[i] = yAND[i]-10;
+      yANDPIN1[i] = yAND[i]+20;
       widthANDPIN1[i] = 5;
       heightANDPIN1[i] = 10;
 
       xANDPIN2[i] = xAND[i]+15;
-      yANDPIN2[i] = yAND[i]-10;
+      yANDPIN2[i] = yAND[i]+20;
       widthANDPIN2[i] = 5;
       heightANDPIN2[i] = 10;
 
       xANDPIN3[i] = xAND[i]+25;
-      yANDPIN3[i] = yAND[i]-10;
+      yANDPIN3[i] = yAND[i]+20;
       widthANDPIN3[i] = 5;
       heightANDPIN3[i] = 10;
 
-      xANDPIN3[i] = xAND[i]+35;
-      yANDPIN3[i] = yAND[i]-10;
-      widthANDPIN3[i] = 5;
-      heightANDPIN3[i] = 10;
-
-      xANDPIN4[i] = xAND[i]+45;
-      yANDPIN4[i] = yAND[i]-10;
+      xANDPIN4[i] = xAND[i]+35;
+      yANDPIN4[i] = yAND[i]+20;
       widthANDPIN4[i] = 5;
       heightANDPIN4[i] = 10;
 
-      xANDPIN5[i] = xAND[i]+55;
-      yANDPIN5[i] = yAND[i]-10;
+      xANDPIN5[i] = xAND[i]+45;
+      yANDPIN5[i] = yAND[i]+20;
       widthANDPIN5[i] = 5;
       heightANDPIN5[i] = 10;
 
-      xANDPIN6[i] = xAND[i]+65;
-      yANDPIN6[i] = yAND[i]-10;
+      xANDPIN6[i] = xAND[i]+55;
+      yANDPIN6[i] = yAND[i]+20;
       widthANDPIN6[i] = 5;
       heightANDPIN6[i] = 10;
 
-      xANDPIN7[i] = xAND[i]+75;
-      yANDPIN7[i] = yAND[i]-10;
-      widthANDPIN11[i] = 5;
-      heightANDPIN11[i] = 10;
+      xANDPIN7[i] = xAND[i]+65;
+      yANDPIN7[i] = yAND[i]+20;
+      widthANDPIN7[i] = 5;
+      heightANDPIN7[i] = 10;
 
-      xANDPIN8[i] = xAND[i]+15;
+      xANDPIN8[i] = xAND[i]+65;
       yANDPIN8[i] = yAND[i]-10;
       widthANDPIN8[i] = 5;
       heightANDPIN8[i] = 10;
 
-      xANDPIN9[i] = xAND[i]+25;
+      xANDPIN9[i] = xAND[i]+55;
       yANDPIN9[i] = yAND[i]-10;
       widthANDPIN9[i] = 5;
       heightANDPIN9[i] = 10;
 
-      xANDPIN10[i] = xAND[i]+35;
+      xANDPIN10[i] = xAND[i]+45;
       yANDPIN10[i] = yAND[i]-10;
       widthANDPIN10[i] = 5;
       heightANDPIN10[i] = 10;
 
-      xANDPIN11[i] = xAND[i]+45;
+      xANDPIN11[i] = xAND[i]+35;
       yANDPIN11[i] = yAND[i]-10;
       widthANDPIN11[i] = 5;
       heightANDPIN11[i] = 10;
 
-      xANDPIN12[i] = xAND[i]+55;
+      xANDPIN12[i] = xAND[i]+25;
       yANDPIN12[i] = yAND[i]-10;
       widthANDPIN12[i] = 5;
       heightANDPIN12[i] = 10;
 
-      xANDPIN13[i] = xAND[i]+65;
+      xANDPIN13[i] = xAND[i]+15;
       yANDPIN13[i] = yAND[i]-10;
       widthANDPIN13[i] = 5;
       heightANDPIN13[i] = 10;
-      
-      xANDPIN14[i] = xAND[i]+65;
+
+      xANDPIN14[i] = xAND[i]+5;
       yANDPIN14[i] = yAND[i]-10;
       widthANDPIN14[i] = 5;
       heightANDPIN14[i] = 10;
