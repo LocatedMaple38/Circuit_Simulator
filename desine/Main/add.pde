@@ -50,12 +50,12 @@ void addSetup(){
   heightItemAddCompute = 10;
 
   xItemAddArduinoNanoESP32 = 50;
-  yItemAddArduinoNanoESP32 = 30;
+  yItemAddArduinoNanoESP32 = 20;
   widhtItemAddArduinoNanoESP32 = 50;
   heightItemAddArduinoNanoESP32 = 10;
 
   xItemAddArduinoUNOR3 = 50;
-  yItemAddArduinoUNOR3 = 40;
+  yItemAddArduinoUNOR3 = 30;
   widthItemAddArduinoUNOR3 = 50;
   heightItemAddArduinoUNOR3 = 10;
 
@@ -69,23 +69,18 @@ void addSetup(){
   widthItemAddPowerSupply = 100;
   heightItemAddPowerSpply = 10;
   
-  xItemAddPowerSupply = 50;
-  yItemAddPowerSupply = 40;
-  widthItemAddPowerSupply = 100;
-  heightItemAddPowerSpply = 10;
-  
   xItemAddMultimeter = 50;
-  yItemAddMultimeter = 50;
+  yItemAddMultimeter = 40;
   widthItemAddMultimeter = 100;
   heightItemAddMultimeter = 10;
 
   xItemAddOscilloscope = 50;
-  yItemAddOscilloscope = 60;
+  yItemAddOscilloscope = 50;
   widthItemAddOscilloscope = 100;
   heightItemAddOscilloscope = 10;
 
   xItemAddFunctionGenerator = 50;
-  yItemAddFunctionGenerator = 70;
+  yItemAddFunctionGenerator = 60;
   widthItemAddFunctionGenerator = 100;
   heightItemAddFunctionGenerator = 10;
 
@@ -110,22 +105,22 @@ void addSetup(){
   heightAddAset = 10;
 
   xItemAddWire = 50;
-  yItemAddWire = 60;
+  yItemAddWire = 50;
   widthItemAddWire= 50;
   heightItemAddWire = 10;
 
   xItemAddGround = 50;
-  yItemAddGround = 70;
+  yItemAddGround = 60;
   widthItemAddGround = 50;
   heightItemAddGround = 10;
 
   xItemAdd5VSupply = 50;
-  yItemAdd5VSupply = 80;
+  yItemAdd5VSupply = 70;
   widhtItemAdd5VSupply = 50; 
   heightItemAdd5VSupply = 10;
 
   xItemAdd3_3VSupply = 50;
-  yItemAdd3_3VSupply = 90;
+  yItemAdd3_3VSupply = 80;
   widhtItemAdd3_3VSupply = 50; 
   heightItemAdd3_3VSupply = 10;
 }
@@ -157,7 +152,7 @@ void addDropDown(){
   text("Aset", xAddAset, yAddAset, widthAddAset, heightAddAset);
   noFill();
   
-  if(itemAddLogic == true){
+  if(itemAddLogic){
     addLogicDraw();
   }else if(itemAddCompute){
     addComputeDraw();
