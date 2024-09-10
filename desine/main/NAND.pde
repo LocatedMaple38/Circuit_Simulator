@@ -1,7 +1,0 @@
-void NANDSetup(){
-  
-}
-
-void NANDDraw(){
-  
-}
