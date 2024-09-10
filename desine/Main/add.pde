@@ -65,9 +65,29 @@ void addSetup(){
   heightItemAddTools = 10;
 
   xItemAddPowerSupply = 50;
-  yItemAddPowerSupply = 60;
-  widthItemAddPowerSupply = 50;
+  yItemAddPowerSupply = 30;
+  widthItemAddPowerSupply = 100;
   heightItemAddPowerSpply = 10;
+  
+  xItemAddPowerSupply = 50;
+  yItemAddPowerSupply = 40;
+  widthItemAddPowerSupply = 100;
+  heightItemAddPowerSpply = 10;
+  
+  xItemAddMultimeter = 50;
+  yItemAddMultimeter = 50;
+  widthItemAddMultimeter = 100;
+  heightItemAddMultimeter = 10;
+
+  xItemAddOscilloscope = 50;
+  yItemAddOscilloscope = 60;
+  widthItemAddOscilloscope = 100;
+  heightItemAddOscilloscope = 10;
+
+  xItemAddFunctionGenerator = 50;
+  yItemAddFunctionGenerator = 70;
+  widthItemAddFunctionGenerator = 100;
+  heightItemAddFunctionGenerator = 10;
 
   xItemAddDisplay = 0;
   yItemAddDisplay = 40;
@@ -75,14 +95,19 @@ void addSetup(){
   heightItemAddDisplay = 10;
 
   xItemAddLed = 50;
-  yItemAddLed = 50;
+  yItemAddLed = 40;
   widthItemAddLed = 50;
   heightItemAddLed = 10;
 
   xItemAddLCD = 50;
-  yItemAddLCD = 60;
+  yItemAddLCD = 50;
   widthItemAddLCD = 50;
   heightItemAddLCD = 10;
+  
+  xAddAset = 0;
+  yAddAset = 50;
+  widthAddAset = 50;
+  heightAddAset = 10;
 
   xItemAddWire = 50;
   yItemAddWire = 60;
@@ -123,12 +148,26 @@ void addDropDown(){
   rect(xItemAddCompute, yItemAddCompute, widthItemAddCompute, heightItemAddCompute);
   rect(xItemAddTools, yItemAddTools, widthItemAddTools, heightItemAddTools);
   rect(xItemAddDisplay, yItemAddDisplay, widthItemAddDisplay, heightItemAddDisplay);
+  rect(xAddAset, yAddAset, widthAddAset, heightAddAset);
   fill(0);
   text("Logic", xItemAddLogic, yItemAddLogic, widthItemAddLogic, heightItemAddLogic);
   text("Compute", xItemAddCompute, yItemAddCompute, widthItemAddCompute, heightItemAddCompute);
   text("Tools", xItemAddTools, yItemAddTools, widthItemAddTools, heightItemAddTools);
   text("Display", xItemAddDisplay, yItemAddDisplay, widthItemAddDisplay, heightItemAddDisplay);
+  text("Aset", xAddAset, yAddAset, widthAddAset, heightAddAset);
   noFill();
+  
+  if(itemAddLogic == true){
+    addLogicDraw();
+  }else if(itemAddCompute){
+    addComputeDraw();
+  }else if(itemAddTools){
+    addToolsDraw();
+  }else if(itemAddDisplay){
+    addDisplayDraw();
+  }else if(itemAddAset){
+    addAsetDraw();
+  }
 }
 
 void addDisplayDraw(){
