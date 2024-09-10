@@ -158,21 +158,21 @@ void draw() {
   multimeterSetup();
   simDraw();
   andSetup();
-  NANDSetup();
-  ORSetup();
-  //NORSetup();
-  //XORSetup();
-  //XNORSetup();
-  //LEDSetup();
+  //nandSetup();
+  //orSetup();
+  //norSetup();
+  //xorSetup();
+  //xnorSetup();
+  //ledSetup();
 
   multimeterDraw();
   andDraw();
-  NANDDraw();
-  ORDraw();
-  //NORDraw();
-  //XORDraw();
-  //XNORDraw();
-  //LEDDraw();
+  //nandDraw();
+  //orDraw();
+  //norDraw();
+  //xorDraw();
+  //xnorraw();
+  //ledDraw();
   fileDraw();
   addDraw();
 }
@@ -243,6 +243,7 @@ void mousePressed(){
       itemAddCompute = false;
     }
   }
+  
+  //nandMousePressed();
+  //andMousePressed();
 }
-
-//, , , 
