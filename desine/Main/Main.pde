@@ -65,8 +65,6 @@ float xItemAddINVERTER, yItemAddINVERTER, widhtItemAddINVERTER, heightItemAddINV
 
 boolean itemAddLogic = false;
 float xItemAddLogic, yItemAddLogic, widthItemAddLogic, heightItemAddLogic;
-float xItemAddWire, yItemAddWire, widthItemAddWire, heightItemAddWire;
-float xItemAddGround, yItemAddGround, widthItemAddGround, heightItemAddGround;
 
 boolean itemAddCompute = false;
 float xItemAddCompute, yItemAddCompute, widthItemAddCompute, heightItemAddCompute;
@@ -76,19 +74,21 @@ float xItemAddArduinoUNOR3, yItemAddArduinoUNOR3, widthItemAddArduinoUNOR3, heig
 boolean itemAddTools = false;
 float xItemAddTools, yItemAddTools, widthItemAddTools, heightItemAddTools;
 float xItemAddPowerSupply, yItemAddPowerSupply, widthItemAddPowerSupply, heightItemAddPowerSpply;
+float xItemAddMultimeter, yItemAddMultimeter, widthItemAddMultimeter, heightItemAddMultimeter;
+float xItemAddOscilloscope, yItemAddOscilloscope, widthItemAddOscilloscope, heightItemAddOscilloscope;
+float xItemAddFunctionGenerator, yItemAddFunctionGenerator, widthItemAddFunctionGenerator, heightItemAddFunctionGenerator;
+
+boolean itemAddAset = false;
+float xAddAset, yAddAset, widthAddAset, heightAddAset;
 float xItemAdd5VSupply, yItemAdd5VSupply, widhtItemAdd5VSupply, heightItemAdd5VSupply;
 float xItemAdd3_3VSupply, yItemAdd3_3VSupply, widhtItemAdd3_3VSupply, heightItemAdd3_3VSupply;
+float xItemAddWire, yItemAddWire, widthItemAddWire, heightItemAddWire;
+float xItemAddGround, yItemAddGround, widthItemAddGround, heightItemAddGround;
 
 boolean itemAddDisplay = false;
 float xItemAddDisplay, yItemAddDisplay, widthItemAddDisplay, heightItemAddDisplay;
 float xItemAddLCD, yItemAddLCD, widthItemAddLCD, heightItemAddLCD;
 float xItemAddLed, yItemAddLed, widthItemAddLed, heightItemAddLed;
-
-boolean toolsAddBool = false;
-float xItemAddMultimeter, yItemAddMultimeter, widthItemAddMultimeter, heightItemAddMultimeter;
-float xItemAddOscilloscope, yItemAddOscilloscope, widthItemAddOscilloscope, heightItemAddOscilloscope;
-float xItemAddPowreSuply, yItemAddPowreSuply, widthItemAddPowreSuply, heightItemAddPowreSuply;
-float xItemAddFunctionGenerator, yItemAddFunctionGenerator, widthItemAddFunctionGenerator, heightItemAddFunctionGenerator;
 
 boolean accessibilityBool = false;
 float xAccessibility, yAccessibility, widthAccessibility, heightAccessibility;
@@ -110,7 +110,7 @@ float[] xMultimeterPosativeProb = new float[multimeterInt], yMultimeterPosativeP
 float[] xPosativeProbRead = new float[multimeterInt], yPosativeProbRead = new float[multimeterInt], widthPosativeProbRead = new float[multimeterInt], heightPosativeProbRead = new float[multimeterInt];
 float[] xNagativeProbRead = new float[multimeterInt], yNagativeProbRead = new float[multimeterInt], widthMultimeterNagativeProb = new float[multimeterInt], heightMultimeterNagativeProb = new float[multimeterInt];
 
-boolean fileBool;
+boolean fileBool = false;
 float xFile, yFile, widthFile, heightFile;
 float xSaveFile, ySaveFile, widthSaveFile, heightSaveFile;
 float xLoadFile, yLoadFile, widthLoadFile, heightLoadFile;
@@ -159,7 +159,7 @@ void draw() {
   simDraw();
   andSetup();
   NANDSetup();
-  //ORSetup();
+  ORSetup();
   //NORSetup();
   //XORSetup();
   //XNORSetup();
@@ -168,7 +168,7 @@ void draw() {
   multimeterDraw();
   andDraw();
   NANDDraw();
-  //ORDraw();
+  ORDraw();
   //NORDraw();
   //XORDraw();
   //XNORDraw();
@@ -180,9 +180,7 @@ void draw() {
 void keyPressed() {
 }
 
-void mousePressed() {
-
-
+void mousePressed(){
   if (mouseX>xFile && mouseX<xFile+widthFile && mouseY>yFile && mouseY<yFile+heightFile) {
     fileBool = fileBool ? false : true;
     itemAddBool = false;
@@ -203,23 +201,48 @@ void mousePressed() {
     fileBool = false;
   }
 
-  if (simBool == true && mouseX>xSIM && mouseX<xSIM+widthSIM && mouseY>ySIM && mouseY<ySIM+heightSIM) {
+  if(simBool == true && mouseX>xSIM && mouseX<xSIM+widthSIM && mouseY>ySIM && mouseY<ySIM+heightSIM) {
     simBool = false;
   } else {
     simBool = true;
-    //fileBool = false;
-    //itemAddBool = false;
   }
 
   if (itemAddBool == true && mouseX>xItemAddAND && mouseX<xItemAddAND+widthItemAddAND && mouseY>yItemAddAND && mouseY<yItemAddAND+heightItemAddAND) {
     a74hc08ADD = true;
   }
-
-  if (itemAddBool == true && mouseX>xItemAddLogic && mouseX<xItemAddLogic+widthItemAddLogic && mouseY>yItemAddLogic && mouseY<yItemAddLogic+heightItemAddLogic) {
-    if (itemAddLogic == true) {
+  
+  if(itemAddBool == true && mouseX>xItemAddLogic && mouseX<xItemAddLogic+widthItemAddLogic && mouseY>yItemAddLogic && mouseY<yItemAddLogic+heightItemAddLogic){
+    if(itemAddLogic == true){
       itemAddLogic = false;
-    } else {
+    }else{
       itemAddLogic = true;
+      itemAddDisplay = false;
+      itemAddTools = false;
+      itemAddCompute = false;
+    }
+  }
+  
+  if(itemAddBool == true && mouseX>xItemAddDisplay && mouseX<xItemAddDisplay+widthItemAddDisplay && mouseY>yItemAddDisplay && mouseY<yItemAddDisplay+heightItemAddDisplay){
+    if(itemAddDisplay == true){
+      itemAddDisplay = false;
+    }else{
+      itemAddLogic = false;
+      itemAddDisplay = true;
+      itemAddTools = false;
+      itemAddCompute = false;
+    }
+  }
+  
+  if(itemAddBool == true && mouseX>xItemAddTools && mouseX<xItemAddTools+widthItemAddTools && mouseY>yItemAddTools && mouseY<yItemAddTools+heightItemAddTools){
+    if(itemAddTools == true){
+      itemAddTools = false;
+    }else{
+      itemAddLogic = false;
+      itemAddDisplay = false;
+      itemAddTools = true;
+      itemAddCompute = false;
     }
   }
 }
+
+//, , , 
