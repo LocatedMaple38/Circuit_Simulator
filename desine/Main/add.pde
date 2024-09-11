@@ -50,12 +50,12 @@ void addSetup(){
   heightItemAddCompute = 10;
 
   xItemAddArduinoNanoESP32 = 50;
-  yItemAddArduinoNanoESP32 = 20;
+  yItemAddArduinoNanoESP32 = 30;
   widhtItemAddArduinoNanoESP32 = 50;
   heightItemAddArduinoNanoESP32 = 10;
 
   xItemAddArduinoUNOR3 = 50;
-  yItemAddArduinoUNOR3 = 30;
+  yItemAddArduinoUNOR3 = 40;
   widthItemAddArduinoUNOR3 = 50;
   heightItemAddArduinoUNOR3 = 10;
 
@@ -69,18 +69,23 @@ void addSetup(){
   widthItemAddPowerSupply = 100;
   heightItemAddPowerSpply = 10;
   
+  xItemAddPowerSupply = 50;
+  yItemAddPowerSupply = 40;
+  widthItemAddPowerSupply = 100;
+  heightItemAddPowerSpply = 10;
+  
   xItemAddMultimeter = 50;
-  yItemAddMultimeter = 40;
+  yItemAddMultimeter = 50;
   widthItemAddMultimeter = 100;
   heightItemAddMultimeter = 10;
 
   xItemAddOscilloscope = 50;
-  yItemAddOscilloscope = 50;
+  yItemAddOscilloscope = 60;
   widthItemAddOscilloscope = 100;
   heightItemAddOscilloscope = 10;
 
   xItemAddFunctionGenerator = 50;
-  yItemAddFunctionGenerator = 60;
+  yItemAddFunctionGenerator = 70;
   widthItemAddFunctionGenerator = 100;
   heightItemAddFunctionGenerator = 10;
 
@@ -105,22 +110,22 @@ void addSetup(){
   heightAddAset = 10;
 
   xItemAddWire = 50;
-  yItemAddWire = 50;
+  yItemAddWire = 60;
   widthItemAddWire= 50;
   heightItemAddWire = 10;
 
   xItemAddGround = 50;
-  yItemAddGround = 60;
+  yItemAddGround = 70;
   widthItemAddGround = 50;
   heightItemAddGround = 10;
 
   xItemAdd5VSupply = 50;
-  yItemAdd5VSupply = 70;
+  yItemAdd5VSupply = 80;
   widhtItemAdd5VSupply = 50; 
   heightItemAdd5VSupply = 10;
 
   xItemAdd3_3VSupply = 50;
-  yItemAdd3_3VSupply = 80;
+  yItemAdd3_3VSupply = 90;
   widhtItemAdd3_3VSupply = 50; 
   heightItemAdd3_3VSupply = 10;
 }
@@ -152,7 +157,7 @@ void addDropDown(){
   text("Aset", xAddAset, yAddAset, widthAddAset, heightAddAset);
   noFill();
   
-  if(itemAddLogic){
+  if(itemAddLogic == true){
     addLogicDraw();
   }else if(itemAddCompute){
     addComputeDraw();
@@ -233,4 +238,45 @@ void addAsetDraw(){
   text("5V Supply", xItemAdd5VSupply, yItemAdd5VSupply, widhtItemAdd5VSupply, heightItemAdd5VSupply);
   text("3.3V Supply", xItemAdd3_3VSupply, yItemAdd3_3VSupply, widhtItemAdd3_3VSupply, heightItemAdd3_3VSupply);
   noFill();
+}
+
+void addMousePressed(){
+  if(mouseX>xItemAdd && mouseX<xItemAdd+widthItemAdd && mouseY>yItemAdd && mouseY<yItemAdd+heightItemAdd){
+    itemAddBool = itemAddBool ? false : true;
+    fileBool = false;
+  }
+  
+  if(mouseX>xItemAddTools && mouseX<xItemAddTools+widthItemAddTools && mouseY>yItemAddTools && mouseY<yItemAddTools+heightItemAddTools){
+    if(itemAddTools == true){
+      itemAddTools = false;
+    }else{
+      itemAddLogic = false;
+      itemAddDisplay = false;
+      itemAddTools = true;
+      itemAddCompute = false;
+    }
+  }
+    
+  
+  if(mouseX>xItemAddDisplay && mouseX<xItemAddDisplay+widthItemAddDisplay && mouseY>yItemAddDisplay && mouseY<yItemAddDisplay+heightItemAddDisplay){
+    if(itemAddDisplay == true){
+      itemAddDisplay = false;
+    }else{
+      itemAddLogic = false;
+      itemAddDisplay = true;
+      itemAddTools = false;
+      itemAddCompute = false;
+    }
+  }
+  
+  if(mouseX>xItemAddLogic && mouseX<xItemAddLogic+widthItemAddLogic && mouseY>yItemAddLogic && mouseY<yItemAddLogic+heightItemAddLogic){
+    if(itemAddLogic == true){
+      itemAddLogic = false;
+    }else{
+      itemAddLogic = true;
+      itemAddDisplay = false;
+      itemAddTools = false;
+      itemAddCompute = false;
+    }
+  }
 }
