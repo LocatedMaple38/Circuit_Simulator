@@ -1,3 +1,10 @@
+//import ddf.minim.*;
+//import ddf.minim.analysis.*;
+//import ddf.minim.effects.*;
+//import ddf.minim.signals.*;
+//import ddf.minim.spi.*;
+//import ddf.minim.ugens.*;
+
 boolean a74hc08ADD = true;
 int a74hc08 = 1;
 float[] xAND = new float[a74hc08], yAND = new float[a74hc08], widhtAND = new float[a74hc08], heightAND = new float[a74hc08];
@@ -111,9 +118,6 @@ float[] xPosativeProbRead = new float[multimeterInt], yPosativeProbRead = new fl
 float[] xNagativeProbRead = new float[multimeterInt], yNagativeProbRead = new float[multimeterInt], widthMultimeterNagativeProb = new float[multimeterInt], heightMultimeterNagativeProb = new float[multimeterInt];
 
 boolean fileBool = false;
-boolean fileSaveAs = false;
-boolean fileLoad = false;
-boolean fileSave = false;
 float xFile, yFile, widthFile, heightFile;
 float xSaveFile, ySaveFile, widthSaveFile, heightSaveFile;
 float xLoadFile, yLoadFile, widthLoadFile, heightLoadFile;
@@ -122,7 +126,8 @@ float xSaveFileAs, ySaveFileAs, widthSaveFileAs, heightSaveFileAs;
 boolean simBool = false;
 float xSIM, ySIM, widthSIM, heightSIM;
 
-String path;
+String audioPath = "../sound/";
+String savePath;
 String Name = "New";
 String userHome = System.getProperty("user.home");
 
@@ -135,20 +140,20 @@ void setup() {
   surface.setResizable(true);
   surface.setLocation(0, 0);
 
-  if (simBool == false) {
-    surface.setTitle("Design "+Name);
-  } else {
-    surface.setTitle("Simulate "+Name);
-  }
-
   addSetup();
   fileSetup();
   simSetup();
 }
 
 void draw() {
+  
+  if (simBool == false) {
+    surface.setTitle("Design "+savePath);
+  } else {
+    surface.setTitle("Simulate "+savePath);
+  }
   fill(#ffadff);
-  rect(0, 0, displayWidth*2, displayHeight*2);
+  rect(0, 0, displayWidth^2, displayHeight^2);
 
   textAlign(LEFT, CENTER);
   textSize(10);
@@ -178,106 +183,15 @@ void draw() {
   //ledDraw();
   fileDraw();
   addDraw();
-  fileKeyPressed();
 }
 
 void keyPressed() {
 }
 
 void mousePressed(){
-  if (mouseX>xFile && mouseX<xFile+widthFile && mouseY>yFile && mouseY<yFile+heightFile) {
-    fileBool = fileBool ? false : true;
-    itemAddBool = false;
-  }
-  if (fileBool == true && mouseX>xLoadFile && mouseX<xLoadFile+widthLoadFile && mouseY>yLoadFile && mouseY<yLoadFile+heightLoadFile) {
-      
-  }
-
-  if (fileBool == true && mouseX>xSaveFile && mouseX<xSaveFile+widthSaveFile && mouseY>ySaveFile && mouseY<ySaveFile+heightSaveFile) {
-  }
-
-  if (fileBool == true && mouseX>xSaveFileAs && mouseX<xSaveFileAs+widthSaveFileAs && mouseY>ySaveFileAs && mouseY<ySaveFileAs+heightSaveFileAs) {
-    //fileSave();
-    fileSaveAs = fileSaveAs ? false : true;
-  }
-
-  if (mouseX>xItemAdd && mouseX<xItemAdd+widthItemAdd && mouseY>yItemAdd && mouseY<yItemAdd+heightItemAdd) {
-    itemAddBool = itemAddBool ? false : true;
-    fileBool = false;
-  }
-
-  if(simBool == true && mouseX>xSIM && mouseX<xSIM+widthSIM && mouseY>ySIM && mouseY<ySIM+heightSIM) {
-    simBool = false;
-  } else {
-    simBool = true;
-  }
-
-  if (itemAddBool == true && mouseX>xItemAddAND && mouseX<xItemAddAND+widthItemAddAND && mouseY>yItemAddAND && mouseY<yItemAddAND+heightItemAddAND) {
-    a74hc08ADD = true;
-  }
-  
-  if(itemAddBool == true && mouseX>xItemAddLogic && mouseX<xItemAddLogic+widthItemAddLogic && mouseY>yItemAddLogic && mouseY<yItemAddLogic+heightItemAddLogic){
-    if(itemAddLogic == true){
-      itemAddLogic = false;
-    }else{
-      itemAddLogic = true;
-      itemAddDisplay = false;
-      itemAddTools = false;
-      itemAddCompute = false;
-      itemAddAset = false;
-    }
-  }
-  
-  if(itemAddBool == true && mouseX>xItemAddDisplay && mouseX<xItemAddDisplay+widthItemAddDisplay && mouseY>yItemAddDisplay && mouseY<yItemAddDisplay+heightItemAddDisplay){
-    if(itemAddDisplay == true){
-      itemAddDisplay = false;
-    }else{
-      itemAddLogic = false;
-      itemAddDisplay = true;
-      itemAddTools = false;
-      itemAddCompute = false;
-      itemAddAset = false;
-    }
-  }
-  
-  if(itemAddBool == true && mouseX>xItemAddTools && mouseX<xItemAddTools+widthItemAddTools && mouseY>yItemAddTools && mouseY<yItemAddTools+heightItemAddTools){
-    if(itemAddTools == true){
-      itemAddTools = false;
-    }else{
-      itemAddLogic = false;
-      itemAddDisplay = false;
-      itemAddTools = true;
-      itemAddCompute = false;
-      itemAddAset = false;
-    }
-  }
-  
-  if(itemAddBool == true && mouseX>xItemAddCompute && mouseX<xItemAddCompute+widthItemAddCompute && mouseY>yItemAddCompute && mouseY<yItemAddCompute+heightItemAddCompute){
-    if(itemAddCompute == true){
-      itemAddCompute = false;
-    }else{
-      itemAddLogic = false;
-      itemAddDisplay = false;
-      itemAddTools = false;
-      itemAddCompute = true;
-      itemAddAset = false;
-    }
-  }
-  
-  if(itemAddBool == true && mouseX>xAccessibility && mouseX<xAccessibility+widthAccessibility && mouseY>yAccessibility && mouseY<yAccessibility+heightAccessibility){
-    if(itemAddAset == true){
-      itemAddAset = false;
-    }else{
-      itemAddLogic = false;
-      itemAddDisplay = false;
-      itemAddTools = false;
-      itemAddCompute = false;
-      itemAddAset = true;
-    }
-  }
-  
+  simMousePressed();
+  fileMousePressed();
+  addMousePressed();
+  andMousePressed();
   //nandMousePressed();
-  //andMousePressed();
 }
-
-//, , , 
