@@ -98,8 +98,11 @@ float xItemAddLCD, yItemAddLCD, widthItemAddLCD, heightItemAddLCD;
 float xItemAddLed, yItemAddLed, widthItemAddLed, heightItemAddLed;
 
 boolean accessibilityBool = false;
+boolean TTSBool = true;
 float xAccessibility, yAccessibility, widthAccessibility, heightAccessibility;
 float xTTS, yTTS, widthTTS, heightTTS;
+String audioPath = "../sound/all";
+String TTS = "";
 
 int multimeterInt = 1;
 boolean multimeterAdd = true;
@@ -126,15 +129,14 @@ float xSaveFileAs, ySaveFileAs, widthSaveFileAs, heightSaveFileAs;
 boolean simBool = false;
 float xSIM, ySIM, widthSIM, heightSIM;
 
-String audioPath = "../sound/";
 String savePath;
-String userHome = System.getProperty("user.home");
-String TTS = "";
 
-int numbSongs = 0;
+File musicFolder, soundEffectFolder; //Class for java.io.* library
 Minim minim; //creates object to access all functions
-AudioPlayer[] song = new AudioPlayer[ numbSongs ]; //creates "Play List" variable holding extensions WAV, AIFF, AU, SND, and MP3
-AudioMetaData[] songMetaData = new AudioMetaData[ numbSongs ]; //
+int numberOfSongs = 1;//Placeholder Only, reexecute lines after fileCount Known
+int currentSong=0; //Variable is rewritten in setup()
+AudioPlayer[] playList = new AudioPlayer[numberOfSongs]; //song is now similar to song1
+AudioMetaData[] playListMetaData = new AudioMetaData[numberOfSongs]; //same as above
 
 
 void setup() {
@@ -152,8 +154,6 @@ void setup() {
 }
 
 void draw() {
-  soundDraw();
-  
   if (simBool == false) {
     surface.setTitle("Design "+savePath);
   } else {
@@ -179,7 +179,10 @@ void draw() {
   //xorSetup();
   //xnorSetup();
   //ledSetup();
-
+  
+  if(TTSBool == true){
+    soundDraw();
+  }
   multimeterDraw();
   andDraw();
   //nandDraw();
@@ -200,5 +203,5 @@ void mousePressed(){
   fileMousePressed();
   addMousePressed();
   andMousePressed();
-  //nandMousePressed();
+  nandMousePressed();
 }
