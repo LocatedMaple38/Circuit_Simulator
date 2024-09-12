@@ -244,7 +244,6 @@ void addMousePressed(){
   if(mouseX>xItemAdd && mouseX<xItemAdd+widthItemAdd && mouseY>yItemAdd && mouseY<yItemAdd+heightItemAdd){
     itemAddBool = itemAddBool ? false : true;
     fileBool = false;
-    TTS = "add";
   }
   
   if(mouseX>xItemAddTools && mouseX<xItemAddTools+widthItemAddTools && mouseY>yItemAddTools && mouseY<yItemAddTools+heightItemAddTools){
