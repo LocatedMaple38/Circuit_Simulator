@@ -126,6 +126,7 @@ void andMousePressed(){
   if(mouseX>xItemAddAND && mouseX<xItemAddAND+widthItemAddAND && mouseY>yItemAddAND && mouseY<yItemAddAND+heightItemAddAND){
     if(mousePressed){
       a74hc08ADD = true;
+      
     }
   }
 }
