@@ -1,9 +1,9 @@
-//import ddf.minim.*;
-//import ddf.minim.analysis.*;
-//import ddf.minim.effects.*;
-//import ddf.minim.signals.*;
-//import ddf.minim.spi.*;
-//import ddf.minim.ugens.*;
+import ddf.minim.*;
+import ddf.minim.analysis.*;
+import ddf.minim.effects.*;
+import ddf.minim.signals.*;
+import ddf.minim.spi.*;
+import ddf.minim.ugens.*;
 
 boolean a74hc08ADD = true;
 int a74hc08 = 1;
@@ -128,8 +128,14 @@ float xSIM, ySIM, widthSIM, heightSIM;
 
 String audioPath = "../sound/";
 String savePath;
-String Name = "New";
 String userHome = System.getProperty("user.home");
+String TTS = "";
+
+int numbSongs = 0;
+Minim minim; //creates object to access all functions
+AudioPlayer[] song = new AudioPlayer[ numbSongs ]; //creates "Play List" variable holding extensions WAV, AIFF, AU, SND, and MP3
+AudioMetaData[] songMetaData = new AudioMetaData[ numbSongs ]; //
+
 
 void setup() {
   xANDPos[0] = 100;
@@ -146,6 +152,7 @@ void setup() {
 }
 
 void draw() {
+  soundDraw();
   
   if (simBool == false) {
     surface.setTitle("Design "+savePath);
