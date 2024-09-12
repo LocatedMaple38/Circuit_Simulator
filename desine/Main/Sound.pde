@@ -12,10 +12,18 @@ void soundSetup(){
 }
 
 void soundDraw(){
+  
   switch(TTS){
-    case "add" : 
-    //playList[0].play();
+    case "itemAdd":
     TTS = "";
-    break;
-  }  
+    //playList[0].play();
+    println("itemAdd");
+  }
+    
+  if(mouseX>xItemAdd && mouseX<xItemAdd+widthItemAdd && mouseY>yItemAdd && mouseY<yItemAdd+heightItemAdd){
+    TTS = "itemAdd";
+  }
+}
+
+void soundExecute(){
 }
