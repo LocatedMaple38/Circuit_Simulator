@@ -180,6 +180,7 @@ void draw() {
   //xnorSetup();
   //ledSetup();
   
+  soundExecute();
   if(TTSBool == true){
     soundDraw();
   }
@@ -193,6 +194,7 @@ void draw() {
   //ledDraw();
   fileDraw();
   addDraw();
+  
 }
 
 void keyPressed() {
