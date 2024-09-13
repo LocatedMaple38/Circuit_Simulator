@@ -1,5 +1,5 @@
 void multimeterSetup(){
-  if(multimeterAdd == true){
+  if(multimeterAdd){
     for(int i = 0; i < multimeterInt;){
       xMultimeter[i] = 200;
       yMultimeter[i] = 100;
