@@ -100,10 +100,12 @@ float xItemAddLCD, yItemAddLCD, widthItemAddLCD, heightItemAddLCD;
 float xItemAddLed, yItemAddLed, widthItemAddLed, heightItemAddLed;
 
 boolean accessibilityBool = false;
-boolean TTSBool = true;
+boolean TTSBool = false;
 float xAccessibility, yAccessibility, widthAccessibility, heightAccessibility;
 float xTTS, yTTS, widthTTS, heightTTS;
-String audioPath = "sound/all/";
+float xKCC, yKSV, widthKSC, heightKSK;
+String audioPath = "sound/";
+String TTS = "";
 String accessibilityString = "";
 
 
@@ -165,14 +167,22 @@ void draw() {
     surface.setTitle("Simulate "+savePath);
   }
   fill(#ffadff);
-  rect(0, 0, displayWidth^2, displayHeight^2);
+  rect(0, 0, displayWidth*2, displayHeight*2);
 
   textAlign(LEFT, CENTER);
   textSize(10);
 
 
-  if (fileBool == true) {
+  if (fileBool) {
     fileDropDown();
+  }
+  
+  if(TTSBool){
+    soundDraw();
+  }
+  
+  if(accessibilityBool){
+    accessibilityDropDown();
   }
 
   multimeterSetup();
@@ -185,10 +195,6 @@ void draw() {
   //xnorSetup();
   //ledSetup();
   
-  soundExecute();
-  if(TTSBool == true){
-    soundDraw();
-  }
   multimeterDraw();
   andDraw();
   //nandDraw();
