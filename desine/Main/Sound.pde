@@ -23,18 +23,29 @@ void soundSetup(){
 
 void soundDraw(){
   
-  switch(accessibilityString){
+  switch(TTS){
     case "itemAdd":
-    accessibilityString = "";
-    playList[0].play();
-    println("itemAdd");
+    TTS = "";
+    //playList[].play();
+    break;
+    
+    case "itemAddLogic":
+    TTS = "";
+    //playList[].play();
+    break;
+    
+    case "itemAddCompute":
+    TTS = "";
+    //playList[].play();
+    break;
+    
+    case "itemAddTools":
+    TTS = "";
+    //playList[].play();
     break;
   }
     
   if(mouseX>xItemAdd && mouseX<xItemAdd+widthItemAdd && mouseY>yItemAdd && mouseY<yItemAdd+heightItemAdd){
-    accessibilityString = "itemAdd";
+    TTS = "itemAdd";
   }
-}
-
-void soundExecute(){
 }
