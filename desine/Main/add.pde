@@ -136,7 +136,7 @@ void addDraw(){
     rect(xItemAdd, yItemAdd, widthItemAdd, heightItemAdd);
     fill(0);
     text("ADD", xItemAdd, yItemAdd, widthItemAdd, heightItemAdd);
-    if(itemAddBool == true){
+    if(itemAddBool){
         addDropDown();
     }
     noFill();
@@ -157,7 +157,7 @@ void addDropDown(){
   text("Aset", xAddAset, yAddAset, widthAddAset, heightAddAset);
   noFill();
   
-  if(itemAddLogic == true){
+  if(itemAddLogic){
     addLogicDraw();
   }else if(itemAddCompute){
     addComputeDraw();
@@ -247,7 +247,7 @@ void addMousePressed(){
   }
   
   if(mouseX>xItemAddTools && mouseX<xItemAddTools+widthItemAddTools && mouseY>yItemAddTools && mouseY<yItemAddTools+heightItemAddTools){
-    if(itemAddTools == true){
+    if(itemAddTools){
       itemAddTools = false;
     }else{
       itemAddLogic = false;
@@ -259,7 +259,7 @@ void addMousePressed(){
     
   
   if(mouseX>xItemAddDisplay && mouseX<xItemAddDisplay+widthItemAddDisplay && mouseY>yItemAddDisplay && mouseY<yItemAddDisplay+heightItemAddDisplay){
-    if(itemAddDisplay == true){
+    if(itemAddDisplay){
       itemAddDisplay = false;
     }else{
       itemAddLogic = false;
@@ -270,7 +270,7 @@ void addMousePressed(){
   }
   
   if(mouseX>xItemAddLogic && mouseX<xItemAddLogic+widthItemAddLogic && mouseY>yItemAddLogic && mouseY<yItemAddLogic+heightItemAddLogic){
-    if(itemAddLogic == true){
+    if(itemAddLogic){
       itemAddLogic = false;
     }else{
       itemAddLogic = true;
