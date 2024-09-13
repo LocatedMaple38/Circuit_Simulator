@@ -1,3 +1,5 @@
+import java.io.*;
+
 import ddf.minim.*;
 import ddf.minim.analysis.*;
 import ddf.minim.effects.*;
@@ -101,8 +103,9 @@ boolean accessibilityBool = false;
 boolean TTSBool = true;
 float xAccessibility, yAccessibility, widthAccessibility, heightAccessibility;
 float xTTS, yTTS, widthTTS, heightTTS;
-String audioPath = "../sound/all";
-String TTS = "";
+String audioPath = "sound/all/";
+String accessibilityString = "";
+
 
 int multimeterInt = 1;
 boolean multimeterAdd = true;
@@ -151,6 +154,8 @@ void setup() {
   addSetup();
   fileSetup();
   simSetup();
+  soundSetup();
+  accessibilitySetup();
 }
 
 void draw() {
@@ -194,10 +199,12 @@ void draw() {
   //ledDraw();
   fileDraw();
   addDraw();
+  accessibilityDraw();
   
 }
 
 void keyPressed() {
+  fileKeyPressed();
 }
 
 void mousePressed(){
@@ -206,4 +213,5 @@ void mousePressed(){
   addMousePressed();
   andMousePressed();
   nandMousePressed();
+  accessibilityMousePressed();
 }
