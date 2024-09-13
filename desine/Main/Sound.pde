@@ -9,19 +9,30 @@ void soundSetup(){
   for ( int i = 0; i < musicFiles.length; i++ ) {
     songFilePathway[i] = ( musicFiles[i].toString() );
   }
+  
+  numberOfSongs = musicFileCount; //Placeholder Only, reexecute lines after fileCount Known
+  playList = new AudioPlayer[numberOfSongs]; //song is now similar to song1
+  printArray(playList);
+  playListMetaData = new AudioMetaData[numberOfSongs]; //same as above
+  for ( int i=0; i<musicFileCount; i++ ) {
+    printArray(playList);
+    playList[i]= minim.loadFile( songFilePathway[i] );
+    playListMetaData[i] = playList[i].getMetaData();
+  } //End Music Load
 }
 
 void soundDraw(){
   
-  switch(TTS){
+  switch(accessibilityString){
     case "itemAdd":
-    TTS = "";
-    //playList[0].play();
+    accessibilityString = "";
+    playList[0].play();
     println("itemAdd");
+    break;
   }
     
   if(mouseX>xItemAdd && mouseX<xItemAdd+widthItemAdd && mouseY>yItemAdd && mouseY<yItemAdd+heightItemAdd){
-    TTS = "itemAdd";
+    accessibilityString = "itemAdd";
   }
 }
 
