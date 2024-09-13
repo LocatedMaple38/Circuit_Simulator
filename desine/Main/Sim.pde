@@ -18,10 +18,12 @@ void simulate(){
 }
 
 void simMousePressed(){
-  if(simBool == true && mouseX>xSIM && mouseX<xSIM+widthSIM && mouseY>ySIM && mouseY<ySIM+heightSIM) {
-    simBool = false;
-  } else {
-    simBool = true;
+  if(mouseX>xSIM && mouseX<xSIM+widthSIM && mouseY>ySIM && mouseY<ySIM+heightSIM){
+    if(simBool){
+      simBool = false;
+    } else {
+      simBool = true;
+    }
   }
 }
 
