@@ -126,17 +126,23 @@ void multimeterDraw(){
     }
     switch(multimeterModeInt[i]){
       case '1':
-        Mode[i] = " VOLTS";
+        Mode[i] = " V";
         break;
       case '2':
-        Mode[i] = " AMPS";
+        Mode[i] = " A";
         break;
       case '3':
         Mode[i] = " OMS";
         break;
       case '4':
-        Mode[i] = " TONE";
+        Mode[i] = "TONE";
         break;
+      case '5':
+        mode[i] = "Hz";
+        brake;
+      case '6':
+        mode[i] = "";
+        brake;
     }
     
     if(i == multimeterInt){
