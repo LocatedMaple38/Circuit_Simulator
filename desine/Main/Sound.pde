@@ -26,7 +26,7 @@ void soundDraw(){
   switch(TTS){
     case "itemAdd":
     TTS = "";
-    //playList[].play();
+    playList[0].play();
     break;
     
     case "itemAddLogic":
