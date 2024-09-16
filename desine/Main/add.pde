@@ -104,10 +104,10 @@ void addSetup(){
   widthItemAddLCD = 50;
   heightItemAddLCD = 10;
   
-  xAddAset = 0;
-  yAddAset = 50;
-  widthAddAset = 50;
-  heightAddAset = 10;
+  xItemAddAset = 0;
+  yItemAddAset = 50;
+  widthItemAddAset = 50;
+  heightItemAddAset = 10;
 
   xItemAddWire = 50;
   yItemAddWire = 60;
@@ -148,13 +148,13 @@ void addDropDown(){
   rect(xItemAddCompute, yItemAddCompute, widthItemAddCompute, heightItemAddCompute);
   rect(xItemAddTools, yItemAddTools, widthItemAddTools, heightItemAddTools);
   rect(xItemAddDisplay, yItemAddDisplay, widthItemAddDisplay, heightItemAddDisplay);
-  rect(xAddAset, yAddAset, widthAddAset, heightAddAset);
+  rect(xItemAddAset, yItemAddAset, widthItemAddAset, heightItemAddAset);
   fill(0);
   text("Logic", xItemAddLogic, yItemAddLogic, widthItemAddLogic, heightItemAddLogic);
   text("Compute", xItemAddCompute, yItemAddCompute, widthItemAddCompute, heightItemAddCompute);
   text("Tools", xItemAddTools, yItemAddTools, widthItemAddTools, heightItemAddTools);
   text("Display", xItemAddDisplay, yItemAddDisplay, widthItemAddDisplay, heightItemAddDisplay);
-  text("Aset", xAddAset, yAddAset, widthAddAset, heightAddAset);
+  text("Aset", xItemAddAset, yItemAddAset, widthItemAddAset, heightItemAddAset);
   noFill();
   
   if(itemAddLogic){
@@ -270,6 +270,28 @@ void addMousePressed(){
   }
   
   if(mouseX>xItemAddLogic && mouseX<xItemAddLogic+widthItemAddLogic && mouseY>yItemAddLogic && mouseY<yItemAddLogic+heightItemAddLogic){
+    if(itemAddLogic){
+      itemAddLogic = false;
+    }else{
+      itemAddLogic = true;
+      itemAddDisplay = false;
+      itemAddTools = false;
+      itemAddCompute = false;
+    }
+  }
+  
+  if(mouseX>xItemAddCompute && mouseX<xItemAddCompute+widthItemAddCompute && mouseY>yItemAddCompute && mouseY<yItemAddCompute+heightItemAddCompute){
+    if(itemAddLogic){
+      itemAddCompute = false;
+    }else{
+      itemAddLogic = false;
+      itemAddDisplay = false;
+      itemAddTools = false;
+      itemAddCompute = true;
+    }
+  }
+  
+  if(mouseX>xItemAddAset && mouseX<xItemAddAset+widthItemAddAset && mouseY>yItemAddAset && mouseY<yItemAddAset+heightItemAddAset){
     if(itemAddLogic){
       itemAddLogic = false;
     }else{
