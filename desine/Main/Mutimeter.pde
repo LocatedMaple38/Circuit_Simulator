@@ -51,6 +51,11 @@ void multimeterSetup(){
       widthMultimeterNagativeProb[i] = 5;
       heightMultimeterNagativeProb[i] = 20;
       
+      multimeterPosMove[i] = false;
+      multimeterNegMove[i] = false;
+      
+      multimeterModeInt[i] = '1';
+      
       if(i == multimeterInt){
         i = 0;
         multimeterAdd = false;
@@ -124,6 +129,7 @@ void multimeterDraw(){
         multimeterModeInt[i] = '4';
       }
     }
+    
     switch(multimeterModeInt[i]){
       case '1':
         Mode[i] = " V";
@@ -137,12 +143,15 @@ void multimeterDraw(){
       case '4':
         Mode[i] = "TONE";
         break;
-      case '5':
-        mode[i] = "Hz";
-        brake;
-      case '6':
-        mode[i] = "";
-        brake;
+    }
+    
+    if(multimeterPosMove[i]){
+      xPosativeProbRead[i] = mouseX;
+      yPosativeProbRead[i] = mouseY;
+    }
+    
+    if(mousePressed && mouseX>xPosativeProbRead[i] && mouseX<xPosativeProbRead[i]+xMultimeterPosative[i] && mouseY<yPosativeProbRead[i] && mouseY>yPosativeProbRead[i]+yMultimeterPosative[i]){
+      multimeterPosMove[i] = true;
     }
     
     if(i == multimeterInt){
@@ -153,3 +162,5 @@ void multimeterDraw(){
     }
   }
 }
+
+//, , , 
