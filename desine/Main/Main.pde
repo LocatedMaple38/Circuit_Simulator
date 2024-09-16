@@ -88,7 +88,7 @@ float xItemAddOscilloscope, yItemAddOscilloscope, widthItemAddOscilloscope, heig
 float xItemAddFunctionGenerator, yItemAddFunctionGenerator, widthItemAddFunctionGenerator, heightItemAddFunctionGenerator;
 
 boolean itemAddAset = false;
-float xAddAset, yAddAset, widthAddAset, heightAddAset;
+float xItemAddAset, yItemAddAset, widthItemAddAset, heightItemAddAset;
 float xItemAdd5VSupply, yItemAdd5VSupply, widhtItemAdd5VSupply, heightItemAdd5VSupply;
 float xItemAdd3_3VSupply, yItemAdd3_3VSupply, widhtItemAdd3_3VSupply, heightItemAdd3_3VSupply;
 float xItemAddWire, yItemAddWire, widthItemAddWire, heightItemAddWire;
@@ -111,6 +111,8 @@ String accessibilityString = "";
 
 int multimeterInt = 1;
 boolean multimeterAdd = true;
+boolean[] multimeterPosMove = new boolean[multimeterInt];
+boolean[] multimeterNegMove = new boolean[multimeterInt];
 int[] multimeterModeInt = new int[multimeterInt];
 String[] Mode = new String[multimeterInt];
 float[] xMultimeter = new float[multimeterInt], yMultimeter = new float[multimeterInt], widthMultimeter = new float[multimeterInt], heightMultimeter = new float[multimeterInt];
@@ -148,7 +150,7 @@ void setup() {
   xANDPos[0] = 100;
   yANDPos[0] = 100;
   size(500, 500);
-  multimeterModeInt[0] = '1';
+  
 
   surface.setResizable(true);
   surface.setLocation(0, 0);
@@ -165,6 +167,7 @@ void draw() {
     surface.setTitle("Design "+savePath);
   } else {
     surface.setTitle("Simulate "+savePath);
+    simulate();
   }
   fill(#ffadff);
   rect(0, 0, displayWidth*2, displayHeight*2);
