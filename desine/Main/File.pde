@@ -57,8 +57,7 @@ void folderSelected(File selection){
   if(selection == null){
     println("Window was closed or the user hit cancel.");
   }else{
-    println(selection.getPath());
-    savePath = selection.getPath();
+    println(savePath = selection.getPath());
     createOutput(savePath+"/tools.txt");
     createOutput(savePath+"/item.txt");
   }
@@ -66,24 +65,21 @@ void folderSelected(File selection){
 
 void fileMousePressed(){
   if(mouseX>xFile && mouseX<xFile+widthFile && mouseY>yFile && mouseY<yFile+heightFile){
-    if(mousePressed){
-      fileBool = fileBool ? false : true;
-      itemAddLogic = itemAddDisplay = itemAddTools = itemAddBool = false;
-    }
+    fileBool = fileBool ? false : true;
+    itemAddLogic = itemAddDisplay = itemAddTools = itemAddBool = false;
   }
   
-  if (fileBool == true && mouseX>xLoadFile && mouseX<xLoadFile+widthLoadFile && mouseY>yLoadFile && mouseY<yLoadFile+heightLoadFile) {
+  if(fileBool == true && mouseX>xLoadFile && mouseX<xLoadFile+widthLoadFile && mouseY>yLoadFile && mouseY<yLoadFile+heightLoadFile) {
     fileLoad();
   }
 
-  if (fileBool == true && mouseX>xSaveFile && mouseX<xSaveFile+widthSaveFile && mouseY>ySaveFile && mouseY<ySaveFile+heightSaveFile) {
+  if(fileBool == true && mouseX>xSaveFile && mouseX<xSaveFile+widthSaveFile && mouseY>ySaveFile && mouseY<ySaveFile+heightSaveFile) {
   }
 
-  if (fileBool == true && mouseX>xSaveFileAs && mouseX<xSaveFileAs+widthSaveFileAs && mouseY>ySaveFileAs && mouseY<ySaveFileAs+heightSaveFileAs) {
+  if(fileBool == true && mouseX>xSaveFileAs && mouseX<xSaveFileAs+widthSaveFileAs && mouseY>ySaveFileAs && mouseY<ySaveFileAs+heightSaveFileAs) {
     fileSave();
   }
 }
 
 void fileKeyPressed(){
-  
 }
