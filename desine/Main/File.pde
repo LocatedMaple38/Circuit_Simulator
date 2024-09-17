@@ -6,17 +6,17 @@ void fileSetup(){
 
     xSaveFile = 20;
     ySaveFile = 10;
-    widthSaveFile = 25;
+    widthSaveFile = 35;
     heightSaveFile = 10;
 
     xLoadFile = 20;
     yLoadFile = 20;
-    widthLoadFile = 25;
+    widthLoadFile = 35;
     heightLoadFile = 10;
 
     xSaveFileAs = 20;
     ySaveFileAs = 30;
-    widthSaveFileAs = 25;
+    widthSaveFileAs = 35;
     heightSaveFileAs = 10;
 }
 
@@ -46,7 +46,7 @@ void fileSave(){
 }
   
 void fileAutoSave(){
-
+  
 }
   
 void fileLoad(){
@@ -57,9 +57,16 @@ void folderSelected(File selection){
   if(selection == null){
     println("Window was closed or the user hit cancel.");
   }else{
+<<<<<<< Updated upstream
     println(savePath = selection.getPath());
     createOutput(savePath+"/tools.txt");
     createOutput(savePath+"/item.txt");
+=======
+    println(selection.getPath());
+    savePath = selection.getPath();
+    createOutput(savePath+"/Tools.txt");
+    createOutput(savePath+"/Logic.txt");
+>>>>>>> Stashed changes
   }
 }
 
