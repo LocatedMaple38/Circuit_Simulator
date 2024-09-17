@@ -36,10 +36,12 @@ void accessibilityDropDown(){
 
 void accessibilityMousePressed(){
   if(mouseX>xAccessibility && mouseX<xAccessibility+widthAccessibility && mouseY>yAccessibility && mouseY<yAccessibility+heightAccessibility){
-    if(accessibilityBool){
-      accessibilityBool = false;
-    }else{
-      accessibilityBool = true;
-    }
+    accessibilityBool = accessibilityBool ? false : true;
   }
+  
+  if(mouseX>xTTS && mouseX<xTTS+widthTTS && mouseY>yTTS && mouseY<yTTS+heightTTS){
+    TTSBool = TTSBool ? false : true;
+  }
+  
+  println(TTSBool);
 }
