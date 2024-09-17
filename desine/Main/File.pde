@@ -57,16 +57,13 @@ void folderSelected(File selection){
   if(selection == null){
     println("Window was closed or the user hit cancel.");
   }else{
-<<<<<<< Updated upstream
     println(savePath = selection.getPath());
     createOutput(savePath+"/tools.txt");
     createOutput(savePath+"/item.txt");
-=======
     println(selection.getPath());
     savePath = selection.getPath();
     createOutput(savePath+"/Tools.txt");
     createOutput(savePath+"/Logic.txt");
->>>>>>> Stashed changes
   }
 }
 
