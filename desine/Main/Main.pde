@@ -108,12 +108,11 @@ String audioPath = "sound/";
 String TTS = "";
 String accessibilityString = "";
 
-
 int multimeterInt = 1;
 boolean multimeterAdd = true;
+boolean multimeterAddBool = true;
 boolean[] multimeterPosMove = new boolean[multimeterInt];
 boolean[] multimeterNegMove = new boolean[multimeterInt];
-boolean multimeterAddBool = true;
 int[] multimeterModeInt = new int[multimeterInt];
 String[] Mode = new String[multimeterInt];
 float[] xMultimeter = new float[multimeterInt], yMultimeter = new float[multimeterInt], widthMultimeter = new float[multimeterInt], heightMultimeter = new float[multimeterInt];
@@ -129,6 +128,7 @@ float[] xPosativeProbRead = new float[multimeterInt], yPosativeProbRead = new fl
 float[] xNagativeProbRead = new float[multimeterInt], yNagativeProbRead = new float[multimeterInt], widthMultimeterNagativeProb = new float[multimeterInt], heightMultimeterNagativeProb = new float[multimeterInt];
 
 boolean fileBool = false;
+boolean fileSaveBool = false;
 float xFile, yFile, widthFile, heightFile;
 float xSaveFile, ySaveFile, widthSaveFile, heightSaveFile;
 float xLoadFile, yLoadFile, widthLoadFile, heightLoadFile;
@@ -145,7 +145,6 @@ int numberOfSongs = 1;//Placeholder Only, reexecute lines after fileCount Known
 int currentSong=0; //Variable is rewritten in setup()
 AudioPlayer[] playList = new AudioPlayer[numberOfSongs]; //song is now similar to song1
 AudioMetaData[] playListMetaData = new AudioMetaData[numberOfSongs]; //same as above
-
 
 void setup() {
   xANDPos[0] = 100;
@@ -181,7 +180,7 @@ void draw() {
     fileDropDown();
   }
   
-  if(TTSBool){
+  if(TTSBool == true){
     soundDraw();
   }
   
@@ -213,8 +212,9 @@ void draw() {
   
 }
 
-void keyPressed() {
+void keyPressed(){
   fileKeyPressed();
+  
 }
 
 void mousePressed(){
@@ -224,4 +224,5 @@ void mousePressed(){
   andMousePressed();
   nandMousePressed();
   accessibilityMousePressed();
+  mulitmeterMousePressed();
 }
