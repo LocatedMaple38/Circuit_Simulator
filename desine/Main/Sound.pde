@@ -26,12 +26,12 @@ void soundDraw(){
   switch(TTS){
     case "itemAdd":
     TTS = "";
-    playList[0].play();
+    //playList[0].play();
     break;
     
     case "itemAddLogic":
     TTS = "";
-    //playList[].play();
+    playList[0].play();
     break;
     
     case "itemAddCompute":
@@ -48,4 +48,10 @@ void soundDraw(){
   if(mouseX>xItemAdd && mouseX<xItemAdd+widthItemAdd && mouseY>yItemAdd && mouseY<yItemAdd+heightItemAdd){
     TTS = "itemAdd";
   }
+  
+  if(mouseX>xItemAddLogic && mouseX<xItemAddLogic+widthItemAddLogic && mouseY>yItemAddLogic && mouseY<yItemAddLogic+heightItemAddLogic){
+    TTS = "itemAddLogic";
+  }
 }
+
+//, , , 
