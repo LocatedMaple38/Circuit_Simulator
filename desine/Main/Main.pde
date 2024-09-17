@@ -52,10 +52,13 @@ boolean a74hc32ADD = true;
 int a74hc32 = 1;
 
 boolean a74hc86ADD = true;
-int a74hc86 = 1;
+int a74hc86int = 1;
 
 boolean a74hc74ADD = true;
-int a74hc74 = 1;
+int a74hc74int = 1;
+
+boolean a65c02ADD = true;
+int a65c02 = 1;
 
 boolean wireBool = false;
 int wireInt = 1;
