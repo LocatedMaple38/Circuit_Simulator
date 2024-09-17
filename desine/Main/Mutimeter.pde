@@ -1,8 +1,8 @@
 void multimeterSetup(){
   if(multimeterAdd){
     for(int i = 0; i < multimeterInt;){
-      xMultimeter[i] = 200;
-      yMultimeter[i] = 100;
+      xMultimeter[i] = 100;
+      yMultimeter[i] = 500;
       widthMultimeter[i] = 50;
       heightMultimeter[i] = 100;
 
@@ -74,7 +74,7 @@ void multimeterDraw(){
     rect(xPosativeProbRead[i], yPosativeProbRead[i], widthMultimeterPosative[i], heightMultimeterPosativeProb[i]);
     strokeWeight(5);
     stroke(#ff0000);
-    line(xPosativeProbRead[i], yPosativeProbRead[i], xMultimeterPosative[i], yMultimeterPosative[i]);
+    //line(xPosativeProbRead[i], yPosativeProbRead[i], xMultimeterPosative[i], yMultimeterPosative[i]);
     noStroke();
     fill(0);
     rect(xMultimeterNagative[i], yMultimeterNagative[i], widthMultimeterNagative[i], heightMultimeterNagative[i]);
@@ -86,10 +86,6 @@ void multimeterDraw(){
     rect(xMultimeterMode3[i], yMultimeterMode3[i], widthMultimeterMode3[i], heightMultimeterMode3[i]);
     rect(xMultimeterMode4[i], yMultimeterMode4[i], widthMultimeterMode4[i], heightMultimeterMode4[i]);
     fill(0);
-    
-    if(multimeterAddBool){
-      multimeterModeInt[i] = '1';
-    }
       
     switch(multimeterModeInt[i]){
       default:
@@ -147,19 +143,38 @@ void multimeterDraw(){
         Mode[i] = "TONE";
         break;
     }
-    
-    if(multimeterPosMove[i]){
+    //if(multimeterPosMove[i]){
       xPosativeProbRead[i] = mouseX;
       yPosativeProbRead[i] = mouseY;
-    }
+    //}
     
-    if(mousePressed && mouseX>xPosativeProbRead[i] && mouseX<xPosativeProbRead[i]+xMultimeterPosative[i] && mouseY<yPosativeProbRead[i] && mouseY>yPosativeProbRead[i]+yMultimeterPosative[i]){
-      multimeterPosMove[i] = true;
-    }
+    /*
+    [i] = 5;
+      [i] = 20;
+
+    */
     
     if(i == multimeterInt){
       i = 0;
       multimeterAddBool = false;
+      continue;
+    }else{
+      i++;
+    }
+  }
+}
+
+void mulitmeterMousePressed(){
+  for(int i = 0; i < multimeterInt;){
+    
+    
+    
+    if(mouseX>xPosativeProbRead[i] && mouseX<xPosativeProbRead[i]+widthMultimeterPosativeProb[i] && mouseY>yPosativeProbRead[i] && mouseY<yPosativeProbRead[i]+heightMultimeterPosativeProb[i]){
+      multimeterPosMove[i] = multimeterPosMove[i] ? false : true;
+    }
+    println(multimeterPosMove[i]);
+    if(i == multimeterInt){
+      i = 0;
       continue;
     }else{
       i++;
