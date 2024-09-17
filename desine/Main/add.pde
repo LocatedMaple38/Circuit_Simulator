@@ -50,13 +50,13 @@ void addSetup(){
   heightItemAddCompute = 10;
 
   xItemAddArduinoNanoESP32 = 50;
-  yItemAddArduinoNanoESP32 = 30;
-  widhtItemAddArduinoNanoESP32 = 50;
+  yItemAddArduinoNanoESP32 = 20;
+  widhtItemAddArduinoNanoESP32 = 100;
   heightItemAddArduinoNanoESP32 = 10;
 
   xItemAddArduinoUNOR3 = 50;
-  yItemAddArduinoUNOR3 = 40;
-  widthItemAddArduinoUNOR3 = 50;
+  yItemAddArduinoUNOR3 = 30;
+  widthItemAddArduinoUNOR3 = 100;
   heightItemAddArduinoUNOR3 = 10;
 
   xItemAddTools = 0;
