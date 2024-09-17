@@ -146,6 +146,7 @@ void multimeterDraw(){
     //if(multimeterPosMove[i]){
       xPosativeProbRead[i] = mouseX;
       yPosativeProbRead[i] = mouseY;
+<<<<<<< Updated upstream
     //}
     
     /*
@@ -153,6 +154,21 @@ void multimeterDraw(){
       [i] = 20;
 
     */
+=======
+      println("x "+xPosativeProbRead[i]+" "+i);
+      println("y "+yPosativeProbRead[i]+" "+i);
+      if(mousePressed){
+        multimeterPosMove[i] = false;
+      }
+    }
+    
+    if(mouseX>xPosativeProbRead[i] && mouseX<xPosativeProbRead[i]+widthPosativeProbRead[i] && mouseY<yPosativeProbRead[i] && mouseY>yPosativeProbRead[i]+heightPosativeProbRead[i]){
+      if(mousePressed){
+        multimeterPosMove[i] = true;
+      }
+    }
+    println(multimeterPosMove[i]+" "+i);
+>>>>>>> Stashed changes
     
     if(i == multimeterInt){
       i = 0;
