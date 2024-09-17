@@ -54,8 +54,6 @@ void multimeterSetup(){
       multimeterPosMove[i] = false;
       multimeterNegMove[i] = false;
       
-      multimeterModeInt[i] = '1';
-      
       if(i == multimeterInt){
         i = 0;
         multimeterAdd = false;
@@ -88,6 +86,11 @@ void multimeterDraw(){
     rect(xMultimeterMode3[i], yMultimeterMode3[i], widthMultimeterMode3[i], heightMultimeterMode3[i]);
     rect(xMultimeterMode4[i], yMultimeterMode4[i], widthMultimeterMode4[i], heightMultimeterMode4[i]);
     fill(0);
+    
+    if(multimeterAddBool){
+      multimeterModeInt[i] = '1';
+    }
+      
     switch(multimeterModeInt[i]){
       default:
         text("0"+Mode[i], xMultimeterLCD[i], yMultimeterLCD[i], widthMultimeterLCD[i], heightMultimeterLCD[i]);
@@ -101,7 +104,7 @@ void multimeterDraw(){
       rect(mouseX+15, mouseY, 30, 20);
       fill(0);
       text("VOLTS", mouseX+15, mouseY, 30, 20);
-      if(mousePressed == true){
+      if(mousePressed){
         multimeterModeInt[i] = '1';
       }
     }else if(mouseX>xMultimeterMode2[i] && mouseX<xMultimeterMode2[i]+widthMultimeterMode2[i] && mouseY>yMultimeterMode2[i] && mouseY<yMultimeterMode2[i]+heightMultimeterMode2[i]){
@@ -109,7 +112,7 @@ void multimeterDraw(){
       rect(mouseX+15, mouseY, 25, 20);
       fill(0);
       text("AMPS", mouseX+15, mouseY, 25, 20);
-      if(mousePressed == true){
+      if(mousePressed){
         multimeterModeInt[i] = '2';
       }
     }else if(mouseX>xMultimeterMode3[i] && mouseX<xMultimeterMode3[i]+widthMultimeterMode3[i] && mouseY>yMultimeterMode3[i] && mouseY<yMultimeterMode3[i]+heightMultimeterMode3[i]){
@@ -156,11 +159,10 @@ void multimeterDraw(){
     
     if(i == multimeterInt){
       i = 0;
+      multimeterAddBool = false;
       continue;
     }else{
       i++;
     }
   }
 }
-
-//, , , 
