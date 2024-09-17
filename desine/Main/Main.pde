@@ -113,6 +113,7 @@ int multimeterInt = 1;
 boolean multimeterAdd = true;
 boolean[] multimeterPosMove = new boolean[multimeterInt];
 boolean[] multimeterNegMove = new boolean[multimeterInt];
+boolean multimeterAddBool = true;
 int[] multimeterModeInt = new int[multimeterInt];
 String[] Mode = new String[multimeterInt];
 float[] xMultimeter = new float[multimeterInt], yMultimeter = new float[multimeterInt], widthMultimeter = new float[multimeterInt], heightMultimeter = new float[multimeterInt];
