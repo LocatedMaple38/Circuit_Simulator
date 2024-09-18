@@ -42,6 +42,4 @@ void accessibilityMousePressed(){
   if(mouseX>xTTS && mouseX<xTTS+widthTTS && mouseY>yTTS && mouseY<yTTS+heightTTS){
     TTSBool = TTSBool ? false : true;
   }
-  
-  println(TTSBool);
 }
