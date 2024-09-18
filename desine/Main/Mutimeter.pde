@@ -1,66 +1,64 @@
 void multimeterSetup(){
-  if(multimeterAdd){
-    for(int i = 0; i < multimeterInt;){
-      xMultimeter[i] = 100;
-      yMultimeter[i] = 500;
-      widthMultimeter[i] = 50;
-      heightMultimeter[i] = 100;
+  int i = 0;
+  while(multimeterAdd && i < multimeterInt){
+    xMultimeter[i] = 100;
+    yMultimeter[i] = 500;
+    widthMultimeter[i] = 50;
+    heightMultimeter[i] = 100;
 
-      xMultimeterPosative[i] = xMultimeter[i]+30;
-      yMultimeterPosative[i] = yMultimeter[i]+90;
-      widthMultimeterPosative[i] = 5;
-      heightMultimeterPosative[i] = 5;
+    xMultimeterPosative[i] = xMultimeter[i]+30;
+    yMultimeterPosative[i] = yMultimeter[i]+90;
+    widthMultimeterPosative[i] = 5;
+    heightMultimeterPosative[i] = 5;
 
-      xMultimeterNagative[i] = xMultimeter[i]+40;
-      yMultimeterNagative[i] = yMultimeter[i]+90;
-      widthMultimeterNagative[i] = 5;
-      heightMultimeterNagative[i] = 5;
+    xMultimeterNagative[i] = xMultimeter[i]+40;
+    yMultimeterNagative[i] = yMultimeter[i]+90;
+    widthMultimeterNagative[i] = 5;
+    heightMultimeterNagative[i] = 5;
 
-      xMultimeterLCD[i] = xMultimeter[i]+5;
-      yMultimeterLCD[i] = yMultimeter[i]+5;
-      widthMultimeterLCD[i] = 40;
-      heightMultimeterLCD[i] = 20;
+    xMultimeterLCD[i] = xMultimeter[i]+5;
+    yMultimeterLCD[i] = yMultimeter[i]+5;
+    widthMultimeterLCD[i] = 40;
+    heightMultimeterLCD[i] = 20;
 
-      xMultimeterMode1[i] = xMultimeter[i]+5;
-      yMultimeterMode1[i] = yMultimeter[i]+30;
-      widthMultimeterMode1[i] = 10;
-      heightMultimeterMode1[i] = 5;
+    xMultimeterMode1[i] = xMultimeter[i]+5;
+    yMultimeterMode1[i] = yMultimeter[i]+30;
+    widthMultimeterMode1[i] = 10;
+    heightMultimeterMode1[i] = 5;
 
-      xMultimeterMode2[i] = xMultimeter[i]+20;
-      yMultimeterMode2[i] = yMultimeter[i]+30;
-      widthMultimeterMode2[i] = 10;
-      heightMultimeterMode2[i] = 5;
+    xMultimeterMode2[i] = xMultimeter[i]+20;
+    yMultimeterMode2[i] = yMultimeter[i]+30;
+    widthMultimeterMode2[i] = 10;
+    heightMultimeterMode2[i] = 5;
 
-      xMultimeterMode3[i] = xMultimeter[i]+35;
-      yMultimeterMode3[i] = yMultimeter[i]+30;
-      widthMultimeterMode3[i] = 10;
-      heightMultimeterMode3[i] = 5;
+    xMultimeterMode3[i] = xMultimeter[i]+35;
+    yMultimeterMode3[i] = yMultimeter[i]+30;
+    widthMultimeterMode3[i] = 10;
+    heightMultimeterMode3[i] = 5;
 
-      xMultimeterMode4[i] = xMultimeter[i]+5;
-      yMultimeterMode4[i] = yMultimeter[i]+40;
-      widthMultimeterMode4[i] = 10;
-      heightMultimeterMode4[i] = 5;
+    xMultimeterMode4[i] = xMultimeter[i]+5;
+    yMultimeterMode4[i] = yMultimeter[i]+40;
+    widthMultimeterMode4[i] = 10;
+    heightMultimeterMode4[i] = 5;
 
-      xPosativeProbRead[i] = 100;
-      yPosativeProbRead[i] = 50;
-      widthMultimeterPosativeProb[i] = 5;
-      heightMultimeterPosativeProb[i] = 20;
+    xPosativeProbRead[i] = 100;
+    yPosativeProbRead[i] = 50;
+    widthMultimeterPosativeProb[i] = 5;
+    heightMultimeterPosativeProb[i] = 20;
 
-      xNagativeProbRead[i] = 110;
-      yNagativeProbRead[i] = 50;
-      widthMultimeterNagativeProb[i] = 5;
-      heightMultimeterNagativeProb[i] = 20;
-      
-      multimeterPosMove[i] = false;
-      multimeterNegMove[i] = false;
-      
-      if(i == multimeterInt){
-        i = 0;
-        multimeterAdd = false;
-        continue;
-      }else{
-        i++;
-      }
+    xNagativeProbRead[i] = 110;
+    yNagativeProbRead[i] = 50;
+    widthMultimeterNagativeProb[i] = 5;
+    heightMultimeterNagativeProb[i] = 20;
+    
+    multimeterPosMove[i] = false;
+    multimeterNegMove[i] = false;
+    
+    if(i == multimeterInt){
+      i = 0;
+      continue;
+    }else{
+      i++;
     }
   }
 }
@@ -143,28 +141,17 @@ void multimeterDraw(){
         Mode[i] = "TONE";
         break;
     }
-    //if(multimeterPosMove[i]){
-      xPosativeProbRead[i] = mouseX;
-      yPosativeProbRead[i] = mouseY;
-    //}
     
-    /*
-    [i] = 5;
-      [i] = 20;
-
-    */
-      println("x "+xPosativeProbRead[i]+" "+i);
-      println("y "+yPosativeProbRead[i]+" "+i);
-      if(mousePressed){
-        multimeterPosMove[i] = false;
-      }
-    
-    if(mouseX>xPosativeProbRead[i] && mouseX<xPosativeProbRead[i]+widthPosativeProbRead[i] && mouseY<yPosativeProbRead[i] && mouseY>yPosativeProbRead[i]+heightPosativeProbRead[i]){
-      if(mousePressed){
-        multimeterPosMove[i] = true;
-      }
+    if(multimeterPosMove[i]){
+      xPosativeProbRead[i] = mouseX-2.5;
+      yPosativeProbRead[i] = mouseY-5;
     }
-    println(multimeterPosMove[i]+" "+i);
+    
+    //println("x "+xPosativeProbRead[i]+" "+i);
+    //println("y "+yPosativeProbRead[i]+" "+i);
+    //println("Move "+multimeterPosMove[i]);
+    println(multimeterAdd);
+    //println(multimeterPosMove[i]+" "+i);
     
     if(i == multimeterInt){
       i = 0;
@@ -179,12 +166,14 @@ void multimeterDraw(){
 void mulitmeterMousePressed(){
   for(int i = 0; i < multimeterInt;){
     
-    
-    
     if(mouseX>xPosativeProbRead[i] && mouseX<xPosativeProbRead[i]+widthMultimeterPosativeProb[i] && mouseY>yPosativeProbRead[i] && mouseY<yPosativeProbRead[i]+heightMultimeterPosativeProb[i]){
-      multimeterPosMove[i] = multimeterPosMove[i] ? false : true;
+      if(multimeterPosMove[i]){
+        multimeterPosMove[i] = false;
+      }else{
+        multimeterPosMove[i] = true;
+      }
     }
-    println(multimeterPosMove[i]);
+    
     if(i == multimeterInt){
       i = 0;
       continue;
