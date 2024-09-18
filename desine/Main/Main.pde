@@ -129,7 +129,7 @@ float[] xMultimeterLCD = new float[multimeterInt], yMultimeterLCD = new float[mu
 float[] xMultimeterPosativeProb = new float[multimeterInt], yMultimeterPosativeProb = new float[multimeterInt], widthMultimeterPosativeProb = new float[multimeterInt], heightMultimeterPosativeProb = new float[multimeterInt];
 float[] xPosativeProbRead = new float[multimeterInt], yPosativeProbRead = new float[multimeterInt], widthPosativeProbRead = new float[multimeterInt], heightPosativeProbRead = new float[multimeterInt];
 float[] xNagativeProbRead = new float[multimeterInt], yNagativeProbRead = new float[multimeterInt], widthMultimeterNagativeProb = new float[multimeterInt], heightMultimeterNagativeProb = new float[multimeterInt];
-
+float xMoveMultimeter, yMoveMultimeter;
 boolean fileBool = false;
 boolean fileSaveBool = false;
 float xFile, yFile, widthFile, heightFile;
@@ -192,6 +192,7 @@ void draw() {
   }
 
   multimeterSetup();
+  multimeterAdd = false;
   simDraw();
   andSetup();
   //nandSetup();
@@ -216,8 +217,6 @@ void draw() {
 }
 
 void keyPressed(){
-  fileKeyPressed();
-  
 }
 
 void mousePressed(){
