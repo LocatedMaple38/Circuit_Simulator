@@ -57,10 +57,10 @@ void folderSelected(File selection){
   if(selection == null){
     println("Window was closed or the user hit cancel.");
   }else{
-    println(savePath = selection.getPath());
+    //println(savePath = selection.getPath());
     createOutput(savePath+"/tools.txt");
     createOutput(savePath+"/item.txt");
-    println(selection.getPath());
+    //println(selection.getPath());
     savePath = selection.getPath();
     createOutput(savePath+"/Tools.txt");
     createOutput(savePath+"/Logic.txt");
@@ -83,7 +83,4 @@ void fileMousePressed(){
   if(fileBool == true && mouseX>xSaveFileAs && mouseX<xSaveFileAs+widthSaveFileAs && mouseY>ySaveFileAs && mouseY<ySaveFileAs+heightSaveFileAs) {
     fileSave();
   }
-}
-
-void fileKeyPressed(){
 }
