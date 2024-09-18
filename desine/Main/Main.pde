@@ -44,7 +44,7 @@ float[] xORPIN11 = new float[a74hc02], yORPIN11 = new float[a74hc02], widthORPIN
 float[] xORPIN12 = new float[a74hc02], yORPIN12 = new float[a74hc02], widthORPIN12 = new float[a74hc02], heightORPIN12 = new float[a74hc02];
 float[] xORPIN13 = new float[a74hc02], yORPIN13 = new float[a74hc02], widthORPIN13 = new float[a74hc02], heightORPIN13 = new float[a74hc02];
 float[] xORPIN14 = new float[a74hc02], yORPIN14 = new float[a74hc02], widthORPIN14 = new float[a74hc02], heightORPIN14 = new float[a74hc02];
-
+float[] xORPin1Loco = new float[a74hc02], yORPin1Loco = new float[a74hc02], widthORPin1Loco = new float[a74hc02];
 boolean a74hc04ADD = true;
 int a74hc04 = 1;
 
@@ -196,7 +196,7 @@ void draw() {
   simDraw();
   andSetup();
   //nandSetup();
-  //orSetup();
+  orSetup();
   //norSetup();
   //xorSetup();
   //xnorSetup();
@@ -205,7 +205,7 @@ void draw() {
   multimeterDraw();
   andDraw();
   //nandDraw();
-  //orDraw();
+  orDraw();
   //norDraw();
   //xorDraw();
   //xnorraw();
