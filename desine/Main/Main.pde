@@ -82,6 +82,7 @@ boolean itemAddCompute = false;
 float xItemAddCompute, yItemAddCompute, widthItemAddCompute, heightItemAddCompute;
 float xItemAddArduinoNanoESP32, yItemAddArduinoNanoESP32, widhtItemAddArduinoNanoESP32, heightItemAddArduinoNanoESP32;
 float xItemAddArduinoUNOR3, yItemAddArduinoUNOR3, widthItemAddArduinoUNOR3, heightItemAddArduinoUNOR3;
+float xItemAdd65c02, yItemAdd65c02, widthItemAdd65c02, heightItemAdd65c02;
 
 boolean itemAddTools = false;
 float xItemAddTools, yItemAddTools, widthItemAddTools, heightItemAddTools;
