@@ -48,16 +48,36 @@ void addSetup(){
   yItemAddCompute = 20;
   widthItemAddCompute= 50;
   heightItemAddCompute = 10;
+  
+  xAddArduino = 50;
+  yAddArduino = 20;
+  widthAddArduino = 75; 
+  heightAddArduino = 10;
 
-  xItemAddArduinoNanoESP32 = 50;
+  xItemAddArduinoNanoESP32 = 125;
   yItemAddArduinoNanoESP32 = 20;
-  widhtItemAddArduinoNanoESP32 = 100;
+  widhtItemAddArduinoNanoESP32 = 50;
   heightItemAddArduinoNanoESP32 = 10;
-
-  xItemAddArduinoUNOR3 = 50;
+  
+  xItemAddArduinoUNOR3 = 125;
   yItemAddArduinoUNOR3 = 30;
-  widthItemAddArduinoUNOR3 = 100;
+  widthItemAddArduinoUNOR3 = 50;
   heightItemAddArduinoUNOR3 = 10;
+  
+  xAddMicroPresseser = 50;
+  yAddMicroPresseser = 30;
+  wifthAddMicroProsseser = 75;
+  heightAddMicroPrsseser = 10;
+  
+  xItemAdd8Bit = 125;
+  yItemAdd8Bit = 30;
+  widthItemAdd8Bit = 50;
+  heightItemAdd8Bit = 10;
+  
+  xItemAdd65c02 = 175;
+  yItemAdd65c02 = 30;
+  widthItemAdd65c02 = 25;
+  heightItemAdd65c02 = 10;
 
   xItemAddTools = 0;
   yItemAddTools = 30;
@@ -204,11 +224,47 @@ void addLogicDraw(){
 
 void addComputeDraw(){
   fill(255);
+  rect(xAddArduino, yAddArduino, widthAddArduino, heightAddArduino);
+  rect(xAddMicroPresseser, yAddMicroPresseser, wifthAddMicroProsseser, heightAddMicroPrsseser);
+  fill(0);
+  text("Arduino", xAddArduino, yAddArduino, widthAddArduino, heightAddArduino);
+  text("Micro Pressseser", xAddMicroPresseser, yAddMicroPresseser, wifthAddMicroProsseser, heightAddMicroPrsseser);
+  noFill();
+  
+  if(arduinoBool){
+    drawArduino();
+  }else if(microPresseserBool){
+    drawMicroPresseser();
+  }
+}
+
+void drawArduino(){
+  fill(255);
   rect(xItemAddArduinoNanoESP32, yItemAddArduinoNanoESP32, widhtItemAddArduinoNanoESP32, heightItemAddArduinoNanoESP32);
   rect(xItemAddArduinoUNOR3, yItemAddArduinoUNOR3, widthItemAddArduinoUNOR3, heightItemAddArduinoUNOR3);
   fill(0);
-  text("ArduinoNanoESP32", xItemAddArduinoNanoESP32, yItemAddArduinoNanoESP32 ,widhtItemAddArduinoNanoESP32, heightItemAddArduinoNanoESP32);
-  text("Arduino UNO R3", xItemAddArduinoUNOR3, yItemAddArduinoUNOR3, widthItemAddArduinoUNOR3, heightItemAddArduinoUNOR3);
+  text("Nano esp32", xItemAddArduinoNanoESP32, yItemAddArduinoNanoESP32, widhtItemAddArduinoNanoESP32, heightItemAddArduinoNanoESP32);
+  text("UNO R3", xItemAddArduinoUNOR3, yItemAddArduinoUNOR3, widthItemAddArduinoUNOR3, heightItemAddArduinoUNOR3);
+  noFill();
+}
+
+void drawMicroPresseser(){
+  fill(255);
+  rect(xItemAdd8Bit, yItemAdd8Bit, widthItemAdd8Bit, heightItemAdd8Bit);
+  fill(0);
+  text("8 Bit", xItemAdd8Bit, yItemAdd8Bit, widthItemAdd8Bit, heightItemAdd8Bit);
+  noFill();
+  
+  if(eaghtBitBool){
+    drawEaightBitMicroProseser();
+  }
+}
+
+void drawEaightBitMicroProseser(){
+  fill(255);
+  rect(xItemAdd65c02, yItemAdd65c02, widthItemAdd65c02, heightItemAdd65c02);
+  fill(0);
+  text("65c02", xItemAdd65c02, yItemAdd65c02, widthItemAdd65c02, heightItemAdd65c02);
   noFill();
 }
 
@@ -283,6 +339,7 @@ void addMousePressed(){
   if(mouseX>xItemAddCompute && mouseX<xItemAddCompute+widthItemAddCompute && mouseY>yItemAddCompute && mouseY<yItemAddCompute+heightItemAddCompute){
     if(itemAddLogic){
       itemAddCompute = false;
+      eaghtBitBool = false;
     }else{
       itemAddLogic = false;
       itemAddDisplay = false;
@@ -301,4 +358,34 @@ void addMousePressed(){
       itemAddCompute = false;
     }
   }
+  
+  if(mouseX>xAddArduino && mouseX<xAddArduino+widthAddArduino && mouseY>yAddArduino && mouseY<yAddArduino+heightAddArduino){
+    if(arduinoBool){
+      arduinoBool = false;
+      
+    }else{
+      arduinoBool = true;
+      microPresseserBool = false;
+      eaghtBitBool = false;
+    }
+  }
+  
+  if(mouseX>xAddMicroPresseser && mouseX<xAddMicroPresseser+wifthAddMicroProsseser && mouseY>yAddMicroPresseser && mouseY<yAddMicroPresseser+heightAddMicroPrsseser){
+    if(microPresseserBool){
+      microPresseserBool = false;
+      eaghtBitBool = false;
+    }else{
+      microPresseserBool = true;
+      arduinoBool = false;
+    }
+  }
+  
+  if(mouseX>xItemAdd8Bit && mouseX<xItemAdd8Bit+widthItemAdd8Bit && mouseY>yItemAdd8Bit && mouseY<yItemAdd8Bit+heightItemAdd8Bit){
+    if(eaghtBitBool){
+      eaghtBitBool = false;
+    }else{
+      eaghtBitBool = true;
+    }
+  }
 }
+//, , , 
