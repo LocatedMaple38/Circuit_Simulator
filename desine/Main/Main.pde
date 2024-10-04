@@ -79,6 +79,12 @@ boolean itemAddLogic = false;
 float xItemAddLogic, yItemAddLogic, widthItemAddLogic, heightItemAddLogic;
 
 boolean itemAddCompute = false;
+boolean arduinoBool = false;
+boolean microPresseserBool = false;
+boolean eaghtBitBool = false;
+float xAddArduino, yAddArduino, widthAddArduino, heightAddArduino;
+float xAddMicroPresseser, yAddMicroPresseser, wifthAddMicroProsseser, heightAddMicroPrsseser;
+float xItemAdd8Bit, yItemAdd8Bit, widthItemAdd8Bit, heightItemAdd8Bit;
 float xItemAddCompute, yItemAddCompute, widthItemAddCompute, heightItemAddCompute;
 float xItemAddArduinoNanoESP32, yItemAddArduinoNanoESP32, widhtItemAddArduinoNanoESP32, heightItemAddArduinoNanoESP32;
 float xItemAddArduinoUNOR3, yItemAddArduinoUNOR3, widthItemAddArduinoUNOR3, heightItemAddArduinoUNOR3;
