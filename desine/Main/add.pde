@@ -83,29 +83,24 @@ void addSetup(){
   yItemAddTools = 30;
   widthItemAddTools = 50; 
   heightItemAddTools = 10;
-
+  
   xItemAddPowerSupply = 50;
   yItemAddPowerSupply = 30;
   widthItemAddPowerSupply = 100;
   heightItemAddPowerSpply = 10;
   
-  xItemAddPowerSupply = 50;
-  yItemAddPowerSupply = 40;
-  widthItemAddPowerSupply = 100;
-  heightItemAddPowerSpply = 10;
-  
   xItemAddMultimeter = 50;
-  yItemAddMultimeter = 50;
+  yItemAddMultimeter = 40;
   widthItemAddMultimeter = 100;
   heightItemAddMultimeter = 10;
 
   xItemAddOscilloscope = 50;
-  yItemAddOscilloscope = 60;
+  yItemAddOscilloscope = 50;
   widthItemAddOscilloscope = 100;
   heightItemAddOscilloscope = 10;
 
   xItemAddFunctionGenerator = 50;
-  yItemAddFunctionGenerator = 70;
+  yItemAddFunctionGenerator = 60;
   widthItemAddFunctionGenerator = 100;
   heightItemAddFunctionGenerator = 10;
 
@@ -347,18 +342,7 @@ void addMousePressed(){
       itemAddCompute = true;
     }
   }
-  
-  if(mouseX>xItemAddAset && mouseX<xItemAddAset+widthItemAddAset && mouseY>yItemAddAset && mouseY<yItemAddAset+heightItemAddAset){
-    if(itemAddLogic){
-      itemAddLogic = false;
-    }else{
-      itemAddLogic = true;
-      itemAddDisplay = false;
-      itemAddTools = false;
-      itemAddCompute = false;
-    }
-  }
-  
+    
   if(mouseX>xAddArduino && mouseX<xAddArduino+widthAddArduino && mouseY>yAddArduino && mouseY<yAddArduino+heightAddArduino){
     if(arduinoBool){
       arduinoBool = false;
