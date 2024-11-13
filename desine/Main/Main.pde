@@ -64,6 +64,45 @@ float[] x74hc02PIN13 = new float[a74hc02], y74hc02PIN13 = new float[a74hc02], wi
 float[] x74hc02PIN14 = new float[a74hc02], y74hc02PIN14 = new float[a74hc02], width74hc02PIN14 = new float[a74hc02], height74hc02PIN14 = new float[a74hc02];
 float[] x74hc02Pin1Loco = new float[a74hc02], y74hc02Pin1Loco = new float[a74hc02], width74hc02Pin1Loco = new float[a74hc02];
 
+boolean a74hc03ADD = true;
+int a74hc03 = 1;
+float[] x74hc03 = new flaot[a74hc03], y74hc03 = new flaot[a74hc03], width74hc03 = new flaot[a74hc03], height74hc03 = new flaot[a74hc03];
+float[] x74hc03PIN1 = new flaot[a74hc03], y74hc03PIN1 = new flaot[a74hc03], width74hc03PIN1 = new flaot[a74hc03], height74hc03PIN1 = new flaot[a74hc03];
+float[] x74hc03PIN2 = new flaot[a74hc03], y74hc03PIN2 = new flaot[a74hc03], width74hc03PIN2 = new flaot[a74hc03], height74hc03PIN2 = new flaot[a74hc03];
+float[] x74hc03PIN3 = new flaot[a74hc03], y74hc03PIN3 = new flaot[a74hc03], width74hc03PIN3 = new flaot[a74hc03], height74hc03PIN3 = new flaot[a74hc03];
+float[] x74hc03PIN4 = new flaot[a74hc03], y74hc03PIN4 = new flaot[a74hc03], width74hc03PIN4 = new flaot[a74hc03], height74hc03PIN4 = new flaot[a74hc03];
+float[] x74hc03PIN5 = new flaot[a74hc03], y74hc03PIN5 = new flaot[a74hc03], width74hc03PIN5 = new flaot[a74hc03], height74hc03PIN5 = new flaot[a74hc03];
+float[] x74hc03PIN6 = new flaot[a74hc03], y74hc03PIN6 = new flaot[a74hc03], width74hc03PIN6 = new flaot[a74hc03], height74hc03PIN6 = new flaot[a74hc03];
+float[] x74hc03PIN7 = new flaot[a74hc03], y74hc03PIN7 = new flaot[a74hc03], width74hc03PIN7 = new flaot[a74hc03], height74hc03PIN7 = new flaot[a74hc03];
+float[] x74hc03PIN8 = new flaot[a74hc03], y74hc03PIN8 = new flaot[a74hc03], width74hc03PIN8 = new flaot[a74hc03], height74hc03PIN8 = new flaot[a74hc03];
+float[] x74hc03PIN9 = new flaot[a74hc03], y74hc03PIN9 = new flaot[a74hc03], width74hc03PIN9 = new flaot[a74hc03], height74hc03PIN9 = new flaot[a74hc03];
+float[] x74hc03PIN10 = new flaot[a74hc03], y74hc03PIN10 = new flaot[a74hc03], width74hc03PIN10 = new flaot[a74hc03], height74hc03PIN10 = new flaot[a74hc03];
+float[] x74hc03PIN11 = new flaot[a74hc03], y74hc03PIN11 = new flaot[a74hc03], width74hc03PIN11 = new flaot[a74hc03], height74hc03PIN11 = new flaot[a74hc03];
+float[] x74hc03PIN12 = new flaot[a74hc03], y74hc03PIN12 = new flaot[a74hc03], width74hc03PIN12 = new flaot[a74hc03], height74hc03PIN12 = new flaot[a74hc03];
+float[] x74hc03PIN13 = new flaot[a74hc03], y74hc03PIN13 = new flaot[a74hc03], width74hc03PIN13 = new flaot[a74hc03], height74hc03PIN13 = new flaot[a74hc03];
+float[] x74hc03PIN14 = new flaot[a74hc03], y74hc03PIN14 = new flaot[a74hc03], width74hc03PIN14 = new flaot[a74hc03], height74hc03PIN14 = new flaot[a74hc03];
+float[] x74hc03Pin1Loco = new float[a74hc03], y74hc03Pin1Loco = new float[a74hc03], width74hc03Pin1Loco = new float[a74hc03];
+
+boolean[] a74hc04ADD = true;
+int a74hc04 = 1;
+float[] x74hc04 = new float[a74hc04], y74hc04 = new float[a74hc04], width74hc04 = new float[a74hc04], height74hc04 = new float[a74hc04];
+float[] x74hc04PIN1 = new float[a74hc04], y74hc04PIN1 = new float[a74hc04], width74hc04PIN1 = new float[a74hc04], height74hc04PIN1 = new float[a74hc04];
+float[] x74hc04PIN2 = new float[a74hc04], y74hc04PIN2 = new float[a74hc04], width74hc04PIN2 = new float[a74hc04], height74hc04PIN2 = new float[a74hc04];
+float[] x74hc04PIN3 = new float[a74hc04], y74hc04PIN3 = new float[a74hc04], width74hc04PIN3 = new float[a74hc04], height74hc04PIN3 = new float[a74hc04];
+float[] x74hc04PIN4 = new float[a74hc04], y74hc04PIN4 = new float[a74hc04], width74hc04PIN4 = new float[a74hc04], height74hc04PIN4 = new float[a74hc04];
+float[] x74hc04PIN5 = new float[a74hc04], y74hc04PIN5 = new float[a74hc04], width74hc04PIN5 = new float[a74hc04], height74hc04PIN5 = new float[a74hc04];
+float[] x74hc04PIN6 = new float[a74hc04], y74hc04PIN6 = new float[a74hc04], width74hc04PIN6 = new float[a74hc04], height74hc04PIN6 = new float[a74hc04];
+float[] x74hc04PIN7 = new float[a74hc04], y74hc04PIN7 = new float[a74hc04], width74hc04PIN7 = new float[a74hc04], height74hc04PIN7 = new float[a74hc04];
+float[] x74hc04PIN8 = new float[a74hc04], y74hc04PIN8 = new float[a74hc04], width74hc04PIN8 = new float[a74hc04], height74hc04PIN8 = new float[a74hc04];
+float[] x74hc04PIN9 = new float[a74hc04], y74hc04PIN9 = new float[a74hc04], width74hc04PIN9 = new float[a74hc04], height74hc04PIN9 = new float[a74hc04];
+float[] x74hc04PIN10 = new float[a74hc04], y74hc04PIN10 = new float[a74hc04], width74hc04PIN10 = new float[a74hc04], height74hc04PIN10 = new float[a74hc04];
+float[] x74hc04PIN11 = new float[a74hc04], y74hc04PIN11 = new float[a74hc04], width74hc04PIN11 = new float[a74hc04], height74hc04PIN11 = new float[a74hc04];
+float[] x74hc04PIN12 = new float[a74hc04], y74hc04PIN12 = new float[a74hc04], width74hc04PIN12 = new float[a74hc04], height74hc04PIN12 = new float[a74hc04];
+float[] x74hc04PIN13 = new float[a74hc04], y74hc04PIN13 = new float[a74hc04], width74hc04PIN13 = new float[a74hc04], height74hc04PIN13 = new float[a74hc04];
+float[] x74hc04PIN14 = new float[a74hc04], y74hc04PIN14 = new float[a74hc04], width74hc04PIN14 = new float[a74hc04], height74hc04PIN14 = new float[a74hc04];
+float[] x74hc04Pin1Loco = new float[a74hc04], y74hc02Pin1Loco = new float[a74hc04], width74hc02Pin1Loco = new float[a74hc04];
+
+
 boolean a74hc08ADD = true;
 int a74hc08 = 1;
 float[] x74hc08 = new float[a74hc08], y74hc08 = new float[a74hc08], widht74hc08 = new float[a74hc08], height74hc08 = new float[a74hc08];
