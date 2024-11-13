@@ -58,7 +58,11 @@ void folderSelected(File selection){
     println("Window was closed or the user hit cancel.");
   }else{
     //println(savePath = selection.getPath());
-    createOutput(savePath+"/item/");
+    createOutput(savePath+"/item/Logic/and.txt") = andSave;
+    createOutput(savePath+"/item/Logic/nand.txt") = nandSave;
+    createOutput(savePath+"/item/Logic/or.txt") = orSave;
+    createOutput(savePath+"/item/Logic/xor.txt") = xroSave;
+    createOutput(savePath+"/item/logic/nor.txt") = norSave;
     //println(selection.getPath());
     savePath = selection.getPath();
   }
