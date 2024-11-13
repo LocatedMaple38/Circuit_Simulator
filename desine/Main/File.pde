@@ -41,7 +41,7 @@ void fileDropDown(){
     noFill();
 }
 
-void fileSave(){
+void fileSaveAs(){
     selectFolder("This will crat a folder of the name of the doc", "folderSelected");
 }
   
@@ -58,13 +58,14 @@ void folderSelected(File selection){
     println("Window was closed or the user hit cancel.");
   }else{
     //println(savePath = selection.getPath());
-    createOutput(savePath+"/tools.txt");
-    createOutput(savePath+"/item.txt");
+    createOutput(savePath+"/item/");
     //println(selection.getPath());
     savePath = selection.getPath();
-    createOutput(savePath+"/Tools.txt");
-    createOutput(savePath+"/Logic.txt");
   }
+}
+
+void fileSave(){
+    output
 }
 
 void fileMousePressed(){
@@ -78,9 +79,10 @@ void fileMousePressed(){
   }
 
   if(fileBool == true && mouseX>xSaveFile && mouseX<xSaveFile+widthSaveFile && mouseY>ySaveFile && mouseY<ySaveFile+heightSaveFile) {
+    fileSave();
   }
 
   if(fileBool == true && mouseX>xSaveFileAs && mouseX<xSaveFileAs+widthSaveFileAs && mouseY>ySaveFileAs && mouseY<ySaveFileAs+heightSaveFileAs) {
-    fileSave();
+    fileSaveAs();
   }
 }
