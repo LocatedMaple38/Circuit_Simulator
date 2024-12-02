@@ -57,28 +57,20 @@ void folderSelected(File selection){
   if(selection == null){
     println("Window was closed or the user hit cancel.");
   }else{
-    //println(savePath = selection.getPath());
-    createOutput(savePath+"/item/Logic/74hc00.txt") = a74hc00Save;
-    createOutput(savePath+"/item/Logic/74hc01.txt") = a74hc01Save;
-    createOutput(savePath+"/item/Logic/74hc02.txt") = a74hc02Save;
-    createOutput(savePath+"/item/Logic/74hc03.txt") = a74hc03Save;
-    createOutput(savePath+"/item/Logic/74hc04.txt") = a74hc04Save;
-    createOutput(savePath+"/item/Logic/74hc05.txt") = a74hc05Save;
-    createOutput(savePath+"/item/Logic/74hc06.txt") = a74hc06Save;
-    createOutput(savePath+"/item/Logic/74hc07.txt") = a74hc07Save;
-    createOutput(savePath+"/item/Logic/74hc08.txt") = a74hc08Save;
-    createOutput(savePath+"/item/Logic/74hc09.txt") = a74hc09Save;
-    createOutput(savePath+"/item/Logic/74hc10.txt") = a74hc10Save;
-    createOutput(savePath+"/item/Logic/74hc11.txt") = a74hc11Save;
-    createOutput(savePath+"/item/Logic/74hc12.txt") = a74hc12Save;
-    createOutput(savePath+"/item/Logic/74hc13.txt") = a74hc13Save;
-    //println(selection.getPath());
     savePath = selection.getPath();
+    //println(savePath = selection.getPath());
+    a74hc00Save = createWriter(savePath+"/item/Logic/74hc00.txt");
+    a74hc01Save = createWriter(savePath+"/item/Logic/74hc01.txt");
+    a74hc02Save = createWriter(savePath+"/item/Logic/74hc02.txt");
+    a74hc03Save = createWriter(savePath+"/item/Logic/74hc03.txt");
+    a74hc04Save = createWriter(savePath+"/item/Logic/74hc04.txt");
+    a74hc08Save = createWriter(savePath+"/item/Logic/74hc08.txt");
+    //println(selection.getPath());
   }
 }
 
 void fileSave(){
-    output
+    //output();
 }
 
 void fileMousePressed(){
