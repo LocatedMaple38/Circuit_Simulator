@@ -2,7 +2,7 @@ void multimeterSetup(){
   int i = 0;
   while(multimeterAdd && i < multimeterInt){
     xMultimeter[i] = 100;
-    yMultimeter[i] = 500;
+    yMultimeter[i] = 200;
     widthMultimeter[i] = 50;
     heightMultimeter[i] = 100;
 
