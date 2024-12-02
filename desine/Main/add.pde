@@ -22,7 +22,7 @@ void addSetup(){
   xItemAddOR = 50;
   yItemAddOR = 30;
   widthItemAddOR= 50;
-  heightItemAddRO = 10;
+  heightItemAddOR = 10;
   
   xItemAddNOR = 50;
   yItemAddNOR = 40;
@@ -201,7 +201,7 @@ void addLogicDraw(){
   fill(255);
   rect(xItemAddAND, yItemAddAND, widthItemAddAND, heightItemAddAND);
   rect(xItemAddNAND, yItemAddNAND, widthItemAddNAND, heightItemAddNAND);
-  rect(xItemAddOR, yItemAddOR, widthItemAddOR, heightItemAddRO);
+  rect(xItemAddOR, yItemAddOR, widthItemAddOR, heightItemAddOR);
   rect(xItemAddNOR, yItemAddNOR, widthItemAddNOR, heightItemAddNOR);
   rect(xItemAddXOR, yItemAddXOR, widthItemAddXOR, heightItemAddXOR);
   rect(xItemAddXNOR, yItemAddXNOR, widthItemAddXNOR, heightItemAddXNOR);
@@ -209,7 +209,7 @@ void addLogicDraw(){
   fill(0);
   text("AND", xItemAddAND, yItemAddAND, widthItemAddAND, heightItemAddAND);
   text("NAND", xItemAddNAND, yItemAddNAND, widthItemAddNAND, heightItemAddNAND);
-  text("OR", xItemAddOR, yItemAddOR, widthItemAddOR, heightItemAddRO);
+  text("OR", xItemAddOR, yItemAddOR, widthItemAddOR, heightItemAddOR);
   text("NOR", xItemAddNOR, yItemAddNOR, widthItemAddNOR, heightItemAddNOR);
   text("XOR", xItemAddXOR, yItemAddXOR, widthItemAddXOR, heightItemAddXOR);
   text("XNOR", xItemAddXNOR, yItemAddXNOR, widthItemAddXNOR, heightItemAddXNOR);
