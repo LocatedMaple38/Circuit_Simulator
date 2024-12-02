@@ -237,7 +237,7 @@ void setup() {
       i++;
     }
   }
-  surface.setResizable(true);
+  surface.setResizable(true);  
   surface.setLocation(0, 0);
 
   addSetup();
