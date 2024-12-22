@@ -123,6 +123,15 @@ float[] x74hc08PIN14 = new float[a74hc08], y74hc08PIN14 = new float[a74hc08], wi
 float[] x74hc08Pin1Loco = new float[a74hc08], y74hc08Pin1Loco = new float[a74hc08], width74hc08Pin1Loco = new float[a74hc08];
 float[] x74hc08Pos = new float[a74hc08], y74hc08Pos = new float[a74hc08];
 
+boolean capacitorADD = true;
+int capacitorINT = 1;
+flaot[] xCapacitor = new float[capacitorINT], yCapacitor = new float[capacitorINT], rCapacitor = new[capacitorINT];
+float[] xPin1 = new float[capacitorINT], yPin1 = new float[capacitorINT], widthPin1 = new float[capacitorINT], heightPin1 = new float[capacitorINT];
+float[] xPin2 = new float[capacitorINT], yPin2 = new float[capacitorINT], widthPin2 = new float[capacitorINT], heightPin2 = new float[capacitorINT];
+
+boolean resistorAdd = true;
+int resistorINT = 1;
+
 int wireInt = 1;
 float[] xWire = new float[wireInt], yWire = new float[wireInt], widthWire = new float[wireInt], heightWire = new float[wireInt];
 float[] volt = new float[wireInt];
