@@ -136,8 +136,7 @@ int wireInt = 1;
 float[] xWire = new float[wireInt], yWire = new float[wireInt], widthWire = new float[wireInt], heightWire = new float[wireInt];
 float[] volt = new float[wireInt];
 
-boolean itemAddBool = false;
-float xItemAdd, yItemAdd, widthItemAdd, heightItemAdd;
+boolean itemAddLogic = false;
 float xItemAddAND, yItemAddAND, widthItemAddAND, heightItemAddAND;
 float xItemAddNAND, yItemAddNAND, widthItemAddNAND, heightItemAddNAND;
 float xItemAddOR, yItemAddOR, widthItemAddOR, heightItemAddOR;
@@ -145,9 +144,16 @@ float xItemAddNOR, yItemAddNOR, widthItemAddNOR, heightItemAddNOR;
 float xItemAddXOR, yItemAddXOR, widthItemAddXOR, heightItemAddXOR;
 float xItemAddXNOR, yItemAddXNOR, widthItemAddXNOR, heightItemAddXNOR;
 float xItemAddINVERTER, yItemAddINVERTER, widhtItemAddINVERTER, heightItemAddINVERTER;
+float xItemAddDiode, yItemAddDiode, widthItemAddDiode, heightItemAddDiode;
+float xItemAddZenerDiode, yItemAddZenerDiode, widhtItemAddZenerDiode, heightItemAddZenerDiode;
 
-boolean itemAddLogic = false;
+boolean itemAddBool = false;
+float xItemAdd, yItemAdd, widthItemAdd, heightItemAdd;
 float xItemAddLogic, yItemAddLogic, widthItemAddLogic, heightItemAddLogic;
+float xItemAddCompute, yItemAddCompute, widthItemAddCompute, heightItemAddCompute;
+float xItemAddTools, yItemAddTools, widthItemAddTools, heightItemAddTools;
+float xItemAddAset, yItemAddAset, widthItemAddAset, heightItemAddAset;
+float xItemAddDisplay, yItemAddDisplay, widthItemAddDisplay, heightItemAddDisplay;
 
 boolean itemAddCompute = false;
 boolean arduinoBool = false;
@@ -156,27 +162,23 @@ boolean eaghtBitBool = false;
 float xAddArduino, yAddArduino, widthAddArduino, heightAddArduino;
 float xAddMicroPresseser, yAddMicroPresseser, wifthAddMicroProsseser, heightAddMicroPrsseser;
 float xItemAdd8Bit, yItemAdd8Bit, widthItemAdd8Bit, heightItemAdd8Bit;
-float xItemAddCompute, yItemAddCompute, widthItemAddCompute, heightItemAddCompute;
 float xItemAddArduinoNanoESP32, yItemAddArduinoNanoESP32, widhtItemAddArduinoNanoESP32, heightItemAddArduinoNanoESP32;
 float xItemAddArduinoUNOR3, yItemAddArduinoUNOR3, widthItemAddArduinoUNOR3, heightItemAddArduinoUNOR3;
 float xItemAdd65c02, yItemAdd65c02, widthItemAdd65c02, heightItemAdd65c02;
 
 boolean itemAddTools = false;
-float xItemAddTools, yItemAddTools, widthItemAddTools, heightItemAddTools;
 float xItemAddPowerSupply, yItemAddPowerSupply, widthItemAddPowerSupply, heightItemAddPowerSpply;
 float xItemAddMultimeter, yItemAddMultimeter, widthItemAddMultimeter, heightItemAddMultimeter;
 float xItemAddOscilloscope, yItemAddOscilloscope, widthItemAddOscilloscope, heightItemAddOscilloscope;
 float xItemAddFunctionGenerator, yItemAddFunctionGenerator, widthItemAddFunctionGenerator, heightItemAddFunctionGenerator;
 
 boolean itemAddAset = false;
-float xItemAddAset, yItemAddAset, widthItemAddAset, heightItemAddAset;
 float xItemAdd5VSupply, yItemAdd5VSupply, widhtItemAdd5VSupply, heightItemAdd5VSupply;
 float xItemAdd3_3VSupply, yItemAdd3_3VSupply, widhtItemAdd3_3VSupply, heightItemAdd3_3VSupply;
 float xItemAddWire, yItemAddWire, widthItemAddWire, heightItemAddWire;
 float xItemAddGround, yItemAddGround, widthItemAddGround, heightItemAddGround;
 
 boolean itemAddDisplay = false;
-float xItemAddDisplay, yItemAddDisplay, widthItemAddDisplay, heightItemAddDisplay;
 float xItemAddLCD, yItemAddLCD, widthItemAddLCD, heightItemAddLCD;
 float xItemAddLed, yItemAddLed, widthItemAddLed, heightItemAddLed;
 
