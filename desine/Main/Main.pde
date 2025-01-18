@@ -7,6 +7,7 @@ import ddf.minim.signals.*;
 import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
 
+//logic{
 boolean a74hc00ADD = true;
 int a74hc00 = 1;
 float[] x74hc00 = new float[a74hc00], y74hc00 = new float[a74hc00], width74hc00 = new float[a74hc00], height74hc00 = new float[a74hc00];
@@ -122,12 +123,13 @@ float[] x74hc08PIN13 = new float[a74hc08], y74hc08PIN13 = new float[a74hc08], wi
 float[] x74hc08PIN14 = new float[a74hc08], y74hc08PIN14 = new float[a74hc08], width74hc08PIN14 = new float[a74hc08], height74hc08PIN14 = new float[a74hc08];
 float[] x74hc08Pin1Loco = new float[a74hc08], y74hc08Pin1Loco = new float[a74hc08], width74hc08Pin1Loco = new float[a74hc08];
 float[] x74hc08Pos = new float[a74hc08], y74hc08Pos = new float[a74hc08];
+//end logic
 
 boolean capacitorADD = true;
 int capacitorINT = 1;
 flaot[] xCapacitor = new float[capacitorINT], yCapacitor = new float[capacitorINT], rCapacitor = new[capacitorINT];
-float[] xPin1 = new float[capacitorINT], yPin1 = new float[capacitorINT], widthPin1 = new float[capacitorINT], heightPin1 = new float[capacitorINT];
-float[] xPin2 = new float[capacitorINT], yPin2 = new float[capacitorINT], widthPin2 = new float[capacitorINT], heightPin2 = new float[capacitorINT];
+float[] xPin1Capacitor = new float[capacitorINT], yPin1Capacitor = new float[capacitorINT], widthPin1Capacitor = new float[capacitorINT], heightPin1Capacitor = new float[capacitorINT];
+float[] xPin2Capacitor = new float[capacitorINT], yPin2Capacitor = new float[capacitorINT], widthPin2Capacitor = new float[capacitorINT], heightPin2Capacitor = new float[capacitorINT];
 
 boolean resistorAdd = true;
 int resistorINT = 1;
