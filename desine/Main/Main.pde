@@ -1,5 +1,3 @@
-import java.io.*;
-
 import ddf.minim.*;
 import ddf.minim.analysis.*;
 import ddf.minim.effects.*;
@@ -7,7 +5,6 @@ import ddf.minim.signals.*;
 import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
 
-//logic{
 boolean a74hc00ADD = true;
 int a74hc00 = 1;
 float[] x74hc00 = new float[a74hc00], y74hc00 = new float[a74hc00], width74hc00 = new float[a74hc00], height74hc00 = new float[a74hc00];
@@ -127,7 +124,7 @@ float[] x74hc08Pos = new float[a74hc08], y74hc08Pos = new float[a74hc08];
 
 boolean capacitorADD = true;
 int capacitorINT = 1;
-flaot[] xCapacitor = new float[capacitorINT], yCapacitor = new float[capacitorINT], rCapacitor = new[capacitorINT];
+float[] xCapacitor = new float[capacitorINT], yCapacitor = new float[capacitorINT], rCapacitor = new float[capacitorINT];
 float[] xPin1Capacitor = new float[capacitorINT], yPin1Capacitor = new float[capacitorINT], widthPin1Capacitor = new float[capacitorINT], heightPin1Capacitor = new float[capacitorINT];
 float[] xPin2Capacitor = new float[capacitorINT], yPin2Capacitor = new float[capacitorINT], widthPin2Capacitor = new float[capacitorINT], heightPin2Capacitor = new float[capacitorINT];
 
@@ -254,7 +251,7 @@ void setup() {
   surface.setLocation(0, 0);
 
   addSetup();
-  fileSetup();
+  //fileSetup();
   simSetup();
   soundSetup();
   accessibilitySetup();
@@ -268,14 +265,14 @@ void draw() {
     simulate();
   }
   fill(#ffadff);
-  rect(0, 0, displayWidth*2, displayHeight*2);
+  rect(0, 0, displayWidth, displayHeight);
 
   textAlign(LEFT, CENTER);
   textSize(10);
 
 
   if (fileBool) {
-    fileDropDown();
+    //fileDropDown();
   }
   
   if(TTSBool == true){
@@ -305,7 +302,7 @@ void draw() {
   //xorDraw();
   //xnorraw();
   //ledDraw();
-  fileDraw();
+  //fileDraw();
   addDraw();
   accessibilityDraw();
   
@@ -316,7 +313,7 @@ void keyPressed(){
 
 void mousePressed(){
   simMousePressed();
-  fileMousePressed();
+  //fileMousePressed();
   addMousePressed();
   andMousePressed();
   nandMousePressed();
