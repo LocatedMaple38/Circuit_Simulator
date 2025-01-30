@@ -12,10 +12,10 @@ void soundSetup(){
   
   numberOfSongs = musicFileCount; //Placeholder Only, reexecute lines after fileCount Known
   playList = new AudioPlayer[numberOfSongs]; //song is now similar to song1
-  printArray(playList);
+  //printArray(playList);
   playListMetaData = new AudioMetaData[numberOfSongs]; //same as above
   for ( int i=0; i<musicFileCount; i++ ) {
-    printArray(playList);
+    //printArray(playList);
     playList[i]= minim.loadFile( songFilePathway[i] );
     playListMetaData[i] = playList[i].getMetaData();
   } //End Music Load
