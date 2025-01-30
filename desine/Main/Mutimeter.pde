@@ -143,14 +143,14 @@ void multimeterDraw(){
     }
     
     if(multimeterPosMove[i]){
-      xPosativeProbRead[i] = mouseX-2.5;
-      yPosativeProbRead[i] = mouseY-5;
+      xPosativeProbRead[i] = mouseX=50;
+      yPosativeProbRead[i] = mouseY=50;
     }
     
     //println("x "+xPosativeProbRead[i]+" "+i);
     //println("y "+yPosativeProbRead[i]+" "+i);
     //println("Move "+multimeterPosMove[i]);
-    println(multimeterAdd);
+    //println(multimeterAdd);
     //println(multimeterPosMove[i]+" "+i);
     
     if(i == multimeterInt){
