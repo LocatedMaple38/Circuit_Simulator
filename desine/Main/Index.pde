@@ -2,8 +2,6 @@ import java.io.*;
 import java.util.*;
 
 boolean debug = true;
-File debug.txt;
-String debugPath = "debug/";
 
 int compINT;
 float[] compX, compY, compWidth, compHeight;
