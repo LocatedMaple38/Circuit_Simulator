@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-bool debug = true;
+boolean debug = true;
 File debug.txt;
 String debugPath = "debug/";
 
