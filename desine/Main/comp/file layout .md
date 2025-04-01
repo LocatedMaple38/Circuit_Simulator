@@ -1,6 +1,8 @@
-//dim
-x, y, Width, height // comp demichons
-x, y, Width, Height // pin demichons pins are labld formetop to bottom
+comp{
+x, y, Width, Height
+x, y, Width, Height
+}comp
 
-//funchon
-//fichon in java
+gui{
+float, x, y, width, height
+}gui
