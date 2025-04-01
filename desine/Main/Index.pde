@@ -78,7 +78,7 @@ void parseContent(String content) {
         debugPrinln("Component Floats Array: " + Arrays.toString(compArray));
     }
 
-    if (content.contains("gui{") && content.contains("}")) {
+    if (content.contains("gui{") && content.contains("}gui")) {
         String guiSection = content.substring(content.indexOf("gui{") + "gui{".length(), content.indexOf("}gui"));
         debugPrinln("GUI Section:");
         float[] guiArray = parseSection(guiSection);
