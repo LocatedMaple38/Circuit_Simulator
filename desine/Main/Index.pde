@@ -17,13 +17,13 @@ void setup() {
     // Get absolute path for the component folder
     String absoluteCompPath = sketchPath(compPath);
     compFolder = new File(absoluteCompPath);
-    println("Component Folder: " + compFolder);
+    debugPrinln("Component Folder: " + compFolder);
 
     // Count the number of files in the component folder
     File[] compFiles = compFolder.listFiles();
     if (compFiles != null) {
         compINT = compFiles.length; // Set compINT to the number of files
-        println("Number of components: " + compINT);
+        debugPrinln("Number of components: " + compINT);
 
         // Initialize arrays dynamically based on compINT
         compX = new float[compINT];
@@ -33,11 +33,11 @@ void setup() {
 
         // Process each file
         for (int i = 0; i < compFiles.length; i++) {
-            println("Component File: " + compFiles[i].getPath());
+            debugPrinln("Component File: " + compFiles[i].getPath());
             parseFile(compFiles[i]); // Read data from the file
         }
     } else {
-        println("No files found in the folder!");
+        debugPrinln("No files found in the folder!");
         compINT = 0;
     }
 }
@@ -75,16 +75,16 @@ void parseContent(String content) {
     // Split content into sections based on `comp` and `gui`
     if (content.contains("comp{") && content.contains("}comp")) {
         String compSection = content.substring(content.indexOf("comp{") + "comp{".length(), content.indexOf("}comp"));
-        println("Component Section:");
+        debugPrinln("Component Section:");
         float[] compArray = parseSection(compSection);
-        println("Component Floats Array: " + Arrays.toString(compArray));
+        debugPrinln("Component Floats Array: " + Arrays.toString(compArray));
     }
 
     if (content.contains("gui{") && content.contains("}")) {
         String guiSection = content.substring(content.indexOf("gui{") + "gui{".length(), content.indexOf("}"));
-        println("GUI Section:");
+        debugPrinln("GUI Section:");
         float[] guiArray = parseSection(guiSection);
-        println("GUI Floats Array: " + Arrays.toString(guiArray));
+        debugPrinln("GUI Floats Array: " + Arrays.toString(guiArray));
     }
 }
 
@@ -98,7 +98,7 @@ float[] parseSection(String section) {
             try {
                 floatList.add(Float.parseFloat(part.trim()));
             } catch (NumberFormatException e) {
-                println("Skipping invalid value: " + part.trim());
+                debugPrinln("Skipping invalid value: " + part.trim());
             }
         }
     }
