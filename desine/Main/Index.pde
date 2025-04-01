@@ -14,8 +14,6 @@ File compFolder;
 void setup() {
     size(500, 500);
 
-debug();
-
     // Get absolute path for the component folder
     String absoluteCompPath = sketchPath(compPath);
     compFolder = new File(absoluteCompPath);
@@ -116,11 +114,5 @@ float[] parseSection(String section) {
 void debugPrinln(String messages){
   if(debug){
     println(message);
-  }
-}
-
-void debug(){
-  if(debug){
-    
   }
 }
