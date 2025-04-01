@@ -1,6 +1,10 @@
 import java.io.*;
 import java.util.*;
 
+book debug = true;
+File debug.txt;
+String debugPath = "debug/";
+
 int compINT;
 float[] compX, compY, compWidth, compHeight;
 
@@ -9,6 +13,8 @@ File compFolder;
 
 void setup() {
     size(500, 500);
+
+debug();
 
     // Get absolute path for the component folder
     String absoluteCompPath = sketchPath(compPath);
@@ -105,4 +111,16 @@ float[] parseSection(String section) {
         floatArray[i] = floatList.get(i);
     }
     return floatArray;
+}
+
+void debugPrinln(String messages){
+  if(debug){
+    println(message);
+  }
+}
+
+void debug(){
+  if(debug){
+    
+  }
 }
