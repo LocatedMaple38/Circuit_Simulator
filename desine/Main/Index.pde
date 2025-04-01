@@ -54,7 +54,7 @@ void mousePressed() {
 public class ComponentReader {
 
     public static void main(String[] args) {
-        String filePath = "components.txt"; // Replace with your file's path
+        String filePath = compPath+compFiles[i].getpath(); // Replace with your file's path
 
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             StringBuilder content = new StringBuilder();
