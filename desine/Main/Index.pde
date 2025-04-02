@@ -1,11 +1,11 @@
 import java.io.*;
 import java.util.*;
 
+float[] compArray;
+int floatSize;
 boolean debug = true;
 int fileNum = 0;
 int compINT;
-float[] compX, compY, compWidth, compHeight;
-float[] pin1X, pin1Y, pin1Width, pin1Height;
 
 String compPath = "comp/";
 File compFolder;
@@ -25,21 +25,14 @@ void setup() {
     debugPrinln("Number of components: " + compINT);
 
     // Initialize arrays dynamically based on compINT
-    compX = new float[compINT];
-    compY = new float[compINT];
-    compWidth = new float[compINT];
-    compHeight = new float[compINT];
-    pin1x = new float[compINT];
-    pin1y = new float[compINT];
-    pin1Width = new float[compINT];
-    pin1Height = new float[compINT];
 
     // Process each file
     for (int i = 0; i < compFiles.length; i++) {
+      println("fileNum "+fileNum);
       debugPrinln("Component File: " + compFiles[i].getPath());
       parseFile(compFiles[i]); // Read data from the file
       fileNum++;
-      println("filoeNum "+fileNum);
+      println("fileNum "+fileNum);
     }
   } else {
     debugPrinln("No files found in the folder!");
@@ -48,17 +41,15 @@ void setup() {
 }
 
 void draw() {
-  for(int i = 0; i < compINT;){
-    rect(compX[i], compY[i], compWidth[i], compHeight[i]);
-    if(i == compINT){
+  for(int i = 0; i < floatSize;){
+    //println(floatSize);
+    rect(compArray[i], compArray[i+1], compArray[i+2], compArray[i+3]);
+    if(i == floatSize){
       continue;
     }else{
-      i++;
+      i=i+4;
     }
-  }
-  
-  rect(compX[0], compY[0], compWidth[0], compHeight[0]);
-  //rect(compX[1], compY[1], compWidth[1], compHeight[1]);
+  } 
 }
 
 void keyPressed() {
@@ -91,12 +82,9 @@ void parseContent(String content) {
   if (content.contains("comp{") && content.contains("}comp")) {
     String compSection = content.substring(content.indexOf("comp{") + "comp{".length(), content.indexOf("}comp"));
     debugPrinln("Component Section:");
-    float[] compArray = parseSection(compSection);
+    compArray = parseSection(compSection);
     debugPrinln("Component Floats Array: " + Arrays.toString(compArray));
-    compX[0] = compArray[0];
-    compY[0] = compArray[1];
-    compWidth[0] = compArray[2];
-    compHeight[0] = compArray[3];
+    
   }
 
   if (content.contains("gui{") && content.contains("}gui")) {
@@ -124,6 +112,7 @@ float[] parseSection(String section) {
 
 // Convert List<Float> to float[]
 float[] floatArray = new float[floatList.size()];
+  floatSize = floatList.size();
   for (int i = 0; i < floatList.size(); i++) {
     floatArray[i] = floatList.get(i);
   }
