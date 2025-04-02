@@ -29,6 +29,10 @@ void setup() {
     compY = new float[compINT];
     compWidth = new float[compINT];
     compHeight = new float[compINT];
+    pin1x = new float[compINT];
+    pin1y = new float[compINT];
+    pin1Width = new float[compINT];
+    pin1Height = new float[compINT];
 
     // Process each file
     for (int i = 0; i < compFiles.length; i++) {
